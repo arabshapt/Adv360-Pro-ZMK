@@ -18,6 +18,11 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
+  &sk {
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
+
 / {
   behaviors {
     #include "macros.dtsi"
@@ -161,10 +166,7 @@ td_mt: tap_dance_mod_tap {
   };
 
 
-  &sk {
-    quick-release;
-    /delete-property/ ignore-modifiers;
-};
+
 
     keymap {
         compatible = "zmk,keymap";
