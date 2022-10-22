@@ -54,7 +54,7 @@ pkp_n1: plus_kp_n1 {
     compatible = "zmk,behavior-mod-morph";
     label = "plus_kp_n1";
     #binding-cells = <0>;
-    bindings = <&kp PLUS>, <&kp KP_N1>;
+    bindings = <&kp PLUS>, <&kp N1>;
     mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
 };
 lkp_n2: left_bracket_kp_n2 {
