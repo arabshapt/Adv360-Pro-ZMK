@@ -180,7 +180,7 @@ td_mt: tap_dance_mod_tap {
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LSHFT HYPER>, <&kp CAPSLOCK>;
+            bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
   };
 
