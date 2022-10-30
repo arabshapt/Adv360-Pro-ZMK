@@ -195,7 +195,7 @@ td_mt: tap_dance_mod_tap {
             bindings = <
                 &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5               &tog 1      &mo 3     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &kp MINUS
                 &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T                &tog 5      &none      &kp Y      &kp U      &kp I      &kp O      &kp P   &kp BSLH
-                &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G                &none  &mt LCTRL LA(LC(LS(SPACE)))   &kp LALT                         &kp LGUI  &mt RCTRL LA(LC(LS(SPACE)))      &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
+                &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G                &none  &mt LCTRL HYP(SPACE)   &kp LALT                         &kp LGUI  &mt RCTRL HYP(SPACE)      &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
                 &td_mt      &kp Z       &kp X    &kp C     &kp V      &kp B     &none      &none   &kp HOME      &none      &none  &kp PG_UP      &none      &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td_mt
                 &mo 2           &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT            &kp BACKSPACE            &lt 6 ESC    &mo 7  &mo 7  &kp ENTER  &lt 7 SPACE   &kp DOWN     &kp UP   &kp LBKT  &kp RBKT   &mo 2
             >;
@@ -245,7 +245,7 @@ td_mt: tap_dance_mod_tap {
       bindings = <
         &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 4                                                     &mo 3          &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
         &kp TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
-        &mt LCTRL ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none    &mt LCTRL LA(LC(LS(SPACE))) &kp LALT                    &kp LGUI  &mt RCTRL LA(LC(LS(SPACE)))  &none &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
+        &mt LCTRL ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
         &td_mt &kp APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &td_mt
         &mo 2     &dgrave     &ggrave   &kp LEFT &kp RIGHT                &kp BKSP  &lt 6 ESC   &mo 7              &mo 7 &kp ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 2
         >;
@@ -254,8 +254,8 @@ td_mt: tap_dance_mod_tap {
         layer_qwerty_nav {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp LC(LS(A))  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                                                  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(LS(A))  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                                                  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
