@@ -217,7 +217,7 @@ td_mt: tap_dance_mod_tap {
             bindings = <
        &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog 1   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
        &trans           &trans         &trans         &trans          &trans  &trans             &none   &none  &trans  &trans  &trans   &trans   &trans   &trans
-       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &none  &trans  &trans                   &kp F19   &kp F24    &none  &trans  &trans  &trans  &trans  &trans  &trans
+       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &none  &trans  &trans                   &kp F19   &kp F24    &none  &kp F19   &kp F24  &trans  &trans  &trans  &trans
        &trans           &trans         &trans         &trans          &trans  &trans             &none   &none  &trans   &none   &none   &trans    &none    &none  &trans  &trans  &trans  &trans  &trans  &trans
        &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans
             >;
@@ -245,7 +245,7 @@ td_mt: tap_dance_mod_tap {
 
        prime_layer {
       bindings = <
-        &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 4                                                     &mo 3          &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
+        &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5 &tog 4                                                     &mo 3          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &kp MINUS
         &kp TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
         &mt LCTRL ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
         &td_mt &kp APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &td_mt
@@ -268,7 +268,7 @@ td_mt: tap_dance_mod_tap {
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &kp TAB   &kp AT     &kp UNDER    &kp LBKT    &kp RBKT      &kp CARET  &none                                                                        &none &kp EXCL  &kp LT  &kp GT     &kp EQUAL    &kp AMPS    &kp BSLH
         &kp ESC   &kp BSLH     &kp FSLH    &kp LBRC    &kp RBRC      &kp ASTRK  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp QMARK  &kp LPAR  &kp RPAR     &kp MINUS    &kp COLON &kp SQT
-        &kp LSHFT &kp POUND     &kp DLLR    &kp PIPE    &kp TILDE      &kp GRAVE         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp PLUS  &kp PRCNT  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &kp LSHFT &kp POUND     &kp DLLR    &kp PIPE    &kp TILDE      &kp GRAVE         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp PLUS  &kp PRCNT  &kp DOUBLE_QUOTES &kp SINGLE_QUOTE  &kp SEMICOLON &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
       >;
     };   
