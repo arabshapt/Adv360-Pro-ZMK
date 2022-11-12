@@ -33,12 +33,12 @@
 #define BROWSER_PREVTAB LG(LA(LEFT))
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <210>;
     flavor = "tap-preferred";
 };
 
 &lt {
-    quick_tap_ms = <200>;
+    quick_tap_ms = <210>;
 };
 
 //   &sk {
@@ -55,8 +55,8 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick_tap_ms = <175>;
+        tapping-term-ms = <170>;
+        quick_tap_ms = <200>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
@@ -259,9 +259,9 @@ td_mt: tap_dance_mod_tap {
       bindings = <
         &kp EQUAL  &kp N1     &kp N2    &kp N3   &kp N4     &kp N5  &tog 4                                                     &mo 3           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
         &mt MEH TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &mt MEH &bhash
-        &mt HYPER ESC   &kp A       &kp O     &lt 9 E    &kp U      &kp I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &kp D    &kp H    &lt 8 T     &kp N     &kp S    &mt HYPER MINUS
-        &td_mt &kp APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &td_mt
-        &mo 12     &dgrave     &lt 12 &ggrave   &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &mo 7              &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
+        &mt HYPER ESC   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 D    &hm RCTRL  H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
+        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
+        &mo 12     &dgrave     &lt 12 &ggrave   &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
         >;
     };
 
@@ -269,7 +269,7 @@ td_mt: tap_dance_mod_tap {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
-       &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                                                  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+       &trans  &trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE   &kp C_VOLUME_UP   &kp C_MUTE            &trans  &trans  &trans                                                  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
@@ -290,7 +290,7 @@ td_mt: tap_dance_mod_tap {
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                  &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
        &trans  &kp LC(BKSP) &kp BKSP &kp DEL &kp LC(DEL)  &trans &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-       &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans   &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans
+       &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)   &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
@@ -298,7 +298,7 @@ td_mt: tap_dance_mod_tap {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &kp LC(LEFT) &kp HOME              &kp END &kp LC(RIGHT)  &trans &trans
-       &trans  &trans  &lt 11 O  &trans  &lt 10 U  &trans            &trans  &trans  &trans                                                  &trans  &trans  &trans                     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT     &kp ENTER  &trans
+       &trans  &trans  &lt 11 O &lt 10 E &trans    &trans            &trans  &trans  &trans                                                  &trans  &trans  &trans                     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT     &kp ENTER  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &kp LC(Z)          &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
@@ -307,7 +307,7 @@ deleting_layer_on_right {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &macro_delete_whole_line &macro_delete_till_start_line              &macro_delete_till_end_line &trans  &trans &trans
-       &trans  &trans  &lt 11 O  &lt 9 E  &lt 10 U  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                     &kp LC(BKSP) &kp BKSP &kp DEL &kp LC(DEL)     &trans  &trans
+       &trans  &trans  &lt 11 O  &lt 10 E  &trans  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                     &kp LC(BKSP) &kp BKSP &kp DEL &kp LC(DEL)     &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &kp LC(Z)          &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
@@ -316,7 +316,7 @@ deleting_layer_on_right {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &macro_select_whole_line &kp LS(HOME)  &kp LS(END) &trans  &trans &trans
-       &trans  &trans  &lt 11 O  &lt 9 E  &lt 10 U  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                &kp LS(LEFT)     &kp LS(LC(LEFT))   &kp LS(LC(RIGHT)) &kp LS(RIGHT)    &trans  &trans
+       &trans  &trans  &lt 11 O  &lt 10 E  &trans  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                &kp LS(LEFT)     &kp LS(LC(LEFT))   &kp LS(LC(RIGHT)) &kp LS(RIGHT)    &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &kp LC(Z)          &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
