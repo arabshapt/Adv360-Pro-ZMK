@@ -35,6 +35,7 @@
 &mt {
     tapping-term-ms = <210>;
     flavor = "tap-preferred";
+    quick_tap_ms = <210>;
 };
 
 &lt {
@@ -55,8 +56,8 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <170>;
-        quick_tap_ms = <200>;
+        tapping-term-ms = <230>;
+        quick_tap_ms = <250>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
@@ -152,11 +153,11 @@ eprcnt: excl_prcnt {
     mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
 };
 
-dgrave: dllr_grave {
+dtilde: dllr_tilde {
     compatible = "zmk,behavior-mod-morph";
     label = "dllr_grave";
     #binding-cells = <0>;
-    bindings = <&kp DLLR>, <&kp GRAVE>;
+    bindings = <&kp DLLR>, <&kp TILDE>;
     mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
 };
 ggrave: grave_grave {
@@ -210,7 +211,7 @@ td_mt: tap_dance_mod_tap {
                 &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5               &tog 1      &mo 3     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &kp MINUS
                 &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T                &tog 5      &none      &kp Y      &kp U      &kp I      &kp O      &kp P   &kp BSLH
                 &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G                &none  &mt LCTRL HYP(SPACE)   &kp LALT                         &kp LGUI  &mt RCTRL HYP(SPACE)      &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
-                &td_mt      &kp Z       &kp X    &kp C     &kp V      &kp B     &none      &none   &kp HOME      &none      &none  &kp PG_UP      &none      &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td_mt
+                &kp LSHFT      &kp Z       &kp X    &kp C     &kp V      &kp B     &none      &none   &kp HOME      &none      &none  &kp PG_UP      &none      &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                 &mo 2           &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT            &kp BACKSPACE            &lt 6 ESC    &mo 7  &mo 7  &kp ENTER  &lt 7 SPACE   &kp DOWN     &kp UP   &kp LBKT  &kp RBKT   &mo 2
             >;
         };
@@ -258,10 +259,10 @@ td_mt: tap_dance_mod_tap {
        prime_layer {
       bindings = <
         &kp EQUAL  &kp N1     &kp N2    &kp N3   &kp N4     &kp N5  &tog 4                                                     &mo 3           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
-        &mt MEH TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &mt MEH &bhash
+        &mt MEH TAB   &kp SEMI    &kp COMMA &kp DOT  &lt 12 P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
         &mt HYPER ESC   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 D    &hm RCTRL  H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
-        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
-        &mo 12     &dgrave     &lt 12 &ggrave   &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
+        &kp LSHFT  &lt 12 APOS    &kp Q     &kp J    &lt 12 K      &kp X         &none     &none     &mo 7 &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
+        &mo 12     &dtilde     &gpipe  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
         >;
     };
 
@@ -288,7 +289,7 @@ td_mt: tap_dance_mod_tap {
       deleting_layer {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
-       &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                  &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
+       &trans &macro_delete_whole_line &macro_delete_till_start_line &macro_delete_till_end_line  &trans  &trans            &trans                                                                  &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
        &trans  &kp LC(BKSP) &kp BKSP &kp DEL &kp LC(DEL)  &trans &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
        &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)   &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
