@@ -258,7 +258,7 @@ td_mt: tap_dance_mod_tap {
 
        prime_layer {
       bindings = <
-        &kp EQUAL  &kp N1     &kp N2    &kp N3   &kp N4     &kp N5  &tog 4                                                     &mo 3           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
+        &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog 4                                                     &mo 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
         &mt MEH TAB   &kp SEMI    &kp COMMA &kp DOT  &lt 12 P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
         &mt HYPER ESC   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 D    &hm RCTRL  H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
         &kp LSHFT  &lt 12 APOS    &kp Q     &kp J    &lt 12 K      &kp X         &none     &none     &mo 7 &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
