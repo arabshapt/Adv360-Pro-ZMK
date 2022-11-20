@@ -20,6 +20,19 @@
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
+//#define AS_PIPE(keycode) &as N1 PLUS 
+#define AS_N1(keycode) &as PIPE PIPE
+#define AS_N2(keycode) &as N2 LEFT_BRACKET 
+#define AS_N3(keycode) &as N3 LEFT_BRACE 
+#define AS_N4(keycode) &as N4 LEFT_PARENTHESIS
+#define AS_N5(keycode) &as N5 AMPS 
+#define AS_N6(keycode) &as N6 EQUAL 
+#define AS_N7(keycode) &as N7 RIGHT_PARENTHESIS 
+#define AS_N8(keycode) &as N8 RIGHT_BRACE 
+#define AS_N9(keycode) &as N9 RIGHT_BRACKET 
+#define AS_N0(keycode) &as N0 STAR 
+#define AS_EXL(keycode) &as PRCNT EXCL 
+
 // #define HYP(key) LS(LC(LA(LG(key))))
 #define HYPERKEY(key) LS(LC(LA(LG(key))))
 #define HYP(key) LS(LC(LA(key)))
@@ -192,10 +205,19 @@ td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
+            tapping_term_ms = <250>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        ht_bhash: ht_bhash {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_BHASH";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&bhash>;
         };
   };
 
@@ -259,9 +281,9 @@ td_mt: tap_dance_mod_tap {
        prime_layer {
       bindings = <
         &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog 4                                                     &mo 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
-        &mt MEH TAB   &kp SEMI    &kp COMMA &kp DOT  &lt 12 P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
+        &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &ht_bhash  MEH 0
         &mt HYPER ESC   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 D    &hm RCTRL  H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
-        &kp LSHFT  &lt 12 APOS    &kp Q     &kp J    &lt 12 K      &kp X         &none     &none     &mo 7 &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
+        &kp LSHFT  &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &mo 7 &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
         &mo 12     &dtilde     &gpipe  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
         >;
     };
