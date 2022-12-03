@@ -223,6 +223,15 @@ td_mt: tap_dance_mod_tap {
 
 
 
+    // combos {
+    //     compatible = "zmk,combos";
+    //     combo_esc {
+    //         timeout-ms = <20>;
+    //         key-positions = <41 42>;
+    //         bindings = <&kp ENTER>;
+    //     };
+    // };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -231,10 +240,10 @@ td_mt: tap_dance_mod_tap {
         default_layer {
             bindings = <
                 &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5               &tog 1      &mo 3     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &kp MINUS
-                &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T                &tog 5      &none      &kp Y      &kp U      &kp I      &kp O      &kp P   &kp BSLH
+                &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T                &tog 5      &tog 2      &kp Y      &kp U      &kp I      &kp O      &kp P   &kp BSLH
                 &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G                &none  &mt LCTRL HYP(SPACE)   &kp LALT                         &kp LGUI  &mt RCTRL HYP(SPACE)      &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
                 &kp LSHFT      &kp Z       &kp X    &kp C     &kp V      &kp B     &none      &none   &kp HOME      &none      &none  &kp PG_UP      &none      &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                &mo 2           &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT            &kp BACKSPACE            &lt 6 ESC    &mo 7  &mo 7  &kp ENTER  &lt 7 SPACE   &kp DOWN     &kp UP   &kp LBKT  &kp RBKT   &mo 2
+                &mo 12           &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT            &kp BACKSPACE            &lt 6 ESC    &mo 7  &mo 7  &kp ENTER  &lt 7 SPACE   &kp DOWN     &kp UP   &kp LBKT  &kp RBKT   &mo 12
             >;
         };
 
@@ -248,14 +257,14 @@ td_mt: tap_dance_mod_tap {
             >;
         };
 
-        layer_fn {
-            bindings = <
-       &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog 1   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-       &trans           &trans         &trans         &trans          &trans  &trans             &none   &none  &trans  &trans  &trans   &trans   &trans   &trans
-       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &none  &trans  &trans                   &kp F19   &kp F24    &none  &kp F19   &kp F24  &trans  &trans  &trans  &trans
-       &trans           &trans         &trans         &trans          &trans  &trans             &none   &none  &trans   &none   &none   &trans    &none    &none  &trans  &trans  &trans  &trans  &trans  &trans
-       &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans
-            >;
+        colemak_5 {
+      bindings = <
+        &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog 4                                                     &mo 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
+        &mt MEH TAB   &kp Q    &kp W &lt 12 F  &lt 12 P      &kp B   &tog 5                                                     &tog 2 &kp J    &kp L    &kp U     &kp Y     &kp SEMI    &ht_bhash  MEH 0
+        &mt HYPER ESC   &hm LGUI A       &hm LALT R     &hm LSFT S    &hm LCTL T      &lt 9 G   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 M    &hm RCTRL  N  &hm RSHFT E     &hm LALT I     &hm RGUI O    &mt HYPER MINUS
+        &kp LSHFT  &lt 12 Z    &kp X     &kp C    &kp D      &kp V         &none     &none     &mo 7 &none &none &kp PG_UP &none     &none  &kp K    &kp H    &kp COMMA     &kp DOT     &kp FSLH    &kp RSHFT
+        &mo 12     &dtilde     &gpipe  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp APOS  &acaret  &mo 12
+        >;
         };
 
         layer_mod {
@@ -278,17 +287,17 @@ td_mt: tap_dance_mod_tap {
             >;
         };
 
-       prime_layer {
+       prime_layer_5 {
       bindings = <
         &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog 4                                                     &mo 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
-        &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &tog 5                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &ht_bhash  MEH 0
+        &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &tog 5                                                     &none &kp F    &kp G    &kp C     &kp R     &kp L    &ht_bhash  MEH 0
         &mt HYPER ESC   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 D    &hm RCTRL  H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
         &kp LSHFT  &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &mo 7 &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
         &mo 12     &dtilde     &gpipe  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
         >;
     };
 
-        layer_qwerty_nav {
+        layer_qwerty_nav_6 {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
@@ -298,7 +307,7 @@ td_mt: tap_dance_mod_tap {
             >;
         };
 
-         symbols_layer {
+         symbols_layer_7 {
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &macro_equal_space   &kp AT     &kp UNDER    &kp LBKT    &kp RBKT      &kp CARET  &none                                                                        &none &kp EXCL  &kp LT  &kp GT     &kp EQUAL    &kp AMPS    &kp BSLH
@@ -308,7 +317,7 @@ td_mt: tap_dance_mod_tap {
       >;
     };   
 
-      deleting_layer {
+      deleting_layer_8 {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans &macro_delete_whole_line &macro_delete_till_start_line &macro_delete_till_end_line  &trans  &trans            &trans                                                                  &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
@@ -317,7 +326,7 @@ td_mt: tap_dance_mod_tap {
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
-  jump_words_layer {
+  jump_words_layer_9 {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &kp LC(LEFT) &kp HOME              &kp END &kp LC(RIGHT)  &trans &trans
@@ -326,7 +335,7 @@ td_mt: tap_dance_mod_tap {
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
-deleting_layer_on_right {
+deleting_layer_on_right_10 {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &macro_delete_whole_line &macro_delete_till_start_line              &macro_delete_till_end_line &trans  &trans &trans
@@ -344,16 +353,24 @@ deleting_layer_on_right {
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
-
-                layer_fn_12 {
+              layer_fn_12 {
             bindings = <
        &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog 1                                  &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-       &trans           &trans         &trans         &trans          &trans  &trans             &none                                   &none  &kp KP_ENTER  &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_N0   &trans
-       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &none  &trans  &trans                   &kp F19   &kp F24    &none  &kp DOT   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MINUS   &trans
-       &trans           &trans         &trans         &trans          &trans  &trans             &none   &none  &trans   &none   &none   &trans    &none    &none   &kp COMMA  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_PLUS  &trans
-       &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp KP_NUM  &kp EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
+       &trans           &trans         &trans         &trans          &trans  &trans             &trans                                   &trans  &kp ENTER  &kp N7     &kp N8      &kp N9     &kp N0   &trans
+       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &trans  &trans  &trans                   &trans   &trans    &trans  &kp DOT   &kp N4  &kp N5  &kp N6   &kp MINUS   &trans
+       &trans           &trans         &trans         &trans          &trans  &trans             &trans   &trans  &trans   &trans   &trans   &trans    &trans    &trans   &kp COMMA  &kp N1  &kp N2  &kp N3  &kp PLUS  &trans
+       &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp ENTER  &kp EQUAL  &kp FSLH  &kp ASTRK  &trans
             >;
         };
+    //             layer_fn_12 {
+    //         bindings = <
+    //    &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog 1                                  &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+    //    &trans           &trans         &trans         &trans          &trans  &trans             &none                                   &none  &kp KP_ENTER  &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_N0   &trans
+    //    &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &none  &trans  &trans                   &kp F19   &kp F24    &none  &kp DOT   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MINUS   &trans
+    //    &trans           &trans         &trans         &trans          &trans  &trans             &none   &none  &trans   &none   &none   &trans    &none    &none   &kp COMMA  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_PLUS  &trans
+    //    &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp KP_NUM  &kp EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
+    //         >;
+    //     };
 
     };
 };
