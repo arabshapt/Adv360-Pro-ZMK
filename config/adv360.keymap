@@ -290,10 +290,10 @@ td_mt: tap_dance_mod_tap {
        prime_layer_5 {
       bindings = <
         &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog 4                                                     &mo 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
-        &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &tog 5                                                     &none &kp F    &kp G    &kp C     &kp R     &kp L    &ht_bhash  MEH 0
-        &mt HYPER ESC   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 D    &hm RCTRL  H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
-        &kp LSHFT  &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &mo 7 &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
-        &mo 12     &dtilde     &gpipe  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
+        &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &tog 5                                                     &none &kp F    &kp G    &lt 8 C     &kp R     &kp L    &ht_bhash  MEH 0
+        &mt HYPER ESC   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 D    &kp H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
+        &kp LSHFT  &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &mo 8 &none &none &lt 6 ESC &none     &none  &kp B    &hm RCTRL M    &kp W     &kp V     &kp Z    &kp RSHFT
+        &mo 12     &dtilde     &gpipe  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 8 &lt 12  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
         >;
     };
 
@@ -302,7 +302,7 @@ td_mt: tap_dance_mod_tap {
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
        &trans  &trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE   &kp C_VOLUME_UP   &kp C_MUTE            &trans  &trans  &trans                                                  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-       &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans
+       &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
