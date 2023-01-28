@@ -170,6 +170,77 @@ skp_n0: star_kp_n0 {
     bindings = <&kp STAR>, <&kp N0>;
     mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
 };
+
+n1_pkp: plus_n1_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "plus_n1_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N1>, <&kp PLUS>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n2_lkp: left_bracket_n2_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "left_bracket_n2_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n3_lkp: left_brace_n3_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "left_brace_n3_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N3>, <&kp LEFT_BRACE>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n4_lkp: left_parenthesis_n4_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "left_parenthesis_n4_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N4>, <&kp LEFT_PARENTHESIS>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n5_akp: amps_n5_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "amps_n5_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N5>, <&kp AMPS>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n6_ekp: equal_n6_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "equal_n6_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N6>, <&kp EQUAL>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n7_rkp: right_parenthesis_n7_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "right_parenthesis_n7_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N7>, <&kp RIGHT_PARENTHESIS>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n8_rkp: right_brace_n8_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "right_brace_n8_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N8>, <&kp RIGHT_BRACE>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n9_rkp: right_bracket_n9_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "right_bracket_n9_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N9>, <&kp RIGHT_BRACKET>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
+n0_skp: star_n0_kp {
+    compatible = "zmk,behavior-mod-morph";
+    label = "star_n0_kp";
+    #binding-cells = <0>;
+    bindings = <&kp N0>, <&kp STAR>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
 eprcnt: excl_prcnt {
     compatible = "zmk,behavior-mod-morph";
     label = "excl_prcnt";
@@ -366,7 +437,7 @@ wait-ms = <50>;
 
        prime_layer_5 {
       bindings = <
-        &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &dynmacron PLAY                                                    &to 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
+        &ppipe    &n1_pkp     &n2_lkp   &n3_lkp  &n4_lkp    &n5_akp        &dynmacron PLAY                                                    &to 3           &n6_ekp  &n7_rkp  &n8_rkp   &n9_rkp   &n0_skp  &eprcnt
         &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &dynmacrot PLAY                                                     &dynmacros PLAY &kp F    &kp G    &lt 8 C     &kp R     &kp L    &ht_bhash  MEH 0
         &mt HYPER TAB   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &kp CARET    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &kp HASH &lt 8 D    &kp H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
         &kp LSHFT &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &leaders &none &none &lt 13 ESC &none     &none  &kp B    &hm RCTRL M    &kp W     &kp V     &kp Z    &custom_shift RSHFT 0
@@ -386,7 +457,7 @@ wait-ms = <50>;
 
          symbols_layer_7 {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &to 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp EQUAL &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 1                                                                       &to 3 &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0   &kp MINUS
         &macro_equal_space   &kp AT     &kp UNDER    &kp LBKT    &kp RBKT      &kp CARET  &none                                                                        &none &kp EXCL  &kp LT  &kp GT     &kp EQUAL    &kp AMPS    &kp BSLH
         &macro_const   &kp BSLH     &kp FSLH    &kp LBRC    &kp RBRC      &kp ASTRK  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp QMARK  &kp LPAR  &kp RPAR     &kp MINUS    &kp COLON &macro_parenth_equal_great
         &trans &kp POUND     &kp DLLR    &kp PIPE    &kp TILDE      &kp GRAVE         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp PLUS  &kp PRCNT  &kp DOUBLE_QUOTES &kp SINGLE_QUOTE  &kp SEMICOLON &kp RSHFT
