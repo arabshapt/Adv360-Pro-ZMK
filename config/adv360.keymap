@@ -325,7 +325,6 @@ leader_sequences {
   };
 
 
-
     macros {
         //        win_shift_grave: win_shift_grave {
         //            label = "win_shift_grave";
