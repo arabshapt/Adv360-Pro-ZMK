@@ -439,11 +439,20 @@ wait-ms = <50>;
       bindings = <
         &ppipe    &kp N1      &kp N2   &kp N3    &kp N4     &kp N5        &dynmacron PLAY                                                    &to 3      &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &eprcnt
         &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &dynmacrot PLAY                                                     &dynmacros PLAY &kp F    &kp G    &lt 8 C     &kp R     &kp L    &ht_bhash  MEH 0
-        &mt HYPER TAB   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &kp CARET    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &kp HASH &lt 8 D    &kp H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
-        &kp LSHFT &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &mo 7 &none &none &mo 7 &none     &none  &kp B    &hm RCTRL M    &kp W     &kp V     &kp Z    &custom_shift RSHFT 0
+        &mt HYPER TAB   &hm LCTL A       &hm LALT O     &hm LSFT E    &hm LGUI U      &lt 9 I   &kp CARET    &mt LGUI HYP(SPACE) &kp LALT                    &kp LCTL  &mt RGUI HYP(SPACE)  &kp HASH &lt 8 D    &kp H  &hm RSHFT T     &hm LALT N     &hm LCTL S    &mt HYPER MINUS
+        &kp LSHFT &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &mo 7 &none &none &mo 7 &none     &none  &kp B    &hm RGUI M    &kp W     &kp V     &kp Z    &custom_shift RSHFT 0
         &mo 12     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt 12 BKSP  &lt 6 ESC   &dynmacroa PLAY             &mt HYPER TAB &lt 12  ENTER &mt HYPER SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
         >;
     };
+    //    prime_layer_5 {
+    //   bindings = <
+    //     &ppipe    &kp N1      &kp N2   &kp N3    &kp N4     &kp N5        &dynmacron PLAY                                                    &to 3      &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &eprcnt
+    //     &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &dynmacrot PLAY                                                     &dynmacros PLAY &kp F    &kp G    &lt 8 C     &kp R     &kp L    &ht_bhash  MEH 0
+    //     &mt HYPER TAB   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &kp CARET    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &kp HASH &lt 8 D    &kp H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
+    //     &kp LSHFT &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &mo 7 &none &none &mo 7 &none     &none  &kp B    &hm RCTRL M    &kp W     &kp V     &kp Z    &custom_shift RSHFT 0
+    //     &mo 12     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt 12 BKSP  &lt 6 ESC   &dynmacroa PLAY             &mt HYPER TAB &lt 12  ENTER &mt HYPER SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
+    //     >;
+    // };
 
         layer_qwerty_nav_6 {
             bindings = <
