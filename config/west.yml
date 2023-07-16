@@ -6,8 +6,10 @@ manifest:
       url-base: https://github.com/arabshapt
   projects:
     - name: zmk
-      remote: arabshapt
-      revision: main
+      # remote: arabshapt
+      # revision: main
+      remote: refil
+      revision: adv360-z3.2
       import: app/west.yml
   self:
     path: config
