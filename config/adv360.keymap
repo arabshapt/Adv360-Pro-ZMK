@@ -455,11 +455,11 @@ td_mt: tap_dance_mod_tap {
 
        prime_layer_5 {
       bindings = <
-        &ppipe        &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                          &to 3    &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &eprcnt
+        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                          &to 3    &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
         &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &tog 3                                                                                                          &trans   &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
         &mt HYPER TAB &hm LCTL A  &hm LALT O &hm LSFT E &hm LGUI U &lt 9 I &kp CARET   &mt LGUI HYP(SPACE)    &kp LALT         &kp LCTL                     &mt RGUI HYPERKEY(SPACE)       &kp HASH &lt 8 D  &kp H       &hm RSHFT T &hm LALT N  &hm LCTL S &mt HYPER MINUS
         &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                      &mo 7            &mo 7                                                                &kp B    &hm RGUI M  &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
-        &mo 12        &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC &mt KP_MINUS TAB &mt KP_ASTERISK HYPERKEY(F9) &lt 12  ENTER &lt 7 SPACE                    &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 12
+        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC &mt KP_MINUS TAB &mt KP_ASTERISK HYPERKEY(F9) &lt 12  ENTER &lt 7 SPACE                        &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
         >;
     };
     //    prime_layer_5 {
@@ -484,7 +484,7 @@ td_mt: tap_dance_mod_tap {
 
          symbols_layer_7 {
       bindings = <
-        &kp EQUAL &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 1                                                                       &to 3 &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0   &kp MINUS
+        &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6 &tog 1                                                                       &to 3 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
         &macro_equal_space   &kp AT     &kp UNDER    &kp LBKT    &kp RBKT      &kp CARET  &none                                                                        &none &kp EXCL  &kp LT  &kp GT     &kp EQUAL    &kp AMPS    &kp BSLH
         &macro_const   &kp BSLH     &kp FSLH    &kp LBRC    &kp RBRC      &kp ASTRK  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp QMARK  &kp LPAR  &kp RPAR     &kp MINUS    &kp COLON &kp SPACE
         &trans &kp POUND     &kp DLLR    &kp PIPE    &kp TILDE      &kp GRAVE                            &kp HOME             &kp PG_UP                           &kp PLUS  &kp PRCNT  &kp DOUBLE_QUOTES &kp SINGLE_QUOTE  &kp SEMICOLON &kp RSHFT
