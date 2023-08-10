@@ -23,11 +23,11 @@
 
 // #define HYP(key) LS(LC(LA(LG(key))))
 #define HYPERKEY(key) LS(LC(LA(LG(key)))) // hyper
-#define HYP(key) LS(LG(LA(key))) // hyp
-#define MEH(key) LS(LC(LA(key))) // meh
-#define CAG(key) LG(LC(LA(key))) // cog
-#define GAS(key) LS(LG(LA(key))) // cos
-#define CSG(key) LS(LC(LG(key))) //  cst
+#define HYPKEY(key) LS(LG(LA(key))) // hyp
+#define MEHKEY(key) LS(LC(LA(key))) // meh
+#define CAGKEY(key) LG(LC(LA(key))) // cog
+#define GASKEY(key) LS(LG(LA(key))) // cos
+#define CSGKEY(key) LS(LC(LG(key))) //  cst
 
 #define HYPER    LS(LC(LA(LGUI))) // hyper
 #define HYP LS(LA(LGUI)) // hyp
@@ -416,7 +416,7 @@ td_mt: tap_dance_mod_tap {
             bindings = <
                 &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5    &tog 3                                                                             &to 3  &kp N6   &kp N7   &kp N8     &kp N9   &kp N0   &kp MINUS
                 &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T     &tog 5                                                                             &tog 2 &kp Y    &kp U    &kp I      &kp O    &kp P    &kp BSLH
-                &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G     &none            &mt LCTRL HYP(SPACE)   &kp LALT &kp LGUI  &mt RCTRL HYP(SPACE)    &none  &kp H    &kp J    &kp K      &kp L    &kp SEMI &kp SQT
+                &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G     &none            &mt LCTRL HYPKEY(SPACE)   &kp LALT &kp LGUI  &mt RCTRL HYPKEY(SPACE)    &none  &kp H    &kp J    &kp K      &kp L    &kp SEMI &kp SQT
                 &kp LSHFT       &kp Z       &kp X    &kp C     &kp V      &kp B                                             &kp HOME &kp PG_UP                                &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH &kp RSHFT
                 &mo 12          &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT                    &kp BSPC &lt 6 ESC              &mo 7    &mo 7     &kp ENTER  &lt 7 SPACE                  &kp DOWN &kp UP     &kp LBKT &kp RBKT &mo 12
             >;
@@ -436,7 +436,7 @@ td_mt: tap_dance_mod_tap {
       bindings = <
         &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog 4                                                     &to 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
         &mt MEH TAB   &kp Q    &kp W &lt 12 F  &lt 12 P      &kp B   &tog 5                                                     &tog 2 &kp J    &kp L    &kp U     &kp Y     &kp SEMI    &ht_bhash  MEH 0
-        &mt HYPER ESC   &hm LGUI A       &hm LALT R     &hm LSFT S    &hm LCTL T      &lt 9 G   &none    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &none &lt 8 M    &hm RCTRL  N  &hm RSHFT E     &hm LALT I     &hm RGUI O    &mt HYPER MINUS
+        &mt HYPER ESC   &hm LGUI A       &hm LALT R     &hm LSFT S    &hm LCTL T      &lt 9 G   &none    &mt LCTRL HYPKEY(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYPKEY(SPACE)  &none &lt 8 M    &hm RCTRL  N  &hm RSHFT E     &hm LALT I     &hm RGUI O    &mt HYPER MINUS
         &kp LSHFT  &lt 12 Z    &kp X     &kp C    &kp D      &kp V              &mo 7  &kp PG_UP   &kp K    &kp H    &kp COMMA     &kp DOT     &kp FSLH    &kp RSHFT
         &mo 12     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp APOS  &acaret  &mo 12
         >;
@@ -464,11 +464,11 @@ td_mt: tap_dance_mod_tap {
 
        prime_layer_5 {
       bindings = <
-        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                          &to 3    &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
-        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &tog 3                                                                                                          &trans   &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
-        &mt HYPER TAB &hm LCTL A  &hm LALT O &hm LSFT E &hm LGUI U &lt 9 I &kp CARET   &mt LGUI HYP(SPACE)    &kp LALT         &kp LCTL                     &mt RGUI HYPERKEY(KP_SLASH)    &kp HASH &lt 8 D  &hm RGUI H  &hm RSHFT T &hm LALT N  &hm LCTL S &mt HYPER MINUS
-        &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                      &mo 7            &mo 7                                                                &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
-        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC &mt KP_MINUS TAB &mt KP_ASTERISK HYPERKEY(F9) &lt 12  ENTER &lt 7 SPACE                        &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
+        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                                                          &to 3    &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
+        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &tog 3                                                                                                                                          &kp HYP  &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
+        &mt HYPER TAB &hm LCTL A  &hm LALT O &hm LSFT E &hm LGUI U &lt 9 I &kp CARET                &mt LGUI HYPKEY(SPACE)  &mt LALT HYPERKEY(KP_N2)  &mt LCTL HYPERKEY(KP_N1)     &mt RGUI HYPERKEY(KP_SLASH)             &kp HASH &lt 8 D  &hm RGUI H  &hm RSHFT T &hm LALT N  &hm LCTL S &mt HYPER MINUS
+        &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                                    &mo 7                     &mo 7                                                                         &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC               &mt KP_MINUS TAB          &mt KP_ASTERISK HYPERKEY(F9) &lt 12  ENTER               &lt 7 SPACE                   &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
         >;
     };
     //    prime_layer_5 {
@@ -484,7 +484,7 @@ td_mt: tap_dance_mod_tap {
         layer_qwerty_nav_6 {
             bindings = <
        &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans     &kp LG(LS(TAB))          &kp LG(TAB)         &trans  &trans  &trans
-       &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp HYP(O)  &trans  &trans
+       &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp HYPKEY(O)  &trans  &trans
        &trans  &trans     &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp C_VOLUME_UP   &kp C_MUTE            &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
        &trans  &kp LG(Z)  &kp LG(X)         &kp LG(C)        &kp LG(V)  &kp LG(LS((Z)))                                 &trans  &trans                   &trans          &kp HYPERKEY(M)       &kp HYPERKEY(COMMA)           &trans  &trans  &trans
        &trans  &trans     &trans            &trans           &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
