@@ -22,10 +22,19 @@
 // #define AS_EXL(keycode) &as PRCNT EXCL 
 
 // #define HYP(key) LS(LC(LA(LG(key))))
-#define HYPERKEY(key) LS(LC(LA(LG(key))))
-#define HYP(key) LS(LC(LA(key)))
-#define MEH LS(LA(LCTRL))
-#define HYPER    LS(LC(LA(LGUI)))
+#define HYPERKEY(key) LS(LC(LA(LG(key)))) // hyper
+#define HYP(key) LS(LG(LA(key))) // hyp
+#define MEH(key) LS(LC(LA(key))) // meh
+#define CAG(key) LG(LC(LA(key))) // cog
+#define GAS(key) LS(LG(LA(key))) // cos
+#define CSG(key) LS(LC(LG(key))) //  cst
+
+#define HYPER    LS(LC(LA(LGUI))) // hyper
+#define HYP LS(LA(LGUI)) // hyp
+#define MEH LS(LA(LCTL)) // meh
+#define CAG LG(LA(LCTL)) // cog
+#define GAS LS(LA(LGUI)) // cos
+#define CSG LS(LC(LGUI)) //  cst
 
 #define BROWSER_SEARCH LG(F) 
 #define BROWSER_NEWTAB LG(T) 
@@ -475,7 +484,7 @@ td_mt: tap_dance_mod_tap {
         layer_qwerty_nav_6 {
             bindings = <
        &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans     &kp LG(LS(TAB))          &kp LG(TAB)         &trans  &trans  &trans
-       &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LG(LS(A))  &trans  &trans
+       &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp HYP(O)  &trans  &trans
        &trans  &trans     &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp C_VOLUME_UP   &kp C_MUTE            &trans  &trans  &trans             &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ENTER  &trans
        &trans  &kp LG(Z)  &kp LG(X)         &kp LG(C)        &kp LG(V)  &kp LG(LS((Z)))                                 &trans  &trans                   &trans          &kp HYPERKEY(M)       &kp HYPERKEY(COMMA)           &trans  &trans  &trans
        &trans  &trans     &trans            &trans           &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
