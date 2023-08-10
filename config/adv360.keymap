@@ -444,11 +444,11 @@ td_mt: tap_dance_mod_tap {
 
         layer_mod_3 {
             bindings = <
-        &to 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog 3                                                                                     &to 3                  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to 0 
-        &to 2 &none        &none        &none        &none        &none        &bootloader                                                                                &bootloader            &none        &none        &none        &none        &none        &to 2 
-        &to 5 &none        &none        &none        &none        &none        &none             &rgb_ug RGB_MEFS_CMD 5 &bt BT_CLR &bt BT_CLR  &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &to 5 
-        &to 4 &none        &none        &none        &none        &none                                                 &none      &none                                                         &none        &none        &none        &none        &none        &to 4 
-        &to 5 &none        &none        &bl BL_INC   &bl BL_DEC                                  &rgb_ug RGB_TOG &none  &none      &none       &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &to 5 
+        &to 0  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog 3                                                                                     &to 3                  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to 0 
+        &to 2  &none        &none        &none        &none        &none        &bootloader                                                                                &bootloader            &none        &none        &none        &none        &none        &to 2 
+        &to 5  &none        &none        &none        &none        &none        &none             &rgb_ug RGB_MEFS_CMD 5 &bt BT_CLR &bt BT_CLR  &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &to 5 
+        &to 4  &none        &none        &none        &none        &none                                                 &none      &none                                                         &none        &none        &none        &none        &none        &to 4 
+        &to 14 &none        &none        &bl BL_INC   &bl BL_DEC                                  &rgb_ug RGB_TOG &none  &none      &none       &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &to 5 
             >;
         };
         
@@ -464,11 +464,11 @@ td_mt: tap_dance_mod_tap {
 
        prime_layer_5 {
       bindings = <
-        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                                                          &to 3    &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
-        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &tog 3                                                                                                                                          &kp HYP  &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
-        &mt HYPER TAB &hm LCTL A  &hm LALT O &hm LSFT E &hm LGUI U &lt 9 I &kp CARET                &mt LGUI HYPKEY(SPACE)  &mt LALT HYPERKEY(KP_N2)  &mt LCTL HYPERKEY(KP_N1)     &mt RGUI HYPERKEY(KP_SLASH)             &kp HASH &lt 8 D  &hm RGUI H  &hm RSHFT T &hm LALT N  &hm LCTL S &mt HYPER MINUS
-        &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                                    &mo 7                     &mo 7                                                                         &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
-        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC               &mt KP_MINUS TAB          &mt KP_ASTERISK HYPERKEY(F9) &lt 12  ENTER               &lt 7 SPACE                   &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
+        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                                                          &to 3         &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
+        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &mt LCTRL CAG                                                                                                                                   &mt LALT HYP  &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
+        &mt HYPER TAB &hm LCTL A  &hm LALT O &hm LSFT E &hm LGUI U &lt 9 I &mt LCTRL GAS            &mt LGUI HYPKEY(SPACE)  &mt LALT HYPERKEY(KP_N2)  &mt LCTL HYPERKEY(KP_N1)     &mt RGUI HYPERKEY(KP_SLASH)             &mt LALT CSG  &lt 8 D  &hm RGUI H  &hm RSHFT T &hm LALT N  &hm LCTL S &mt HYPER MINUS
+        &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                                    &mo 7                     &mo 7                                                                              &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC               &mt KP_MINUS TAB          &mt KP_ASTERISK HYPERKEY(F9) &lt 12  ENTER               &lt 7 SPACE                        &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
         >;
     };
     //    prime_layer_5 {
@@ -555,6 +555,16 @@ deleting_layer_on_right_10 {
        &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp BSPC  &kp EQUAL  &kp FSLH  &kp ASTRK  &trans
             >;
         };
+
+         prime_layer_14 {
+      bindings = <
+        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                                                          &to 3        &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
+        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &mt LCTRL CAG                                                                                                                                   &mt LALT HYP &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
+        &mt HYPER TAB &kp  A      &kp  O     &kp  E     &kp  U     &kp I   &mt LCTRL GAS            &mt LGUI HYPKEY(SPACE)  &mt LALT HYPERKEY(KP_N2)  &mt LCTL HYPERKEY(KP_N1)     &mt RGUI HYPERKEY(KP_SLASH)             &mt LALT CSG &kp D    &kp  H      &kp  T      &kp  N      &kp  S     &mt HYPER MINUS
+        &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                                    &mo 7                     &mo 7                                                                             &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC               &mt KP_MINUS TAB          &mt KP_ASTERISK HYPERKEY(F9) &lt 12  ENTER               &lt 7 SPACE                       &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
+        >;
+    };
 
     //             layer_fn_12 {
     //         bindings = <
