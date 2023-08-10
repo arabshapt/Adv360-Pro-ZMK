@@ -42,6 +42,21 @@
 #define BROWSER_NEXTTAB LG(LA(RIGHT))
 #define BROWSER_PREVTAB LG(LA(LEFT))
 
+#define DEFAULT_QWERTY             0
+#define LAYER_KEYPAD               1
+#define COLEMAK                    2
+#define LAYER_MOD                  3
+#define LAYER_GAMING               4
+#define PRIME_LAYER                5
+#define LAYER_QWERTY_NAV           6
+#define SYMBOLS_LAYER              7
+#define DELETING_LAYER             8
+#define JUMP_WORDS_LAYER           9
+#define DELETING_LAYER_ON_RIGHT    10
+#define SELECTING_LAYER_ON_RIGHT   11
+#define LAYER_FN                   12
+#define PRIME_LAYER_NO_MODS        13
+
 // #define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
 //     leader_##NAME { \
 //         key-positions = <KEYS>; \
@@ -412,49 +427,49 @@ td_mt: tap_dance_mod_tap {
         compatible = "zmk,keymap";
 
                     
-        default_layer_0 {
+        DEFAULT_QWERTY {
             bindings = <
-                &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5    &tog 3                                                                             &to 3  &kp N6   &kp N7   &kp N8     &kp N9   &kp N0   &kp MINUS
-                &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T     &tog 5                                                                             &tog 2 &kp Y    &kp U    &kp I      &kp O    &kp P    &kp BSLH
+                &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5    &tog LAYER_MOD                                                                             &to LAYER_MOD  &kp N6   &kp N7   &kp N8     &kp N9   &kp N0   &kp MINUS
+                &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T     &tog PRIME_LAYER                                                                             &tog COLEMAK &kp Y    &kp U    &kp I      &kp O    &kp P    &kp BSLH
                 &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G     &none            &mt LCTRL HYPKEY(SPACE)   &kp LALT &kp LGUI  &mt RCTRL HYPKEY(SPACE)    &none  &kp H    &kp J    &kp K      &kp L    &kp SEMI &kp SQT
                 &kp LSHFT       &kp Z       &kp X    &kp C     &kp V      &kp B                                             &kp HOME &kp PG_UP                                &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH &kp RSHFT
-                &mo 12          &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT                    &kp BSPC &lt 6 ESC              &mo 7    &mo 7     &kp ENTER  &lt 7 SPACE                  &kp DOWN &kp UP     &kp LBKT &kp RBKT &mo 12
+                &mo LAYER_FN          &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT                    &kp BSPC &lt LAYER_QWERTY_NAV ESC              &mo SYMBOLS_LAYER    &mo SYMBOLS_LAYER     &kp ENTER  &lt SYMBOLS_LAYER SPACE                  &kp DOWN &kp UP     &kp LBKT &kp RBKT &mo LAYER_FN
             >;
         };
 
-        layer_keypad_1 {
+        LAYER_KEYPAD {
             bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3     &kp N4    &kp N5 &trans     &to 3     &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp MINUS
+                &kp EQUAL &kp N1    &kp N2    &kp N3     &kp N4    &kp N5 &trans     &to LAYER_MOD     &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp MINUS
                 &kp TAB   &kp Q     &kp W     &kp E      &kp R     &kp T  &none      &none      &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS    &kp BSLH
                 &kp ESC   &kp A     &kp S     &kp D      &kp F     &kp G  &none      &kp LCTRL   &kp LALT                                 &kp C_VOLUME_DOWN        &kp C_VOLUME_UP       &none     &kp H  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS    &kp SQT
                 &kp LSHFT &kp Z     &kp X     &kp C      &kp V     &kp B               &kp HOME         &kp C_PLAY_PAUSE           &kp N  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER  &kp RSHFT
-                &mo 2     &kp GRAVE &kp CAPS  &kp LEFT   &kp RIGHT                 &kp BSPC          &kp DEL    &kp END  &kp C_MUTE   &kp ENTER     &kp KP_N0         &kp UP         &kp DOWN  &kp KP_DOT  &kp RBKT      &mo 2
+                &mo COLEMAK     &kp GRAVE &kp CAPS  &kp LEFT   &kp RIGHT                 &kp BSPC          &kp DEL    &kp END  &kp C_MUTE   &kp ENTER     &kp KP_N0         &kp UP         &kp DOWN  &kp KP_DOT  &kp RBKT      &mo COLEMAK
             >;
         };
 //put  &tog 5 somewhere on layer 3
-        colemak_2 {
-      bindings = <
-        &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog 4                                                     &to 3           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
-        &mt MEH TAB   &kp Q    &kp W &lt 12 F  &lt 12 P      &kp B   &tog 5                                                     &tog 2 &kp J    &kp L    &kp U     &kp Y     &kp SEMI    &ht_bhash  MEH 0
-        &mt HYPER ESC   &hm LGUI A       &hm LALT R     &hm LSFT S    &hm LCTL T      &lt 9 G   &none    &mt LCTRL HYPKEY(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYPKEY(SPACE)  &none &lt 8 M    &hm RCTRL  N  &hm RSHFT E     &hm LALT I     &hm RGUI O    &mt HYPER MINUS
-        &kp LSHFT  &lt 12 Z    &kp X     &kp C    &kp D      &kp V              &mo 7  &kp PG_UP   &kp K    &kp H    &kp COMMA     &kp DOT     &kp FSLH    &kp RSHFT
-        &mo 12     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt 7 BKSP  &lt 6 ESC   &caps_word             &mo 7 &lt 7  ENTER &lt 7 SPACE       &kp DOWN   &kp UP  &kp APOS  &acaret  &mo 12
+        COLEMAK {
+            bindings = <
+        &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog LAYER_GAMING                                                     &to LAYER_MOD           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
+        &mt MEH TAB   &kp Q    &kp W &lt LAYER_FN F  &lt LAYER_FN P      &kp B   &tog PRIME_LAYER                                                     &tog COLEMAK &kp J    &kp L    &kp U     &kp Y     &kp SEMI    &ht_bhash  MEH 0
+        &mt HYPER ESC   &hm LGUI A       &hm LALT R     &hm LSFT S    &hm LCTL T      &lt JUMP_WORDS_LAYER G   &none    &mt LCTRL HYPKEY(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYPKEY(SPACE)  &none &lt DELETING_LAYER M    &hm RCTRL  N  &hm RSHFT E     &hm LALT I     &hm RGUI O    &mt HYPER MINUS
+        &kp LSHFT  &lt LAYER_FN Z    &kp X     &kp C    &kp D      &kp V              &mo SYMBOLS_LAYER  &kp PG_UP   &kp K    &kp H    &kp COMMA     &kp DOT     &kp FSLH    &kp RSHFT
+        &mo LAYER_FN     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt SYMBOLS_LAYER BKSP  &lt LAYER_QWERTY_NAV ESC   &caps_word             &mo SYMBOLS_LAYER &lt SYMBOLS_LAYER  ENTER &lt SYMBOLS_LAYER SPACE       &kp DOWN   &kp UP  &kp APOS  &acaret  &mo LAYER_FN
         >;
         };
 
-        layer_mod_3 {
+        LAYER_MOD {
             bindings = <
-        &to 0  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog 3                                                                                     &to 3                  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to 0 
-        &to 2  &none        &none        &none        &none        &none        &bootloader                                                                                &bootloader            &none        &none        &none        &none        &none        &to 2 
-        &to 5  &none        &none        &none        &none        &none        &none             &rgb_ug RGB_MEFS_CMD 5 &bt BT_CLR &bt BT_CLR  &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &to 5 
-        &to 4  &none        &none        &none        &none        &none                                                 &none      &none                                                         &none        &none        &none        &none        &none        &to 4 
-        &to 14 &none        &none        &bl BL_INC   &bl BL_DEC                                  &rgb_ug RGB_TOG &none  &none      &none       &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &to 5 
+        &to DEFAULT_QWERTY      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog LAYER_MOD                                                                             &to LAYER_MOD          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to DEFAULT_QWERTY 
+        &to COLEMAK             &none        &none        &none        &none        &none        &bootloader                                                                                &bootloader            &none        &none        &none        &none        &none        &to COLEMAK 
+        &to PRIME_LAYER         &none        &none        &none        &none        &none        &none             &rgb_ug RGB_MEFS_CMD 5 &bt BT_CLR &bt BT_CLR  &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &to PRIME_LAYER 
+        &to LAYER_GAMING        &none        &none        &none        &none        &none                                                 &none      &none                                                         &none        &none        &none        &none        &none        &to LAYER_GAMING 
+        &to PRIME_LAYER_NO_MODS &none        &none        &bl BL_INC   &bl BL_DEC                                  &rgb_ug RGB_TOG &none  &none      &none       &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &to PRIME_LAYER_NO_MODS 
             >;
         };
         
-        layer_gaming_4 {
+        LAYER_GAMING {
             bindings = <
-       &trans  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4 &none   &tog 4                                                         &to 3   &trans  &trans  &trans  &trans  &trans  &trans
+       &trans  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4 &none   &tog LAYER_GAMING                                              &to LAYER_MOD   &trans  &trans  &trans  &trans  &trans  &trans
        &trans  &kp TAB        &kp Q         &kp W         &kp E        &kp R   &kp T                                                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
        &trans  &kp ESC        &kp A         &kp S         &kp D        &kp F   &kp G             &trans  &trans        &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
        &trans  &kp LEFT_SHIFT &kp Z         &kp X         &kp C        &kp V                             &trans        &trans                         &trans  &trans  &trans  &trans  &trans  &trans
@@ -462,13 +477,13 @@ td_mt: tap_dance_mod_tap {
             >;
         };
 
-       prime_layer_5 {
+       PRIME_LAYER {
       bindings = <
-        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                                                                                     &to 3         &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
-        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &mt LCTRL CAG                                                                                                                                                              &mt LALT HYP  &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
-        &mt HYPER TAB &hm LCTL A  &hm LALT O &hm LSFT E &hm LGUI U &lt 9 I &mt LCTRL GAS            &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)             &mt LALT CSG  &lt 8 D  &hm RGUI H  &hm RSHFT T &hm LALT N  &hm LCTL S &mt HYPER MINUS
-        &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                                     &mt HYPER HYPERKEY(KP_N4)              &mt MEH HYPERKEY(KP_N5)                                                                         &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
-        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC                &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &mt HYPERKEY(KP_ASTERISK) HYPERKEY(KP_N7) &lt 12  ENTER               &lt 7 SPACE                        &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
+        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog LAYER_MOD                                                                                                                                                                     &to LAYER_MOD         &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
+        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt LAYER_FN DOT &lt LAYER_FN P   &kp Y   &mt LCTRL CAG                                                                                                                                                              &mt LALT HYP  &kp F    &kp G       &lt DELETING_LAYER C     &kp R       &kp L      &ht_bhash  MEH 0
+        &mt HYPER TAB &hm LCTL A  &hm LALT O &hm LSFT E &hm LGUI U &lt 9 I &mt LCTRL GAS            &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)             &mt LALT CSG  &lt DELETING_LAYER D  &hm RGUI H  &hm RSHFT T &hm LALT N  &hm LCTL S &mt HYPER MINUS
+        &kp LSHFT     &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                     &mt HYPER HYPERKEY(KP_N4)              &mt MEH HYPERKEY(KP_N5)                                                                         &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &mo SYMBOLS_LAYER         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt LAYER_FN BKSP  &lt LAYER_QWERTY_NAV ESC                &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &mt HYPERKEY(KP_ASTERISK) HYPERKEY(KP_N7) &lt LAYER_FN  ENTER               &lt SYMBOLS_LAYER SPACE                        &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo SYMBOLS_LAYER
         >;
     };
     //    prime_layer_5 {
@@ -481,7 +496,7 @@ td_mt: tap_dance_mod_tap {
     //     >;
     // };
 
-        layer_qwerty_nav_6 {
+        LAYER_QWERTY_NAV {
             bindings = <
        &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans     &kp LG(LS(TAB))          &kp LG(TAB)         &trans  &trans  &trans
        &trans  &trans     &trans  &trans    &trans           &trans            &trans                                                                 &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp HYPKEY(O)  &trans  &trans
@@ -491,17 +506,17 @@ td_mt: tap_dance_mod_tap {
             >;
         };
 
-         symbols_layer_7 {
+         SYMBOLS_LAYER {
       bindings = <
-        &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6 &tog 1                                                                       &to 3 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+        &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6 &tog LAYER_KEYPAD                                                                       &to LAYER_MOD &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
         &macro_equal_space   &kp AT     &kp UNDER    &kp LBKT    &kp RBKT      &kp CARET  &none                                                                        &none &kp EXCL  &kp LT  &kp GT     &kp EQUAL    &kp AMPS    &kp BSLH
         &macro_const   &kp BSLH     &kp FSLH    &kp LBRC    &kp RBRC      &kp ASTRK  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp QMARK  &kp LPAR  &kp RPAR     &kp MINUS    &kp COLON &kp SPACE
         &trans &kp POUND     &kp DLLR    &kp PIPE    &kp TILDE      &kp GRAVE                            &kp HOME             &kp PG_UP                           &kp PLUS  &kp PRCNT  &kp DOUBLE_QUOTES &kp SINGLE_QUOTE  &kp SEMICOLON &kp RSHFT
-        &macro_delete_whole_line     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &macro_delete_whole_line     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo COLEMAK
       >;
     };   
 
-      deleting_layer_8 {
+      DELETING_LAYER {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans &macro_delete_whole_line &macro_delete_till_start_line &macro_delete_till_end_line  &trans  &trans            &trans                                                                  &trans  &trans  &kp HYPERKEY(LEFT)  &kp HYPERKEY(RIGHT)  &kp LC(LS(A))  &trans  &trans
@@ -510,59 +525,49 @@ td_mt: tap_dance_mod_tap {
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
-  jump_words_layer_9 {
+    JUMP_WORDS_LAYER {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &kp LA(LEFT) &kp LG(LEFT)              &kp LG(RIGHT) &kp LA(RIGHT)  &trans &trans
-       &trans  &trans  &lt 11 O &lt 10 E &trans    &trans            &trans  &trans  &trans                                                  &trans  &trans  &trans                     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT     &kp ENTER  &trans
+       &trans  &trans  &lt SELECTING_LAYER_ON_RIGHT O &lt DELETING_LAYER_ON_RIGHT E &trans    &trans            &trans  &trans  &trans                                                  &trans  &trans  &trans                     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT     &kp ENTER  &trans
        &trans  &trans  &trans  &trans  &trans  &trans                            &trans                                                  &trans                          &kp LG(Z)          &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS((Z)))  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
-deleting_layer_on_right_10 {
+        DELETING_LAYER_ON_RIGHT {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &macro_delete_whole_line &macro_delete_till_start_line              &macro_delete_till_end_line &trans  &trans &trans
-       &trans  &trans  &lt 11 O  &lt 10 E  &trans  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                     &kp LG(BKSP) &kp BKSP &kp DEL &kp LG(DEL)     &trans  &trans
+       &trans  &trans  &lt SELECTING_LAYER_ON_RIGHT O  &lt DELETING_LAYER_ON_RIGHT E  &trans  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                     &kp LG(BKSP) &kp BKSP &kp DEL &kp LG(DEL)     &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                              &trans                                                              &kp LG(Z)          &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS((Z)))  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
-        selecting_layer_on_right_11 {
+        SELECTING_LAYER_ON_RIGHT {
             bindings = <
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans  &trans     &kp LC(LS(TAB))          &kp LC(TAB)         &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                                 &trans   &macro_select_whole_line &kp LS(HOME)  &kp LS(END) &trans  &trans &trans
-       &trans  &trans  &lt 11 O  &lt 10 E  &trans  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                &kp LS(LEFT)     &kp LS(LA(LEFT))   &kp LS(LA(RIGHT)) &kp LS(RIGHT)    &trans  &trans
+       &trans  &trans  &lt SELECTING_LAYER_ON_RIGHT O  &lt DELETING_LAYER_ON_RIGHT E  &trans  &trans            &trans  &trans  &trans                                              &trans  &trans  &trans                &kp LS(LEFT)     &kp LS(LA(LEFT))   &kp LS(LA(RIGHT)) &kp LS(RIGHT)    &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans                            &trans                                                  &trans                          &kp LG(Z)          &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS((Z)))  &trans
        &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans              &trans               &trans         &trans  &trans  &trans          &trans          &trans
             >;
         };
-              layer_fn_12 {
+        LAYER_FN {
             bindings = <
-       &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog 1                                  &to 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+       &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog LAYER_KEYPAD                                  &to LAYER_MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
        &trans           &trans         &trans         &trans          &trans  &trans             &trans                                   &trans  &kp ENTER  &kp N7     &kp N8      &kp N9     &kp  N0   &trans
        &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &trans  &trans  &trans                   &trans   &trans    &trans  &kp DOT   &kp N4  &kp N5  &kp N6   &kp  BSPC   &trans
        &trans           &trans         &trans         &trans          &trans  &trans                              &trans                     &trans                       &kp COMMA  &kp N1  &kp N2  &kp N3  &kp PLUS  &trans
        &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp BSPC  &kp EQUAL  &kp FSLH  &kp ASTRK  &trans
             >;
         };
-        layer_fn_13 {
+         PRIME_LAYER_NO_MODS {
             bindings = <
-       &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog 1                                  &to 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-       &trans           &trans         &trans         &trans          &trans  &trans             &trans                                   &trans  &kp ENTER   &trans  &trans  &trans   &trans  &trans
-       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &trans  &trans  &trans                   &trans   &trans    &trans  &kp DOT    &trans  &trans  &trans   &trans  &trans
-       &trans           &trans         &trans         &trans          &trans  &trans                              &trans                     &trans                       &kp COMMA  &kp N1  &kp N2  &kp N3  &kp PLUS  &trans
-       &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp BSPC  &kp EQUAL  &kp FSLH  &kp ASTRK  &trans
-            >;
-        };
-
-         prime_layer_14 {
-      bindings = <
-        &kp GRAVE     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5  &tog 3                                                                                                                                                                     &to 3        &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
-        &mt MEH TAB   &kp SEMI    &kp COMMA  &lt 12 DOT &lt 12 P   &kp Y   &mt LCTRL CAG                                                                                                                                                              &mt LALT HYP &kp F    &kp G       &lt 8 C     &kp R       &kp L      &ht_bhash  MEH 0
-        &mt HYPER TAB &kp A       &kp O      &kp E      &kp U      &kp I   &mt LCTRL GAS            &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)             &mt LALT CSG &kp D    &kp H       &kp  T      &kp  N      &kp  S     &mt HYPER MINUS
-        &kp LSHFT     &lt 12 APOS &kp Q      &kp J      &kp K      &kp X                                                     &mt HYPER HYPERKEY(KP_N4)              &mt MEH HYPERKEY(KP_N5)                                                                        &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
-        &mo 7         &dtilde     &gprcnt    &kp LEFT   &kp RIGHT                      &lt 12 BKSP  &lt 6 ESC                &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &mt HYPERKEY(KP_ASTERISK) HYPERKEY(KP_N7) &lt 12  ENTER               &lt 7 SPACE                       &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo 7
+        &kp GRAVE         &kp N1            &kp N2     &kp N3     &kp N4     &kp N5  &tog LAYER_MOD                                                                                                                                                                          &to LAYER_MOD  &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
+        &mt MEH TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y   &mt LCTRL CAG                                                                                                                                                                           &mt LALT HYP   &kp F    &kp G       &kp C       &kp R       &kp L      &ht_bhash  MEH 0
+        &mt HYPER TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &mt LCTRL GAS            &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &mt HYPER MINUS
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                     &mt HYPER HYPERKEY(KP_N4)              &mt MEH HYPERKEY(KP_N5)                                                                                       &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &mo SYMBOLS_LAYER &dtilde           &gprcnt    &kp LEFT   &kp RIGHT                &lt LAYER_FN BKSP  &lt LAYER_QWERTY_NAV ESC &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &mt HYPERKEY(KP_ASTERISK) HYPERKEY(KP_N7) &lt LAYER_FN  ENTER          &lt SYMBOLS_LAYER SPACE                         &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo SYMBOLS_LAYER
         >;
     };
 
