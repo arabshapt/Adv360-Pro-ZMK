@@ -37,17 +37,87 @@
 // #define GASKEY(key) LS(LG(LA(key))) // cos
 // #define CSGKEY(key) LS(LC(LG(key))) //  cst
 
-#define HYPER LS(LC(LA(LGUI))) // hyper
-#define ALL_RIGHT_HYPER_01 RS(RC(RA(RGUI))) // hyper
-#define RIGHT_CMD_HYPER_02 LS(LC(LA(RGUI))) // hyper
-#define RIGHT_CTRL_HYPER_03 LS(LG(LA(RCTRL))) // hyper
-#define RIGHT_ALT_HYPER_04 LS(LG(LC(RALT))) // hyper
-#define RIGHT_SHFT_HYPER_05 LC(LG(LA(RSHFT))) // hyper
-#define RIGHT_CMD_SHFT_HYPER_06 LC(RG(LA(RSHFT))) // hyper
-#define RIGHT_CTRL_SHFT_HYPER_07 RC(LG(LA(RSHFT))) // hyper
-#define RIGHT_ALT_SHFT_HYPER_08 LC(LG(RA(RSHFT))) // hyper
-#define RIGHT_CTRL_ALT_SHFT_HYPER_09 RC(LG(RA(RSHFT))) // hyper
-#define RIGHT_CMD_ALT_SHFT_HYPER_10 LC(RG(RA(RSHFT))) // hyper
+#define HYPER_01 LS(LC(LA(LGUI)))   // hyper  LS,LC,LA,LG
+#define HYPER_02 RS(RC(RA(RGUI)))   // hyper  RS,RC,RA,RG
+#define HYPER_03 RS(RC(RA(LSHFT)))  // hyper  RS,RC,RA,LS
+#define HYPER_04 RS(RC(RA(LCTRL)))  // hyper  RS,RC,RA,LC
+#define HYPER_05 RS(RC(RA(LALT)))   // hyper  RS,RC,RA,LA
+#define HYPER_06 RS(RC(RA(LGUI)))   // hyper  RS,RC,RA,LG
+#define HYPER_07 RS(RC(RG(LSHFT)))  // hyper  RS,RC,RG,LS
+#define HYPER_08 RS(RC(RG(LCTRL)))  // hyper  RS,RC,RG,LC
+#define HYPER_09 RS(RC(RG(LALT)))   // hyper  RS,RC,RG,LA
+#define HYPER_10 RS(RC(RG(LGUI)))   // hyper  RS,RC,RG,LG
+#define HYPER_11 RS(RC(LS(LCTRL)))  // hyper  RS,RC,LS,LC
+#define HYPER_12 RS(RC(LS(LALT)))   // hyper  RS,RC,LS,LA
+#define HYPER_13 RS(RC(LS(LGUI)))   // hyper  RS,RC,LS,LG
+#define HYPER_14 RS(RC(LC(LALT)))   // hyper  RS,RC,LC,LA
+#define HYPER_15 RS(RC(LC(LGUI)))   // hyper  RS,RC,LC,LG
+#define HYPER_16 RS(RC(LA(LGUI)))   // hyper  RS,RC,LA,LG
+#define HYPER_17 RS(RA(RG(LSHFT)))  // hyper  RS,RA,RG,LS
+#define HYPER_18 RS(RA(RG(LCTRL)))  // hyper  RS,RA,RG,LC
+#define HYPER_19 RS(RA(RG(LALT)))   // hyper  RS,RA,RG,LA
+#define HYPER_20 RS(RA(RG(LGUI)))   // hyper  RS,RA,RG,LG
+#define HYPER_21 RS(RA(LS(LCTRL)))  // hyper  RS,RA,LS,LC
+#define HYPER_22 RS(RA(LS(LALT)))   // hyper  RS,RA,LS,LA
+#define HYPER_23 RS(RA(LS(LGUI)))   // hyper  RS,RA,LS,LG
+#define HYPER_24 RS(RA(LC(LALT)))   // hyper  RS,RA,LC,LA
+#define HYPER_25 RS(RA(LC(LGUI)))   // hyper  RS,RA,LC,LG
+#define HYPER_26 RS(RA(LA(LGUI)))   // hyper  RS,RA,LA,LG
+#define HYPER_27 RS(RG(LS(LCTRL)))  // hyper  RS,RG,LS,LC
+#define HYPER_28 RS(RG(LS(LALT)))   // hyper  RS,RG,LS,LA
+#define HYPER_29 RS(RG(LS(LGUI)))   // hyper  RS,RG,LS,LG
+#define HYPER_30 RS(RG(LC(LALT)))   // hyper  RS,RG,LC,LA
+#define HYPER_31 RS(RG(LC(LGUI)))   // hyper  RS,RG,LC,LG
+#define HYPER_32 RS(RG(LA(LGUI)))   // hyper  RS,RG,LA,LG
+#define HYPER_33 RS(LS(LC(LALT)))   // hyper  RS,LS,LC,LA
+#define HYPER_34 RS(LS(LC(LGUI)))   // hyper  RS,LS,LC,LG
+#define HYPER_35 RS(LS(LA(LGUI)))   // hyper  RS,LS,LA,LG
+#define HYPER_36 RS(LC(LA(LGUI)))   // hyper  RS,LC,LA,LG
+#define HYPER_37 RC(RA(RG(LSHFT)))  // hyper  RC,RA,RG,LS
+#define HYPER_38 RC(RA(RG(LCTRL)))  // hyper  RC,RA,RG,LC
+#define HYPER_39 RC(RA(RG(LALT)))   // hyper  RC,RA,RG,LA
+#define HYPER_40 RC(RA(RG(LGUI)))   // hyper  RC,RA,RG,LG
+#define HYPER_41 RC(RA(LS(LCTRL)))  // hyper  RC,RA,LS,LC
+#define HYPER_42 RC(RA(LS(LALT)))   // hyper  RC,RA,LS,LA
+#define HYPER_43 RC(RA(LS(LGUI)))   // hyper  RC,RA,LS,LG
+#define HYPER_44 RC(RA(LC(LALT)))   // hyper  RC,RA,LC,LA
+#define HYPER_45 RC(RA(LC(LGUI)))   // hyper  RC,RA,LC,LG
+#define HYPER_46 RC(RA(LA(LGUI)))   // hyper  RC,RA,LA,LG
+#define HYPER_47 RC(RG(LS(LCTRL)))  // hyper  RC,RG,LS,LC
+#define HYPER_48 RC(RG(LS(LALT)))   // hyper  RC,RG,LS,LA
+#define HYPER_49 RC(RG(LS(LGUI)))   // hyper  RC,RG,LS,LG
+#define HYPER_50 RC(RG(LC(LALT)))   // hyper  RC,RG,LC,LA
+#define HYPER_51 RC(RG(LC(LGUI)))   // hyper  RC,RG,LC,LG
+#define HYPER_52 RC(RG(LA(LGUI)))   // hyper  RC,RG,LA,LG
+#define HYPER_53 RC(LS(LC(LALT)))   // hyper  RC,LS,LC,LA
+#define HYPER_54 RC(LS(LC(LGUI)))   // hyper  RC,LS,LC,LG
+#define HYPER_55 RC(LS(LA(LGUI)))   // hyper  RC,LS,LA,LG
+#define HYPER_56 RC(LC(LA(LGUI)))   // hyper  RC,LC,LA,LG
+#define HYPER_57 RA(RG(LS(LCTRL)))  // hyper  RA,RG,LS,LC
+#define HYPER_58 RA(RG(LS(LALT)))   // hyper  RA,RG,LS,LA
+#define HYPER_59 RA(RG(LS(LGUI)))   // hyper  RA,RG,LS,LG
+#define HYPER_60 RA(RG(LC(LALT)))   // hyper  RA,RG,LC,LA
+#define HYPER_61 RA(RG(LC(LGUI)))   // hyper  RA,RG,LC,LG
+#define HYPER_62 RA(RG(LA(LGUI)))   // hyper  RA,RG,LA,LG
+#define HYPER_63 RA(LS(LC(LALT)))   // hyper  RA,LS,LC,LA
+#define HYPER_64 RA(LS(LC(LGUI)))   // hyper  RA,LS,LC,LG
+#define HYPER_65 RA(LS(LA(LGUI)))   // hyper  RA,LS,LA,LG
+#define HYPER_66 RA(LC(LA(LGUI)))   // hyper  RA,LC,LA,LG
+#define HYPER_67 RG(LS(LC(LALT)))   // hyper  RG,LS,LC,LA
+#define HYPER_68 RG(LS(LC(LGUI)))   // hyper  RG,LS,LC,LG
+#define HYPER_69 RG(LS(LA(LGUI)))   // hyper  RG,LS,LA,LG
+#define HYPER_70 RG(LC(LA(LGUI)))   // hyper  RG,LC,LA,LG
+
+// #define ALL_RIGHT_HYPER_01 RS(RC(RA(RGUI))) // hyper
+// #define RIGHT_CMD_HYPER_02 LS(LC(LA(RGUI))) // hyper
+// #define RIGHT_CTRL_HYPER_03 LS(LG(LA(RCTRL))) // hyper
+// #define RIGHT_ALT_HYPER_04 LS(LG(LC(RALT))) // hyper
+// #define RIGHT_SHFT_HYPER_05 LC(LG(LA(RSHFT))) // hyper
+// #define RIGHT_CMD_SHFT_HYPER_06 LC(RG(LA(RSHFT))) // hyper
+// #define RIGHT_CTRL_SHFT_HYPER_07 RC(LG(LA(RSHFT))) // hyper
+// #define RIGHT_ALT_SHFT_HYPER_08 LC(LG(RA(RSHFT))) // hyper
+// #define RIGHT_CTRL_ALT_SHFT_HYPER_09 RC(LG(RA(RSHFT))) // hyper
+// #define RIGHT_CMD_ALT_SHFT_HYPER_10 LC(RG(RA(RSHFT))) // hyper
 #define HYP LS(LA(LGUI)) // hyp
 #define MEH LS(LA(LCTL)) // meh
 #define CAG LG(LA(LCTL)) // cog
@@ -493,7 +563,7 @@ td_mt: tap_dance_mod_tap {
             bindings = <
         &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5        &tog LAYER_GAMING                                                     &to LAYER_MOD           &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
         &mt MEH TAB   &kp Q    &kp W &lt LAYER_FN F  &lt LAYER_FN P      &kp B   &tog PRIME_LAYER                                                     &tog COLEMAK &kp J    &kp L    &kp U     &kp Y     &kp SEMI    &ht_bhash  MEH 0
-        &mt HYPER ESC   &hm LGUI A       &hm LALT R     &hm LSFT S    &hm LCTL T      &lt JUMP_WORDS_LAYER G   &none    &mt LCTRL HYPKEY(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYPKEY(SPACE)  &none &lt DELETING_LAYER M    &hm RCTRL  N  &hm RSHFT E     &hm LALT I     &hm RGUI O    &mt HYPER MINUS
+        &mt HYPER_01 ESC   &hm LGUI A       &hm LALT R     &hm LSFT S    &hm LCTL T      &lt JUMP_WORDS_LAYER G   &none    &mt LCTRL HYPKEY(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYPKEY(SPACE)  &none &lt DELETING_LAYER M    &hm RCTRL  N  &hm RSHFT E     &hm LALT I     &hm RGUI O    &mt HYPER_01 MINUS
         &kp LSHFT  &lt LAYER_FN Z    &kp X     &kp C    &kp D      &kp V              &mo SYMBOLS_LAYER  &kp PG_UP   &kp K    &kp H    &kp COMMA     &kp DOT     &kp FSLH    &kp RSHFT
         &mo LAYER_FN     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt SYMBOLS_LAYER BKSP  &lt LAYER_QWERTY_NAV ESC   &caps_word             &mo SYMBOLS_LAYER &lt SYMBOLS_LAYER  ENTER &lt SYMBOLS_LAYER SPACE       &kp DOWN   &kp UP  &kp APOS  &acaret  &mo LAYER_FN
         >;
@@ -523,8 +593,8 @@ td_mt: tap_dance_mod_tap {
       bindings = <
         &kp GRAVE         &kp N1            &kp N2     &kp N3           &kp N4          &kp N5                 &tog LAYER_MOD                                                                                                                                                                                          &to LAYER_MOD &kp N6               &kp N7      &kp N8                  &kp N9      &kp N0     &kp EQUAL
         &mt MEH TAB       &kp SEMI          &kp COMMA  &lt LAYER_FN DOT &lt LAYER_FN P  &kp Y                  &mt LCTRL CAG                                                                                                                                                                                           &mt LALT HYP  &kp F                &kp G       &lt DELETING_LAYER C    &kp R       &kp L      &ht_bhash  MEH 0
-        &mt HYPER TAB     &hm LCTL A        &hm LALT O &hm LSFT E       &hm LGUI U      &lt JUMP_WORDS_LAYER I &mt LCTRL GAS                             &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)                         &mt LALT CSG  &lt DELETING_LAYER D &hm RGUI H  &hm RSHFT T             &hm LALT N  &hm LCTL S &mt HYPER MINUS
-        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J            &kp K           &kp X                                                                                     &mt HYPER HYPERKEY(KP_N4)              &mt MEH HYPERKEY(KP_N5)                                                                                     &kp B                &kp M       &kp W                   &kp V       &kp Z      &kp RSHFT 
+        &mt HYPER_01 TAB     &hm LCTL A        &hm LALT O &hm LSFT E       &hm LGUI U      &lt JUMP_WORDS_LAYER I &mt LCTRL GAS                             &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)                         &mt LALT CSG  &lt DELETING_LAYER D &hm RGUI H  &hm RSHFT T             &hm LALT N  &hm LCTL S &mt HYPER_01 MINUS
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J            &kp K           &kp X                                                                                     &mt HYPER_01 HYPERKEY(KP_N4)              &mt MEH HYPERKEY(KP_N5)                                                                                     &kp B                &kp M       &kp W                   &kp V       &kp Z      &kp RSHFT 
         &mo SYMBOLS_LAYER &dtilde           &gprcnt    &kp LEFT         &kp RIGHT                                               &lt LAYER_FN BKSP        &lt LAYER_QWERTY_NAV ESC &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &mt HYPERKEY(KP_ASTERISK) HYPERKEY(KP_N7) &lt LAYER_FN  ENTER         &lt SYMBOLS_LAYER SPACE                                    &kp DOWN    &kp UP                  &kp FSLH    &acaret    &mo SYMBOLS_LAYER
         >;
        };
@@ -533,8 +603,8 @@ td_mt: tap_dance_mod_tap {
             bindings = <
         &kp GRAVE         &kp N1            &kp N2     &kp N3     &kp N4     &kp N5  &tog LAYER_MOD                                                                                                                                                                                   &to LAYER_MOD  &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
         &mt MEH TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y   &mt LCTRL CAG                                                                                                                                                                                    &mt LALT HYP   &kp F    &kp G       &kp C       &kp R       &kp L      &ht_bhash  MEH 0
-        &mt HYPER TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &mt LCTRL GAS                     &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &mt HYPER MINUS
-        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                              &mt HYPER HYPERKEY(KP_N4)              &td_mt_kp_123                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &kp RSHFT 
+        &mt HYPER_01 TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &mt LCTRL GAS                     &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &mt HYPER_01 MINUS
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                              &mt HYPER_01 HYPERKEY(KP_N4)              &td_mt_kp_123                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &kp RSHFT 
         &mo SYMBOLS_LAYER &dtilde           &gprcnt    &kp LEFT   &kp RIGHT                         &lt LAYER_FN BKSP  &lt LAYER_QWERTY_NAV ESC &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &td_kp_789 HYPERKEY(KP_ASTERISK) 0 &lt LAYER_FN  ENTER          &lt SYMBOLS_LAYER SPACE                         &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo SYMBOLS_LAYER
         >;
         };
@@ -542,9 +612,9 @@ td_mt: tap_dance_mod_tap {
     //   bindings = <
     //     &ppipe    &kp N1      &kp N2   &kp N3    &kp N4     &kp N5        &tog 3                                                     &to 3      &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &eprcnt
     //     &mt MEH TAB   &kp SEMI    &kp COMMA &lt 12 DOT  &lt 12 P      &kp Y   &tog 3                                                       &trans &kp F    &kp G    &lt 8 C     &kp R     &kp L    &ht_bhash  MEH 0
-    //     &mt HYPER TAB   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &kp CARET    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &kp HASH &lt 8 D    &kp H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER MINUS
+    //     &mt HYPER_01 TAB   &hm LGUI A       &hm LALT O     &hm LSFT E    &hm LCTL U      &lt 9 I   &kp CARET    &mt LCTRL HYP(SPACE) &kp LALT                    &kp LGUI  &mt RCTRL HYP(SPACE)  &kp HASH &lt 8 D    &kp H  &hm RSHFT T     &hm LALT N     &hm RGUI S    &mt HYPER_01 MINUS
     //     &kp LSHFT &lt 12 APOS    &kp Q     &kp J    &kp K      &kp X                             &mo 7             &mo 7                  &kp B    &hm RCTRL M    &kp W     &kp V     &kp Z    &custom_shift RSHFT 0
-    //     &mo 12     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt 12 BKSP  &lt 6 ESC    &trans             &mt HYPER TAB &lt 12  ENTER &mt HYPER SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
+    //     &mo 12     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt 12 BKSP  &lt 6 ESC    &trans             &mt HYPER_01 TAB &lt 12  ENTER &mt HYPER_01 SPACE       &kp DOWN   &kp UP  &kp FSLH  &acaret  &mo 12
     //     >;
     // };
 
@@ -632,73 +702,74 @@ td_mt: tap_dance_mod_tap {
 
 
 
-// all possible modifier combos that can be distinguished by karabiner (69 total)
+// all possible modifier combos that can be distinguished by karabiner (70 total)
+// LS,LC,LA,LG
 // RS,RC,RA,RG
 // RS,RC,RA,LS
 // RS,RC,RA,LC
 // RS,RC,RA,LA
+// RS,RC,RA,LG
 // RS,RC,RG,LS
 // RS,RC,RG,LC
 // RS,RC,RG,LA
-// RS,RC,RG,RG
+// RS,RC,RG,LG
 // RS,RC,LS,LC
 // RS,RC,LS,LA
-// RS,RC,LS,RG
+// RS,RC,LS,LG
 // RS,RC,LC,LA
-// RS,RC,LC,RG
-// RS,RC,LA,RG
+// RS,RC,LC,LG
+// RS,RC,LA,LG
 // RS,RA,RG,LS
 // RS,RA,RG,LC
 // RS,RA,RG,LA
-// RS,RA,RG,RG
+// RS,RA,RG,LG
 // RS,RA,LS,LC
 // RS,RA,LS,LA
-// RS,RA,LS,RG
+// RS,RA,LS,LG
 // RS,RA,LC,LA
-// RS,RA,LC,RG
-// RS,RA,LA,RG
+// RS,RA,LC,LG
+// RS,RA,LA,LG
 // RS,RG,LS,LC
 // RS,RG,LS,LA
-// RS,RG,LS,RG
+// RS,RG,LS,LG
 // RS,RG,LC,LA
-// RS,RG,LC,RG
-// RS,RG,LA,RG
+// RS,RG,LC,LG
+// RS,RG,LA,LG
 // RS,LS,LC,LA
-// RS,LS,LC,RG
-// RS,LS,LA,RG
-// RS,LC,LA,RG
+// RS,LS,LC,LG
+// RS,LS,LA,LG
+// RS,LC,LA,LG
 // RC,RA,RG,LS
 // RC,RA,RG,LC
 // RC,RA,RG,LA
-// RC,RA,RG,RG
+// RC,RA,RG,LG
 // RC,RA,LS,LC
 // RC,RA,LS,LA
-// RC,RA,LS,RG
+// RC,RA,LS,LG
 // RC,RA,LC,LA
-// RC,RA,LC,RG
-// RC,RA,LA,RG
+// RC,RA,LC,LG
+// RC,RA,LA,LG
 // RC,RG,LS,LC
 // RC,RG,LS,LA
-// RC,RG,LS,RG
+// RC,RG,LS,LG
 // RC,RG,LC,LA
-// RC,RG,LC,RG
-// RC,RG,LA,RG
+// RC,RG,LC,LG
+// RC,RG,LA,LG
 // RC,LS,LC,LA
-// RC,LS,LC,RG
-// RC,LS,LA,RG
-// RC,LC,LA,RG
+// RC,LS,LC,LG
+// RC,LS,LA,LG
+// RC,LC,LA,LG
 // RA,RG,LS,LC
 // RA,RG,LS,LA
-// RA,RG,LS,RG
+// RA,RG,LS,LG
 // RA,RG,LC,LA
-// RA,RG,LC,RG
-// RA,RG,LA,RG
+// RA,RG,LC,LG
+// RA,RG,LA,LG
 // RA,LS,LC,LA
-// RA,LS,LC,RG
-// RA,LS,LA,RG
-// RA,LC,LA,RG
+// RA,LS,LC,LG
+// RA,LS,LA,LG
+// RA,LC,LA,LG
 // RG,LS,LC,LA
-// RG,LS,LC,RG
-// RG,LS,LA,RG
-// RG,LC,LA,RG
-// LS,LC,LA,RG
+// RG,LS,LC,LG
+// RG,LS,LA,LG
+// RG,LC,LA,LG
