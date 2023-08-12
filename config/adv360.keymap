@@ -23,11 +23,19 @@
 
 // #define HYP(key) LS(LC(LA(LG(key))))
 #define HYPERKEY(key) LS(LC(LA(LG(key)))) // hyper
+#define RIGHT_CMD_HYPERKEY(key) LS(LC(LA(RG(key)))) // hyper
 #define HYPKEY(key) LS(LG(LA(key))) // hyp
 #define MEHKEY(key) LS(LC(LA(key))) // meh
 #define CAGKEY(key) LG(LC(LA(key))) // cog
 #define GASKEY(key) LS(LG(LA(key))) // cos
 #define CSGKEY(key) LS(LC(LG(key))) //  cst
+
+// #define RIGHT_CMD_HYPERKEY(key) LS(LC(LA(RG(key)))) // hyper
+// #define HYPKEY(key) LS(LG(LA(key))) // hyp
+// #define MEHKEY(key) LS(LC(LA(key))) // meh
+// #define CAGKEY(key) LG(LC(LA(key))) // cog
+// #define GASKEY(key) LS(LG(LA(key))) // cos
+// #define CSGKEY(key) LS(LC(LG(key))) //  cst
 
 #define HYPER    LS(LC(LA(LGUI))) // hyper
 #define HYP LS(LA(LGUI)) // hyp
@@ -361,6 +369,29 @@ td_mt: tap_dance_mod_tap {
             flavor = "hold-preferred";
             bindings = <&kp>, <&td_mt>;
         };
+        //
+        td_mt_kp_123: tap_dance_kp_123 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_KP_123";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RIGHT_CMD_HYPERKEY(KP_ASTERISK) RIGHT_CMD_HYPERKEY(KP_N7)>, <&mt RIGHT_CMD_HYPERKEY(KP_SLASH) RIGHT_CMD_HYPERKEY(KP_N8)>, <&kp RIGHT_CMD_HYPERKEY(KP_N9)>;
+        }; 
+        td_mt_kp_789: tap_dance_kp_789 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_KP_789";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&kp HYPERKEY(KP_N7)>, <&kp HYPERKEY(KP_N8)>, <&kp HYPERKEY(KP_N9)>;
+        };
+        td_kp_789: custom_mt_kp_789 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CUSTOM_MT_KP_789";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&td_mt_kp_789>;
+        };
     //     leaders: leaders {
     // compatible = "zmk,behavior-tap-dance";
     // label = "leaders";
@@ -492,8 +523,8 @@ td_mt: tap_dance_mod_tap {
         &kp GRAVE         &kp N1            &kp N2     &kp N3     &kp N4     &kp N5  &tog LAYER_MOD                                                                                                                                                                                   &to LAYER_MOD  &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
         &mt MEH TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y   &mt LCTRL CAG                                                                                                                                                                                    &mt LALT HYP   &kp F    &kp G       &kp C       &kp R       &kp L      &ht_bhash  MEH 0
         &mt HYPER TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &mt LCTRL GAS                     &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &mt HYPER MINUS
-        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                              &mt HYPER HYPERKEY(KP_N4)              &mt MEH HYPERKEY(KP_N5)                                                                                       &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
-        &mo SYMBOLS_LAYER &dtilde           &gprcnt    &kp LEFT   &kp RIGHT                         &lt LAYER_FN BKSP  &lt LAYER_QWERTY_NAV ESC &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &mt HYPERKEY(KP_ASTERISK) HYPERKEY(KP_N7) &lt LAYER_FN  ENTER          &lt SYMBOLS_LAYER SPACE                         &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo SYMBOLS_LAYER
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                              &mt HYPER HYPERKEY(KP_N4)              &td_mt_kp_123                                                                                        &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &mo SYMBOLS_LAYER &dtilde           &gprcnt    &kp LEFT   &kp RIGHT                         &lt LAYER_FN BKSP  &lt LAYER_QWERTY_NAV ESC &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6) &td_kp_789 HYPERKEY(KP_ASTERISK) 0 &lt LAYER_FN  ENTER          &lt SYMBOLS_LAYER SPACE                         &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo SYMBOLS_LAYER
         >;
         };
     //    prime_layer_5 {
