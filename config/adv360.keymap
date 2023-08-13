@@ -541,21 +541,21 @@ td_mt: tap_dance_mod_tap {
                     
         DEFAULT_QWERTY {
             bindings = <
-                &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5    &tog LAYER_MOD                                                                             &to LAYER_MOD  &kp N6   &kp N7   &kp N8     &kp N9   &kp N0   &kp MINUS
-                &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T     &tog PRIME_LAYER                                                                             &tog COLEMAK &kp Y    &kp U    &kp I      &kp O    &kp P    &kp BSLH
-                &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G     &none            &mt LCTRL HYPKEY(SPACE)   &kp LALT &kp LGUI  &mt RCTRL HYPKEY(SPACE)    &none  &kp H    &kp J    &kp K      &kp L    &kp SEMI &kp SQT
-                &kp LSHFT       &kp Z       &kp X    &kp C     &kp V      &kp B                                             &kp HOME &kp PG_UP                                &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH &kp RSHFT
-                &mo LAYER_FN          &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT                    &kp BSPC &lt LAYER_QWERTY_NAV ESC              &mo SYMBOLS_LAYER    &mo SYMBOLS_LAYER     &kp ENTER  &lt SYMBOLS_LAYER SPACE                  &kp DOWN &kp UP     &kp LBKT &kp RBKT &mo LAYER_FN
+        &kp EQUAL       &kp N1      &kp N2   &kp N3    &kp N4     &kp N5    &tog LAYER_MOD                                                                             &to LAYER_MOD  &kp N6   &kp N7   &kp N8     &kp N9   &kp N0   &kp MINUS
+        &kp TAB         &kp Q       &kp W    &kp E     &kp R      &kp T     &tog PRIME_LAYER                                                                             &tog COLEMAK &kp Y    &kp U    &kp I      &kp O    &kp P    &kp BSLH
+        &mt LCTRL ESC   &kp A       &kp S    &kp D     &kp F      &kp G     &none            &mt LCTRL HYPKEY(SPACE)   &kp LALT &kp LGUI  &mt RCTRL HYPKEY(SPACE)    &none  &kp H    &kp J    &kp K      &kp L    &kp SEMI &kp SQT
+        &kp LSHFT       &kp Z       &kp X    &kp C     &kp V      &kp B                                             &kp HOME &kp PG_UP                                &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH &kp RSHFT
+        &mo LAYER_FN          &kp GRAVE   &mo 4    &kp LEFT  &kp RIGHT                    &kp BSPC &lt LAYER_QWERTY_NAV ESC              &mo SYMBOLS_LAYER    &mo SYMBOLS_LAYER     &kp ENTER  &lt SYMBOLS_LAYER SPACE                  &kp DOWN &kp UP     &kp LBKT &kp RBKT &mo LAYER_FN
             >;
         };
 
         LAYER_KEYPAD {
             bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3     &kp N4    &kp N5 &trans     &to LAYER_MOD     &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp MINUS
-                &kp TAB   &kp Q     &kp W     &kp E      &kp R     &kp T  &none      &none      &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS    &kp BSLH
-                &kp ESC   &kp A     &kp S     &kp D      &kp F     &kp G  &none      &kp LCTRL   &kp LALT                                 &kp C_VOLUME_DOWN        &kp C_VOLUME_UP       &none     &kp H  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS    &kp SQT
-                &kp LSHFT &kp Z     &kp X     &kp C      &kp V     &kp B               &kp HOME         &kp C_PLAY_PAUSE           &kp N  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER  &kp RSHFT
-                &mo COLEMAK     &kp GRAVE &kp CAPS  &kp LEFT   &kp RIGHT                 &kp BSPC          &kp DEL    &kp END  &kp C_MUTE   &kp ENTER     &kp KP_N0         &kp UP         &kp DOWN  &kp KP_DOT  &kp RBKT      &mo COLEMAK
+        &kp EQUAL &kp N1    &kp N2    &kp N3     &kp N4    &kp N5 &trans     &to LAYER_MOD     &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp MINUS
+        &kp TAB   &kp Q     &kp W     &kp E      &kp R     &kp T  &none      &none      &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS    &kp BSLH
+        &kp ESC   &kp A     &kp S     &kp D      &kp F     &kp G  &none      &kp LCTRL   &kp LALT                                 &kp C_VOLUME_DOWN        &kp C_VOLUME_UP       &none     &kp H  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS    &kp SQT
+        &kp LSHFT &kp Z     &kp X     &kp C      &kp V     &kp B               &kp HOME         &kp C_PLAY_PAUSE           &kp N  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER  &kp RSHFT
+        &mo COLEMAK     &kp GRAVE &kp CAPS  &kp LEFT   &kp RIGHT                 &kp BSPC          &kp DEL    &kp END  &kp C_MUTE   &kp ENTER     &kp KP_N0         &kp UP         &kp DOWN  &kp KP_DOT  &kp RBKT      &mo COLEMAK
             >;
         };
 //put  &tog 5 somewhere on layer 3
@@ -572,10 +572,10 @@ td_mt: tap_dance_mod_tap {
         LAYER_MOD {
             bindings = <
         &to DEFAULT_QWERTY      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog LAYER_MOD                                                                             &to LAYER_MOD          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to DEFAULT_QWERTY 
-        &to COLEMAK             &none        &none        &none        &none        &none        &bootloader                                                                                &bootloader            &none        &none        &none        &none        &none        &to COLEMAK 
-        &to PRIME_LAYER         &none        &none        &none        &none        &none        &none             &rgb_ug RGB_MEFS_CMD 5        &bt BT_CLR &bt BT_CLR  &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &to PRIME_LAYER 
-        &to LAYER_GAMING        &none        &none        &none        &none        &none                                                        &none      &none                                                         &none        &none        &none        &none        &none        &to LAYER_GAMING 
-        &to PRIME_LAYER_NO_MODS &none        &none        &bl BL_INC   &bl BL_DEC                                  &rgb_ug RGB_TOG        &none  &none      &none       &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &to PRIME_LAYER_NO_MODS 
+        &to COLEMAK             &trans        &trans        &trans        &trans        &trans        &bootloader                                                                                &bootloader            &trans        &trans        &trans        &trans        &trans        &to COLEMAK 
+        &to PRIME_LAYER         &trans        &trans        &trans        &trans        &trans        &trans             &trans        &bt BT_CLR &bt BT_CLR  &bt BT_CLR   &trans               &trans        &trans        &trans        &trans        &trans        &to PRIME_LAYER 
+        &to LAYER_GAMING        &trans        &trans        &trans        &trans        &trans                                                        &trans      &trans                                                         &trans        &trans        &trans        &trans        &trans        &to LAYER_GAMING 
+        &to PRIME_LAYER_NO_MODS &trans        &trans        &bl BL_INC   &bl BL_DEC                                  &rgb_ug RGB_TOG        &trans  &trans      &trans       &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &trans        &trans        &to PRIME_LAYER_NO_MODS 
             >;
         };
         
