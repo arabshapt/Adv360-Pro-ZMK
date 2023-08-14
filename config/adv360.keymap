@@ -627,16 +627,16 @@ td_mt: tap_dance_mod_tap {
             tapping-term-ms = <200>;
             bindings = <&mt HYPER_41 HYPER_11_KEY(KP_N1)>, <&mt HYPER_42 HYPER_12_KEY(KP_N2)>;
         }; 
-        td_mt_kp_56_57: tap_dance_kp_56_57 {
+        td_mt_kp_58_59: tap_dance_kp_58_59 {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_KP_56_57";
+            label = "tap_dance_KP_58_59";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt HYPER_56 HYPER_05_KEY(KP_N5)>, <&mt HYPER_57 HYPER_06_KEY(KP_N6)>;
         }; 
-        td_mt_kp_58_59: tap_dance_kp_58_59 {
+        td_mt_kp_60_61: tap_dance_kp_60_61 {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_KP_58_59";
+            label = "tap_dance_KP_60_61";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt HYPER_58 HYPER_07_KEY(KP_N7)>, <&mt HYPER_59 HYPER_08_KEY(KP_N8)>;
@@ -781,10 +781,9 @@ td_mt: tap_dance_mod_tap {
         &mt HYPER_17 TAB    &hml HYPER_18 SEMI &hml HYPER_19 COMMA  &hml HYPER_20 DOT &hml HYPER_21 P  &hml HYPER_22 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &td_mt_kp_25_26   &hmr HYPER_27 F  &hmr HYPER_28 G   &hmr HYPER_29 C    &hmr HYPER_30 R            &hmr HYPER_31 L                &mt HYPER_32 MINUS
         &mt HYPER_33 TAB    &hml LCTL A        &hml LALT O          &hml LSFT E       &hml LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &thumbhm HYPER_37 HYPER_01_KEY(KP_N1) &thumbhm HYPER_38 HYPER_02_KEY(KP_N2) &thumbhm HYPER_39 HYPER_03_KEY(KP_N3)  &thumbhm HYPER_40 HYPER_04_KEY(KP_N4)                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr RGUI H       &hmr RSHFT T       &hmr LALT N                &hmr LCTL S                    &mt HYPER_44 MINUS
         &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &mo SYMBOLS_LAYER                     &kp LSHFT                                                                                                                   &hmr HYPER_51 B  &hmr HYPER_52 M   &hmr HYPER_53 W    &hmr HYPER_54 V            &hmr HYPER_55 Z                &kp RSHFT 
-        &mo SYMBOLS_LAYER   &dtilde            &gprcnt              &kp LEFT          &kp  RIGHT                                                     &thumbhm LAYER_FN BKSP    &thumbhm LAYER_QWERTY_NAV ESC         &td_mt_kp_56_57                       &td_mt_kp_58_59                        &thumbhm LAYER_FN  ENTER               &thumbhm SYMBOLS_LAYER SPACE                                   &kp DOWN          &kp UP             &hmr HYPER_60 LEFT_BRACKET &hmr HYPER_61 RIGHT_BRACKET    &mo SYMBOLS_LAYER
+        &mo SYMBOLS_LAYER   &dtilde            &gprcnt              &kp LEFT          &kp  RIGHT                                                     &thumbhm HYPER_56 BKSP    &thumbhm HYPER_57 ESC         &td_mt_kp_58_59                       &td_mt_kp_60_61                        &thumbhm HYPER_62  ENTER               &thumbhm HYPER_63 SPACE                                   &kp DOWN          &kp UP             &hmr HYPER_64 LEFT_BRACKET &hmr HYPER_65 RIGHT_BRACKET    &mo SYMBOLS_LAYER
         >;
        };
-
          PRIME_LAYER_NO_MODS {
             bindings = <
         &kp GRAVE         &kp N1            &kp N2     &kp N3     &kp N4     &kp N5  &td_mt_kp_07_08                                                                                                                                                                                   &to LAYER_MOD  &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
