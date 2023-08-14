@@ -327,8 +327,8 @@
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <210>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
+        tapping-term-ms = <280>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
         global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
@@ -340,7 +340,7 @@
         label = "LEFT_HOMEROW_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <210>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
+        quick-tap-ms = <185>;                //default: 175 repeat on tap-into-hold
         flavor = "balanced";
         global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
@@ -352,7 +352,7 @@
         label = "RIGHT_HOMEROW_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <210>;
-        quick-tap-ms = <175>;
+        quick-tap-ms = <185>;
         global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
