@@ -352,7 +352,7 @@
         label = "LEFT_HOMEROW_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <210>;
-        quick-tap-ms = <185>;                //default: 175 repeat on tap-into-hold
+        quick-tap-ms = <210>;                //default: 175 repeat on tap-into-hold
         flavor = "balanced";
         global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
@@ -364,7 +364,7 @@
         label = "RIGHT_HOMEROW_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <210>;
-        quick-tap-ms = <185>;
+        quick-tap-ms = <210>;
         global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
@@ -602,56 +602,56 @@ td_mt: tap_dance_mod_tap {
             label = "tap_dance_KP_07_08";
             #binding-cells = <0>;
             tapping-term-ms = <350>;
-            bindings = <&mt HYPER_07 HYPER_01_KEY(KP_N1)>, <&mt HYPER_08 HYPER_02_KEY(KP_N2)>, <&to LAYER_MOD>;
+            bindings = <&mt HYPER_07 HYPER_05_KEY(KP_N5)>, <&mt HYPER_08 HYPER_06_KEY(KP_N6)>, <&to LAYER_MOD>;
         };
         td_mt_kp_09_10: tap_dance_kp_09_10 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_09_10";
             #binding-cells = <0>;
             tapping-term-ms = <350>;
-            bindings = <&mt HYPER_09 HYPER_03_KEY(KP_N1)>, <&mt HYPER_10 HYPER_04_KEY(KP_N2)>, <&to LAYER_MOD>;
+            bindings = <&mt HYPER_09 HYPER_07_KEY(KP_N7)>, <&mt HYPER_10 HYPER_08_KEY(KP_N8)>, <&to LAYER_MOD>;
         }; 
         td_mt_kp_23_24: tap_dance_kp_23_24 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_23_24";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_23 HYPER_05_KEY(KP_N1)>, <&mt HYPER_24 HYPER_06_KEY(KP_N2)>;
+            bindings = <&mt HYPER_23 HYPER_09_KEY(KP_N9)>, <&mt HYPER_24 HYPER_10_KEY(KP_N0)>;
         }; 
         td_mt_kp_25_26: tap_dance_kp_25_26 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_25_26";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_25 HYPER_07_KEY(KP_N1)>, <&mt HYPER_26 HYPER_08_KEY(KP_N2)>;
+            bindings = <&mt HYPER_25 HYPER_11_KEY(KP_PLUS)>, <&mt HYPER_26 HYPER_12_KEY(KP_MINUS)>;
         }; 
         td_mt_kp_35_36: tap_dance_kp_35_36 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_35_36";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_35 HYPER_09_KEY(KP_N1)>, <&mt HYPER_36 HYPER_10_KEY(KP_N2)>;
+            bindings = <&mt HYPER_35 HYPER_13_KEY(KP_ASTERISK)>, <&mt HYPER_36 HYPER_14_KEY(KP_SLASH)>;
         }; 
         td_mt_kp_41_42: tap_dance_kp_41_42 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_41_42";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_41 HYPER_11_KEY(KP_N1)>, <&mt HYPER_42 HYPER_12_KEY(KP_N2)>;
+            bindings = <&mt HYPER_41 HYPER_15_KEY(HOME)>, <&mt HYPER_42 HYPER_16_KEY(END)>;
         }; 
         td_mt_kp_59_60: tap_dance_kp_59_60 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_59_60";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_59 HYPER_05_KEY(KP_N5)>, <&mt HYPER_60 HYPER_06_KEY(KP_N6)>;
+            bindings = <&mt HYPER_59 HYPER_17_KEY(PG_UP)>, <&mt HYPER_60 HYPER_18_KEY(PG_DN)>;
         }; 
         td_mt_kp_61_62: tap_dance_kp_61_62 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_61_62";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_61 HYPER_07_KEY(KP_N7)>, <&mt HYPER_62 HYPER_08_KEY(KP_N8)>;
+            bindings = <&mt HYPER_61 HYPER_19_KEY(UP)>, <&mt HYPER_62 HYPER_20_KEY(DOWN)>;
         }; 
         
         // td_mt_kp_789: tap_dance_kp_789 {
