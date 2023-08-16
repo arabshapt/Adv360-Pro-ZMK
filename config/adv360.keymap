@@ -856,8 +856,8 @@ td_mt: tap_dance_mod_tap {
       bindings = <
         &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6 &tog LAYER_KEYPAD                                                                       &to LAYER_MOD &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
         &macro_equal_space   &kp AT     &kp UNDER    &kp LBKT    &kp RBKT      &kp CARET  &none                                                                        &none &kp EXCL  &kp LT  &kp GT     &kp EQUAL    &kp AMPS    &kp BKSP
-        &macro_const   &kp BSLH     &kp FSLH    &kp LBRC    &kp RBRC      &kp ASTRK  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp QMARK  &kp LPAR  &kp RPAR     &kp MINUS    &kp COLON &kp SPACE
-        &trans &kp POUND     &kp DLLR    &kp PIPE    &kp TILDE      &kp GRAVE                            &kp HOME             &kp PG_UP                           &kp PLUS  &kp PRCNT  &kp DOUBLE_QUOTES &kp SINGLE_QUOTE  &kp SEMICOLON &kp BKSP
+        &macro_const   &kp BSLH     &kp FSLH    &kp LBRC    &kp RBRC      &kp ASTRK  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp QMARK  &kp LPAR  &kp RPAR     &kp MINUS    &kp COLON &kp BKSP
+        &trans &kp POUND     &kp DLLR    &kp PIPE    &kp TILDE      &kp GRAVE                            &kp HOME             &kp PG_UP                           &kp PLUS  &kp PRCNT  &kp DOUBLE_QUOTES &kp SINGLE_QUOTE  &kp SEMICOLON &kp SPACE
         &macro_delete_whole_line     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo COLEMAK
       >;
     };   
