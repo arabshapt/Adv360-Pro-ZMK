@@ -371,7 +371,7 @@
         flavor = "balanced";
         global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
-        // hold-trigger-key-positions = < KEYS_L THUMBS>;
+        hold-trigger-key-positions = < KEYS_L THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
     };
         hml: left_homerow_mods {
