@@ -158,7 +158,7 @@
 #define HYPER_68_KEY(key) RG(LS(LC(LG(key))))   // hyper  RG,LS,LC,LG
 #define HYPER_69_KEY(key) RG(LS(LA(LG(key))))   // hyper  RG,LS,LA,LG
 #define HYPER_70_KEY(key) RG(LC(LA(LG(key))))   // hyper  RG,LC,LA,LG
-
+// unused hyper keys 
 
 #define HYPER_01 LS(LC(LA(LGUI)))   // hyper  LS,LC,LA,LG
 #define HYPER_02 RS(RC(RA(RGUI)))   // hyper  RS,RC,RA,RG
@@ -318,12 +318,12 @@
 
   &mt {
     tapping-term-ms = <210>;
-    flavor = "tap-preferred";
+    flavor = "hold-preferred";//"tap-preferred";
     quick_tap_ms = <210>;
   };
 
 &lt {
-    flavor = "balanced"; // tp - testing phase
+    flavor = "hold-preferred";//"balanced"; // tp - testing phase
     tapping-term-ms = <200>; //tp
     quick_tap_ms = <210>;
 };
@@ -680,7 +680,20 @@ td_mt: tap_dance_mod_tap {
             tapping-term-ms = <200>;
             bindings = <&mt HYPER_61 HYPER_19_KEY(UP)>, <&mt HYPER_62 HYPER_20_KEY(DOWN)>;
         }; 
-        
+        td_mt_kp_66_68: tap_dance_kp_66_68 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_KP_66_68";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt HYPER_66 HYPER_21_KEY(LEFT)>, <&mt HYPER_68 HYPER_22_KEY(RIGHT)>;
+        }; 
+        td_mt_kp_69_70: tap_dance_kp_69_70 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_KP_69_70";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt HYPER_69 HYPER_23_KEY(LEFT_BRACE)>, <&mt HYPER_70 HYPER_24_KEY(RIGHT_BRACE)>;
+        }; 
         // td_mt_kp_789: tap_dance_kp_789 {
         //     compatible = "zmk,behavior-tap-dance";
         //     label = "TAP_DANCE_KP_789";
@@ -813,23 +826,23 @@ td_mt: tap_dance_mod_tap {
        &trans  &kp LCTRL      &trans        &trans        &trans                      &kp SPACE  &trans  &trans        &trans  &trans  &trans                 &trans  &trans  &trans  &trans  &trans
             >;
         };
-
-       PRIME_LAYER {
-      bindings = <
+        //unused hypers: 33, 44, 45, 46, 57, 58, 63, 64, 65,
+        PRIME_LAYER {
+            bindings = <
         &mt HYPER_01 GRAVE  &hml HYPER_02 N1   &hml HYPER_03 N2     &hml HYPER_04 N3  &hml HYPER_05 N4 &hml HYPER_06 N5  &td_mt_kp_07_08                                                                                                                                                                                                                             &td_mt_kp_09_10   &hmr HYPER_11 N6 &hmr HYPER_12 N7  &hmr HYPER_13 N8   &hmr HYPER_14 N9           &hmr HYPER_15 N0               &mt HYPER_16 EQUAL
         &mt HYPER_17 TAB    &hml HYPER_18 SEMI &hml HYPER_19 COMMA  &hml HYPER_20 DOT &hml HYPER_21 P  &hml HYPER_22 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &td_mt_kp_25_26   &hmr HYPER_27 F  &hmr HYPER_28 G   &hmr HYPER_29 C    &hmr HYPER_30 R            &hmr HYPER_31 L                &mt HYPER_32 MINUS
-        &mt HYPER_33 TAB    &hml LCTL A        &hml LALT O          &hml LSFT E       &hml LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &modthumbhm HYPER_37 HYPER_01_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_02_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_03_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_04_KEY(KP_N4)                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr RGUI H       &hmr RSHFT T       &hmr LALT N                &hmr LCTL S                    &mt HYPER_44 MINUS
-        &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &mo SYMBOLS_LAYER                     &kp LSHFT                                                                                                                   &hmr HYPER_52 B  &hmr HYPER_53 M   &hmr HYPER_54 W    &hmr HYPER_55 V            &hmr HYPER_56 Z                &custom_shift RSHFT 0
+        &lt /*HYPER_33*/SYMBOLS_LAYER TAB    &hml LCTL A        &hml LALT O          &hml LSFT E       &hml LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &modthumbhm HYPER_37 HYPER_01_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_02_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_03_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_04_KEY(KP_N4)                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr RGUI H       &hmr RSHFT T       &hmr LALT N                &hmr LCTL S                    &lt /*HYPER_44*/SYMBOLS_LAYER MINUS
+        &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &td_mt_kp_66_68                     &td_mt_kp_69_70                                                                                                                   &hmr HYPER_52 B  &hmr HYPER_53 M   &hmr HYPER_54 W    &hmr HYPER_55 V            &hmr HYPER_56 Z                &custom_shift RSHFT 0
         &mo SYMBOLS_LAYER   &dtilde            &gprcnt              &kp LEFT          &kp  RIGHT                                                     &thumbhm HYPER_57 BKSP    &thumbhm HYPER_58 ESC                 &td_mt_kp_59_60                       &td_mt_kp_61_62                        &thumbhm HYPER_63  ENTER               &thumbhm HYPER_64 SPACE                                        &kp DOWN          &kp UP             &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &mo SYMBOLS_LAYER
         >;
        };
          PRIME_LAYER_NO_MODS {
             bindings = <
-        &kp GRAVE         &kp N1            &kp N2     &kp N3     &kp N4     &kp N5  &td_mt_kp_07_08                                                                                                                                                                                   &to LAYER_MOD  &kp N6   &kp N7      &kp N8      &kp N9      &kp N0     &kp EQUAL
-        &mt MEH TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y   &mt LCTRL CAG                                                                                                                                                                                    &mt LALT HYP   &kp F    &kp G       &kp C       &kp R       &kp L      &ht_bhash  MEH 0
-        &mt HYPER_01 TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &mt LCTRL GAS                     &mt LGUI HYPERKEY(KP_N1) &mt LALT HYPERKEY(KP_N2)               &mt LCTL HYPERKEY(KP_N3)                  &mt RGUI HYPERKEY(KP_SLASH)                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &mt HYPER_01 MINUS
-        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                              &mo SYMBOLS_LAYER                         &kp LSHFT                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
-        &mo SYMBOLS_LAYER &dtilde           &gprcnt    &kp LEFT   &kp RIGHT                         &lt LAYER_FN BKSP  &lt LAYER_QWERTY_NAV ESC &mt HYPERKEY(KP_MINUS) HYPERKEY(KP_N6)    &hmr HYPER_01 HYPER_01_KEY(KP_N1) &lt LAYER_FN  ENTER          &lt SYMBOLS_LAYER SPACE                         &kp DOWN    &kp UP      &kp FSLH    &acaret    &mo SYMBOLS_LAYER
+        &mt HYPER_01 GRAVE  &hml HYPER_02 N1   &hml HYPER_03 N2     &hml HYPER_04 N3  &hml HYPER_05 N4 &hml HYPER_06 N5  &td_mt_kp_07_08                                                                                                                                                                                   &td_mt_kp_09_10   &hmr HYPER_11 N6 &hmr HYPER_12 N7  &hmr HYPER_13 N8   &hmr HYPER_14 N9           &hmr HYPER_15 N0               &mt HYPER_16 EQUAL
+        &mt HYPER_17 TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y   &td_mt_kp_23_24                                                                                                                                                                                  &td_mt_kp_25_26   &kp F    &kp G       &kp C       &kp R       &kp L      &mt HYPER_32 MINUS
+         &lt /*HYPER_33*/SYMBOLS_LAYER TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &td_mt_kp_35_36                     &modthumbhm HYPER_37 HYPER_01_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_02_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_03_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_04_KEY(KP_N4)                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &lt /*HYPER_44*/SYMBOLS_LAYER MINUS
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                              &td_mt_kp_66_68                     &td_mt_kp_69_70                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &mo SYMBOLS_LAYER &dtilde           &gprcnt    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_57 BKSP    &thumbhm HYPER_58 ESC                 &td_mt_kp_59_60                       &td_mt_kp_61_62                        &thumbhm HYPER_63  ENTER               &thumbhm HYPER_64 SPACE                         &kp DOWN    &kp UP      &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &mo SYMBOLS_LAYER
         >;
         };
     //    prime_layer_5 {
