@@ -678,14 +678,14 @@ td_mt: tap_dance_mod_tap {
             label = "tap_dance_KP_61_62";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_61 HYPER_19_KEY(UP)>, <&mt HYPER_62 HYPER_20_KEY(DOWN)>;
+            bindings = <&mt HYPER_61 HYPER_19_KEY(LESS_THAN)>, <&mt HYPER_62 HYPER_20_KEY(GREATER_THAN)>;
         }; 
         td_mt_kp_66_68: tap_dance_kp_66_68 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_66_68";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_66 HYPER_21_KEY(LEFT)>, <&mt HYPER_68 HYPER_22_KEY(RIGHT)>;
+            bindings = <&mt HYPER_66 HYPER_21_KEY(COLON)>, <&mt HYPER_68 HYPER_22_KEY(DOUBLE_QUOTES)>;
         }; 
         td_mt_kp_69_70: tap_dance_kp_69_70 {
             compatible = "zmk,behavior-tap-dance";
