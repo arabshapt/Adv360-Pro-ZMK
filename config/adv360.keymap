@@ -39,7 +39,7 @@
 // │ SB  XX  XX  XX  XX╭────╯         ╰───╮     XX  XX  65  66  SB │
 // ╰───────────────────┼─────────┬────────┼────────────────────────╯
 //                 ╭───╯ 1(1)  2(2) │ 3(3)   4(4)╰───╮  3 is hyper_03 and (3) is kp_3 key                   
-//                 │          SB │ LS         │                   
+//                 │          66/68 │ 23/24         │                   
 //                 │ 57 58 17/18(pg_up/pg_dn) │ 19/20(up/down) 63 64│                   
 //                 ╰─────────────┴────────────╯                    
 // SB symbols layer on kinesis 
@@ -678,7 +678,7 @@ td_mt: tap_dance_mod_tap {
             label = "tap_dance_KP_61_62";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_61 HYPER_19_KEY(LESS_THAN)>, <&mt HYPER_62 HYPER_20_KEY(GREATER_THAN)>;
+            bindings = <&mt HYPER_61 HYPER_28_KEY(LESS_THAN)>, <&mt HYPER_62 HYPER_29_KEY(GREATER_THAN)>;
         }; 
         td_mt_kp_66_68: tap_dance_kp_66_68 {
             compatible = "zmk,behavior-tap-dance";
@@ -692,7 +692,7 @@ td_mt: tap_dance_mod_tap {
             label = "tap_dance_KP_69_70";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt HYPER_69 HYPER_23_KEY(LEFT_BRACE)>, <&mt HYPER_70 HYPER_24_KEY(RIGHT_BRACE)>;
+            bindings = <&mt HYPER_69 HYPER_23_KEY(LEFT_BRACE)>, <&mt HYPER_70 HYPER_27_KEY(RIGHT_BRACE)>;
         }; 
         // td_mt_kp_789: tap_dance_kp_789 {
         //     compatible = "zmk,behavior-tap-dance";
