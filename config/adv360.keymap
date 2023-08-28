@@ -217,6 +217,36 @@
 #define HYPER_126_KEY(key)  RS(LA(LS(LG(LC(key)))))   // hyper  // RS LA LS LG LC
 // unused hyper keys 
 
+// keys for one time activation(not holding)
+#define HYPER_127_KEY(key)  RC(RA(RG(RS(LA(LS(key))))))   // hyper  // RC RA RG RS LA LS
+#define HYPER_128_KEY(key)  RC(RA(RG(RS(LA(LG(key))))))   // hyper  // RC RA RG RS LA LG
+#define HYPER_129_KEY(key)  RC(RA(RG(RS(LA(LC(key))))))   // hyper  // RC RA RG RS LA LC
+#define HYPER_130_KEY(key)  RC(RA(RG(RS(LS(LG(key))))))   // hyper  // RC RA RG RS LS LG
+#define HYPER_131_KEY(key)  RC(RA(RG(RS(LS(LC(key))))))   // hyper  // RC RA RG RS LS LC
+#define HYPER_132_KEY(key)  RC(RA(RG(RS(LG(LC(key))))))   // hyper  // RC RA RG RS LG LC
+#define HYPER_133_KEY(key)  RC(RA(RG(LA(LS(LG(key))))))   // hyper  // RC RA RG LA LS LG
+#define HYPER_134_KEY(key)  RC(RA(RG(LA(LS(LC(key))))))   // hyper  // RC RA RG LA LS LC
+#define HYPER_135_KEY(key)  RC(RA(RG(LA(LG(LC(key))))))   // hyper  // RC RA RG LA LG LC
+#define HYPER_136_KEY(key)  RC(RA(RG(LS(LG(LC(key))))))   // hyper  // RC RA RG LS LG LC
+#define HYPER_137_KEY(key)  RC(RA(RS(LA(LS(LG(key))))))   // hyper  // RC RA RS LA LS LG
+#define HYPER_138_KEY(key)  RC(RA(RS(LA(LS(LC(key))))))   // hyper  // RC RA RS LA LS LC
+#define HYPER_139_KEY(key)  RC(RA(RS(LA(LG(LC(key))))))   // hyper  // RC RA RS LA LG LC
+#define HYPER_140_KEY(key)  RC(RA(RS(LS(LG(LC(key))))))   // hyper  // RC RA RS LS LG LC
+#define HYPER_141_KEY(key)  RC(RA(LA(LS(LG(LC(key))))))   // hyper  // RC RA LA LS LG LC
+#define HYPER_142_KEY(key)  RC(RG(RS(LA(LS(LG(key))))))   // hyper  // RC RG RS LA LS LG
+#define HYPER_143_KEY(key)  RC(RG(RS(LA(LS(LC(key))))))   // hyper  // RC RG RS LA LS LC
+#define HYPER_144_KEY(key)  RC(RG(RS(LA(LG(LC(key))))))   // hyper  // RC RG RS LA LG LC
+#define HYPER_145_KEY(key)  RC(RG(RS(LS(LG(LC(key))))))   // hyper  // RC RG RS LS LG LC
+#define HYPER_146_KEY(key)  RC(RG(LA(LS(LG(LC(key))))))   // hyper  // RC RG LA LS LG LC
+#define HYPER_147_KEY(key)  RC(RS(LA(LS(LG(LC(key))))))   // hyper  // RC RS LA LS LG LC
+#define HYPER_148_KEY(key)  RA(RG(RS(LA(LS(LG(key))))))   // hyper  // RA RG RS LA LS LG
+#define HYPER_149_KEY(key)  RA(RG(RS(LA(LS(LC(key))))))   // hyper  // RA RG RS LA LS LC
+#define HYPER_150_KEY(key)  RA(RG(RS(LA(LG(LC(key))))))   // hyper  // RA RG RS LA LG LC
+#define HYPER_151_KEY(key)  RA(RG(RS(LS(LG(LC(key))))))   // hyper  // RA RG RS LS LG LC
+#define HYPER_152_KEY(key)  RA(RG(LA(LS(LG(LC(key))))))   // hyper  // RA RG LA LS LG LC
+#define HYPER_153_KEY(key)  RA(RS(LA(LS(LG(LC(key))))))   // hyper  // RA RS LA LS LG LC
+#define HYPER_154_KEY(key)  RG(RS(LA(LS(LG(LC(key))))))   // hyper  // RG RS LA LS LG LC
+
 #define HYPER_01 LS(LC(LA(LGUI)))   // hyper  LS,LC,LA,LG
 #define HYPER_02 RS(RC(RA(RGUI)))   // hyper  RS,RC,RA,RG
 #define HYPER_03 RS(RC(RA(LSHFT)))  // hyper  RS,RC,RA,LS
@@ -937,7 +967,7 @@ td_mt: tap_dance_mod_tap {
         &modthumbhm HYPER_01 GRAVE  &hml HYPER_02 N1   &hml HYPER_03 N2     &hml HYPER_04 N3  &hml HYPER_05 N4 &hml HYPER_06 N5  &td_mt_kp_07_08                                                                                                                                                                                                                             &td_mt_kp_09_10   &hmr HYPER_11 N6 &hmr HYPER_12 N7  &hmr HYPER_13 N8   &hmr HYPER_14 N9           &hmr HYPER_15 N0               &modthumbhm HYPER_16 EQUAL
         &modthumbhm HYPER_17 TAB    &hml HYPER_18 SEMI &hml HYPER_19 COMMA  &hml HYPER_20 DOT &hml HYPER_21 P  &hml HYPER_22 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &td_mt_kp_25_26   &hmr HYPER_27 F  &hmr HYPER_28 G   &hmr HYPER_29 C    &hmr HYPER_30 R            &hmr HYPER_31 L                &modthumbhm HYPER_32 BKSP
         &thumbhlay /*HYPER_33*/SYMBOLS_LAYER TAB    &hml_primal LCTL A        &hml_primal LALT O          &hml_primal LSFT E       &hml_primal LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr_primal RGUI H       &hmr_primal RSHFT T       &hmr_primal LALT N                &hmr_primal LCTL S                    &thumbhlay /*HYPER_44*/SYMBOLS_LAYER BKSP
-        &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &modthumbhm HYPER_66 HYPER_75_KEY(COLON)                    &modthumbhm  HYPER_69 HYPER_76_KEY(LEFT_BRACE)                                                                                                                 &hmr HYPER_52 B  &hmr HYPER_53 M   &hmr HYPER_54 W    &hmr HYPER_55 V            &hmr HYPER_56 Z                &custom_shift RSHFT 0
+        &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0)                    &modthumbhm  HYPER_69 HYPER_127_KEY(KP_N1)                                                                                                                 &hmr HYPER_52 B  &hmr HYPER_53 M   &hmr HYPER_54 W    &hmr HYPER_55 V            &hmr HYPER_56 Z                &custom_shift RSHFT 0
         &mo SYMBOLS_LAYER   &kp GRAVE           &kp FSLH              &kp LEFT          &kp  RIGHT                                                     &thumbhm HYPER_58 BKSP    &thumbhlay SYMBOLS_LAYER ESC                 &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP)                     &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)                      &thumbhm HYPER_63  ENTER               &thumbhm HYPER_64 SPACE                                        &kp DOWN          &kp UP             &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &mo SYMBOLS_LAYER
         >;
        };
@@ -946,7 +976,7 @@ td_mt: tap_dance_mod_tap {
         &modthumbhm HYPER_01 GRAVE  &hml HYPER_02 N1   &hml HYPER_03 N2     &hml HYPER_04 N3  &hml HYPER_05 N4 &hml HYPER_06 N5  &td_mt_kp_07_08                                                                                                                                                                                   &td_mt_kp_09_10   &hmr HYPER_11 N6 &hmr HYPER_12 N7  &hmr HYPER_13 N8   &hmr HYPER_14 N9           &hmr HYPER_15 N0               &modthumbhm HYPER_16 EQUAL
         &modthumbhm HYPER_17 TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y   &td_mt_kp_23_24                                                                                                                                                                                  &td_mt_kp_25_26   &kp F    &kp G       &kp C       &kp R       &kp L      &modthumbhm HYPER_32 BKSP
          &thumbhlay /*HYPER_33*/SYMBOLS_LAYER TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &td_mt_kp_35_36                     &modthumbhm HYPER_37 HYPER_01_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_02_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_03_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_04_KEY(KP_N4)                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &thumbhlay /*HYPER_44*/SYMBOLS_LAYER BKSP
-        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                               &modthumbhm HYPER_66 HYPER_21_KEY(COLON)                    &modthumbhm  HYPER_69 HYPER_23_KEY(LEFT_BRACE)                                                                                                  &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                               &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0)                      &modthumbhm  HYPER_69 HYPER_127_KEY(KP_N1)                                                                                                &kp B    &kp M       &kp W       &kp V       &kp Z      &custom_shift RSHFT 0
         &mo SYMBOLS_LAYER &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlay SYMBOLS_LAYER ESC                  &modthumbhm  HYPER_59 HYPER_17_KEY(PG_UP)                     &modthumbhm  HYPER_61 HYPER_28_KEY(PG_DN)                        &thumbhm HYPER_63  ENTER               &thumbhm HYPER_64 SPACE                         &kp DOWN    &kp UP      &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &mo SYMBOLS_LAYER
         >;
         };
