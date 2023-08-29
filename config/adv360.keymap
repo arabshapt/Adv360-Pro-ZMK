@@ -489,10 +489,10 @@
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <210>;
+        tapping-term-ms = <200>;
         quick-tap-ms = <210>;                //default: 175 repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = < KEYS_L THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
@@ -501,9 +501,9 @@
         compatible = "zmk,behavior-hold-tap";
         label = "RIGHT_HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <210>;
+        tapping-term-ms = <200>;
         quick-tap-ms = <210>;
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
+        global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -513,7 +513,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_HOMEROW_MODS_PRIMAL";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <175>;
         quick-tap-ms = <210>;
         global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
@@ -525,7 +525,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "RIGHT_HOMEROW_MODS_PRIMAL";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <175>;
         quick-tap-ms = <210>;
         global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
@@ -965,7 +965,7 @@ td_mt: tap_dance_mod_tap {
         PRIME_LAYER {
             bindings = <
         &modthumbhm HYPER_01 GRAVE  &hml HYPER_02 N1   &hml HYPER_03 N2     &hml HYPER_04 N3  &hml HYPER_05 N4 &hml HYPER_06 N5  &td_mt_kp_07_08                                                                                                                                                                                                                             &td_mt_kp_09_10   &hmr HYPER_11 N6 &hmr HYPER_12 N7  &hmr HYPER_13 N8   &hmr HYPER_14 N9           &hmr HYPER_15 N0               &modthumbhm HYPER_16 EQUAL
-        &modthumbhm HYPER_17 TAB    &hml HYPER_18 SEMI &hml HYPER_19 COMMA  &hml HYPER_20 DOT &hml HYPER_21 P  &hml HYPER_22 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &td_mt_kp_25_26   &hmr HYPER_27 F  &hmr HYPER_28 G   &hmr HYPER_29 C    &hmr HYPER_30 R            &hmr HYPER_31 L                &modthumbhm HYPER_32 BKSP
+        &modthumbhm HYPER_17 TAB    &hml HYPER_18 SEMI &hml HYPER_19 COMMA  &hml HYPER_20 DOT &hml HYPER_21 P  &hml HYPER_22 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &td_mt_kp_25_26   &hmr HYPER_27 F  &hmr HYPER_28 G   &hmr HYPER_29 C    &hmr HYPER_30 R            &hmr HYPER_31 L                &modthumbhm HYPER_32 MINUS
         &thumbhlay /*HYPER_33*/SYMBOLS_LAYER TAB    &hml_primal LCTL A        &hml_primal LALT O          &hml_primal LSFT E       &hml_primal LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr_primal RGUI H       &hmr_primal RSHFT T       &hmr_primal LALT N                &hmr_primal LCTL S                    &thumbhlay /*HYPER_44*/SYMBOLS_LAYER BKSP
         &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0)                    &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                                                                 &hmr HYPER_52 B  &hmr HYPER_53 M   &hmr HYPER_54 W    &hmr HYPER_55 V            &hmr HYPER_56 Z                &custom_shift RSHFT 0
         &mo SYMBOLS_LAYER   &kp GRAVE           &kp FSLH              &kp LEFT          &kp  RIGHT                                                     &thumbhm HYPER_58 BKSP    &thumbhlay SYMBOLS_LAYER ESC                 &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP)                     &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)                      &thumbhm HYPER_63  ENTER               &thumbhm HYPER_64 SPACE                                        &kp DOWN          &kp UP             &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &mo SYMBOLS_LAYER
