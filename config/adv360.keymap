@@ -54,8 +54,8 @@
 
 /* Global settings */
 
-#define QUICK_TAP_MS 140
-#define QUICK_TAP_MS_PRIMAL 130
+#define QUICK_TAP_MS 175
+#define QUICK_TAP_MS_PRIMAL 150
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 //#define AS_PIPE(keycode) &as N1 PLUS 
@@ -489,10 +489,10 @@
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <210>;
         quick-tap-ms = <210>;                //default: 175 repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387
+        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = < KEYS_L THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
@@ -501,9 +501,9 @@
         compatible = "zmk,behavior-hold-tap";
         label = "RIGHT_HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <210>;
         quick-tap-ms = <210>;
-        global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
+        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -513,7 +513,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_HOMEROW_MODS_PRIMAL";
         #binding-cells = <2>;
-        tapping-term-ms = <175>;
+        tapping-term-ms = <200>;
         quick-tap-ms = <210>;
         global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
@@ -525,7 +525,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "RIGHT_HOMEROW_MODS_PRIMAL";
         #binding-cells = <2>;
-        tapping-term-ms = <175>;
+        tapping-term-ms = <200>;
         quick-tap-ms = <210>;
         global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
