@@ -214,10 +214,10 @@
 #define HYPER_123_KEY(key)  RG(RS(LA(LG(LC(key)))))   // hyper  // RG RS LA LG LC
 #define HYPER_124_KEY(key)  RG(RS(LS(LG(LC(key)))))   // hyper  // RG RS LS LG LC
 #define HYPER_125_KEY(key)  RG(LA(LS(LG(LC(key)))))   // hyper  // RG LA LS LG LC
-#define HYPER_126_KEY(key)  RS(LA(LS(LG(LC(key)))))   // hyper  // RS LA LS LG LC
 // unused hyper keys 
 
 // keys for one time activation(not holding)
+#define HYPER_126_KEY(key)  RS(LA(LS(LG(LC(key)))))   // hyper  // RS LA LS LG LC
 #define HYPER_127_KEY(key)  RC(RA(RG(RS(LA(LS(key))))))   // hyper  // RC RA RG RS LA LS
 #define HYPER_128_KEY(key)  RC(RA(RG(RS(LA(LG(key))))))   // hyper  // RC RA RG RS LA LG
 #define HYPER_129_KEY(key)  RC(RA(RG(RS(LA(LC(key))))))   // hyper  // RC RA RG RS LA LC
@@ -318,6 +318,38 @@
 #define HYPER_69 RG(LS(LA(LGUI)))   // hyper  RG,LS,LA,LG
 #define HYPER_70 RG(LC(LA(LGUI)))   // hyper  RG,LC,LA,LG
 
+
+// keys for sticky modifiers(not holding)
+#define HYPER_126(key) RS(LA(LS(LG(LCTRL))))   // hyper  // RS LA LS LG LC
+#define HYPER_127(key) RC(RA(RG(RS(LA(LSHFT)))))   // hyper  // RC RA RG RS LA LS
+#define HYPER_128(key) RC(RA(RG(RS(LA(LGUI)))))   // hyper  // RC RA RG RS LA LG
+#define HYPER_129(key) RC(RA(RG(RS(LA(LCTRL)))))   // hyper  // RC RA RG RS LA LC
+#define HYPER_130(key) RC(RA(RG(RS(LS(LGUI)))))   // hyper  // RC RA RG RS LS LG
+#define HYPER_131(key) RC(RA(RG(RS(LS(LCTRL)))))   // hyper  // RC RA RG RS LS LC
+#define HYPER_132(key) RC(RA(RG(RS(LG(LCTRL)))))   // hyper  // RC RA RG RS LG LC
+#define HYPER_133(key) RC(RA(RG(LA(LS(LGUI)))))   // hyper  // RC RA RG LA LS LG
+#define HYPER_134(key) RC(RA(RG(LA(LS(LCTRL)))))   // hyper  // RC RA RG LA LS LC
+#define HYPER_135(key) RC(RA(RG(LA(LG(LCTRL)))))   // hyper  // RC RA RG LA LG LC
+#define HYPER_136(key) RC(RA(RG(LS(LG(LCTRL)))))   // hyper  // RC RA RG LS LG LC
+#define HYPER_137(key) RC(RA(RS(LA(LS(LGUI)))))   // hyper  // RC RA RS LA LS LG
+#define HYPER_138(key) RC(RA(RS(LA(LS(LCTRL)))))   // hyper  // RC RA RS LA LS LC
+#define HYPER_139(key) RC(RA(RS(LA(LG(LCTRL)))))   // hyper  // RC RA RS LA LG LC
+#define HYPER_140(key) RC(RA(RS(LS(LG(LCTRL)))))   // hyper  // RC RA RS LS LG LC
+#define HYPER_141(key) RC(RA(LA(LS(LG(LCTRL)))))   // hyper  // RC RA LA LS LG LC
+#define HYPER_142(key) RC(RG(RS(LA(LS(LGUI)))))   // hyper  // RC RG RS LA LS LG
+#define HYPER_143(key) RC(RG(RS(LA(LS(LCTRL)))))   // hyper  // RC RG RS LA LS LC
+#define HYPER_144(key) RC(RG(RS(LA(LG(LCTRL)))))   // hyper  // RC RG RS LA LG LC
+#define HYPER_145(key) RC(RG(RS(LS(LG(LCTRL)))))   // hyper  // RC RG RS LS LG LC
+#define HYPER_146(key) RC(RG(LA(LS(LG(LCTRL)))))   // hyper  // RC RG LA LS LG LC
+#define HYPER_147(key) RC(RS(LA(LS(LG(LCTRL)))))   // hyper  // RC RS LA LS LG LC
+#define HYPER_148(key) RA(RG(RS(LA(LS(LGUI)))))   // hyper  // RA RG RS LA LS LG
+#define HYPER_149(key) RA(RG(RS(LA(LS(LCTRL)))))   // hyper  // RA RG RS LA LS LC
+#define HYPER_150(key) RA(RG(RS(LA(LG(LCTRL)))))   // hyper  // RA RG RS LA LG LC
+#define HYPER_151(key) RA(RG(RS(LS(LG(LCTRL)))))   // hyper  // RA RG RS LS LG LC
+#define HYPER_152(key) RA(RG(LA(LS(LG(LCTRL)))))   // hyper  // RA RG LA LS LG LC
+#define HYPER_153(key) RA(RS(LA(LS(LG(LCTRL)))))   // hyper  // RA RS LA LS LG LC
+#define HYPER_154(key) RG(RS(LA(LS(LG(LCTRL)))))   // hyper  // RG RS LA LS LG LC
+
 // #define ALL_RIGHT_HYPER_01 RS(RC(RA(RGUI))) // hyper
 // #define RIGHT_CMD_HYPER_02 LS(LC(LA(RGUI))) // hyper
 // #define RIGHT_CTRL_HYPER_03 LS(LG(LA(RCTRL))) // hyper
@@ -354,7 +386,38 @@
 #define DELETING_LAYER_ON_RIGHT    11
 #define SELECTING_LAYER_ON_RIGHT   12
 #define LAYER_FN                   13
-
+// SEMI COMMA DOT P Y F G R L A O E U I D H T N S APOS Q J K X B M W V Z
+#define SKQ_CROSSROADS          14
+// #define SL_SEMI                15
+// #define SL_COMMA               16
+// #define SL_DOT                 17
+// #define SL_P                   18
+// #define SL_Y                   19
+// #define SL_F                   20
+// #define SL_G                   21
+// #define SL_R                   22
+// #define SL_C                   22
+// #define SL_L                   23
+// #define SL_A                   24
+// #define SL_O                   25
+// #define SL_E                   26
+// #define SL_U                   27
+// #define SL_I                   28
+// #define SL_D                   29
+// #define SL_H                   30
+// #define SL_T                   31
+// #define SL_N                   32
+// #define SL_S                   33
+// #define SL_APOS                34
+// #define SL_Q                   35
+// #define SL_J                   36
+// #define SL_K                   37
+// #define SL_X                   38
+// #define SL_B                   39
+// #define SL_M                   40
+// #define SL_W                   41
+// #define SL_V                   42
+// #define SL_Z                   43
 // #define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
 //     leader_##NAME { \
 //         key-positions = <KEYS>; \
@@ -414,6 +477,9 @@
     tapping-term-ms = <200>; //tp
     quick_tap_ms = <210>;
 };
+&sl {
+    release-after-ms = <2000>;
+};
 // &leader {
 //     timeout-ms = <500>;
 //     // timerless;
@@ -427,7 +493,15 @@
 / {
     behaviors {
       #include "macros.dtsi"
-
+    skq: sticky_key_quick_release {
+        compatible = "zmk,behavior-sticky-key";
+        label = "STICKY_KEY_QUICK_RELEASE";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <2000>;
+        quick-release;
+        ignore-modifiers;
+      };
     // hm: homerow_mods {
     //     compatible = "zmk,behavior-hold-tap";
     //     label = "HOMEROW_MODS";
@@ -470,6 +544,18 @@
         flavor = "balanced";
         global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&mo>, <&kp>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+       thumbhSlay: thumb_homerow_Slay {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_SLAY";
+        #binding-cells = <2>;
+        tapping-term-ms = <280>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";
+        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        bindings = <&mo>, <&sl>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
@@ -730,7 +816,7 @@ td_mt: tap_dance_mod_tap {
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp RSHFT >, < &caps_word >, <&kp HYPER_67>;
+            bindings = <&kp RSHFT >, < &caps_word >/*, <&kp HYPER_67>*/;
         };
                 as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -974,7 +1060,7 @@ td_mt: tap_dance_mod_tap {
             bindings = <
         &modthumbhm HYPER_01 GRAVE  &hml HYPER_02 N1   &hml HYPER_03 N2     &hml HYPER_04 N3  &hml HYPER_05 N4 &hml HYPER_06 N5  &td_mt_kp_07_08                                                                                                                                                                                                                             &td_mt_kp_09_10   &hmr HYPER_11 N6 &hmr HYPER_12 N7  &hmr HYPER_13 N8   &hmr HYPER_14 N9           &hmr HYPER_15 N0               &modthumbhm HYPER_16 EQUAL
         &modthumbhm HYPER_17 TAB    &hml HYPER_18 SEMI &hml HYPER_19 COMMA  &hml HYPER_20 DOT &hml HYPER_21 P  &hml HYPER_22 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &custom_repeat HYPER_25 0   &hmr HYPER_27 F  &hmr HYPER_28 G   &hmr HYPER_29 C    &hmr HYPER_30 R            &hmr HYPER_31 L                &modthumbhm HYPER_32 MINUS
-        &thumbhlay /*HYPER_33*/SYMBOLS_LAYER TAB    &hml_primal LCTL A        &hml_primal LALT O          &hml_primal LSFT E       &hml_primal LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr_primal RGUI H       &hmr_primal RSHFT T       &hmr_primal RALT N                &hmr_primal RCTL S                    &thumbhlay /*HYPER_44*/SYMBOLS_LAYER BKSP
+        &thumbhlay /*HYPER_33*/SYMBOLS_LAYER TAB    &hml_primal LCTL A        &hml_primal LALT O          &hml_primal LSFT E       &hml_primal LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &thumbhSlay HYPER_37 SKQ_CROSSROADS /*HYPER_71_KEY(KP_N1)*/ &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2) &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr_primal RGUI H       &hmr_primal RSHFT T       &hmr_primal RALT N                &hmr_primal RCTL S                    &thumbhlay /*HYPER_44*/SYMBOLS_LAYER BKSP
         &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0)                    &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                                                                 &hmr HYPER_52 B  &hmr HYPER_53 M   &hmr HYPER_54 W    &hmr HYPER_55 V            &hmr HYPER_56 Z                &custom_shift RSHFT 0
         &mo SYMBOLS_LAYER   &kp GRAVE           &kp FSLH              &kp LEFT          &kp  RIGHT                                                     &thumbhm HYPER_58 BKSP    &thumbhlay SYMBOLS_LAYER ESC                 &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP)                     &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)                      &thumbhm HYPER_63  ENTER               &thumbhm HYPER_64 SPACE                                        &kp DOWN          &kp UP             &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &mo SYMBOLS_LAYER
         >;
@@ -1063,8 +1149,320 @@ td_mt: tap_dance_mod_tap {
        &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp BSPC  &kp EQUAL  &kp FSLH  &kp ASTRK  &trans
             >;
         };
-       
+        
+        SKQ_CROSSROADS {
+            bindings = <
+        &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+        &trans  &skq RS(LA(LS(LG(LCTRL)))) &skq RC(RA(RG(RS(LA(LSHFT)))))  &skq RC(RA(RG(RS(LA(LGUI))))) &skq RC(RA(RG(RS(LA(LCTRL))))) &skq RC(RA(RG(RS(LS(LGUI))))) &trans                                                                                                                                                                                                                         &trans   &skq RC(RA(RG(RS(LS(LCTRL)))))  &skq RC(RA(RG(RS(LG(LCTRL)))))   &skq RC(RA(RG(LA(LS(LGUI)))))  &skq RC(RA(RG(LA(LS(LCTRL)))))  &skq RC(RA(RG(LA(LG(LCTRL)))))  &trans
+        &trans  &skq RC(RA(RG(LS(LG(LCTRL)))))    &skq RC(RA(RS(LA(LS(LGUI)))))      &skq RC(RA(RS(LA(LS(LCTRL)))))   &skq RC(RA(RS(LA(LG(LCTRL))))) &skq RC(RA(RS(LS(LG(LCTRL))))) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &skq RC(RA(LA(LS(LG(LCTRL)))))  &skq RC(RG(RS(LA(LS(LGUI)))))   &skq RC(RG(RS(LA(LS(LCTRL)))))  &skq RC(RG(RS(LA(LG(LCTRL)))))  &skq RC(RG(RS(LS(LG(LCTRL)))))  &trans
+        &trans  &skq RC(RG(LA(LS(LG(LCTRL))))) &skq RC(RS(LA(LS(LG(LCTRL)))))      &skq RA(RG(RS(LA(LS(LGUI)))))   &skq RA(RG(RS(LA(LS(LCTRL))))) &skq RA(RG(RS(LA(LG(LCTRL)))))                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &skq RA(RG(RS(LS(LG(LCTRL)))))  &skq RA(RG(LA(LS(LG(LCTRL)))))   &skq RA(RS(LA(LS(LG(LCTRL)))))  &skq RG(RS(LA(LS(LG(LCTRL)))))  &skq RS(LA(LS(LG(LCTRL))))  &trans
+        &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+        >;
+       };
 
+
+        // sticky layers end 
+    //     SL_CROSSROADS {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &sl SL_SEMI &sl SL_COMMA  &sl SL_DOT &sl SL_P &sl SL_Y &trans                                                                                                                                                                                                                         &trans   &sl SL_F  &sl SL_G   &sl SL_C  &sl SL_R  &sl SL_L  &trans
+    //     &trans  &sl SL_A    &sl SL_O      &sl SL_E   &sl SL_U &sl SL_I &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &sl SL_D  &sl SL_H   &sl SL_T  &sl SL_N  &sl SL_S  &trans
+    //     &trans  &sl SL_APOS &sl SL_Q      &sl SL_J   &sl SL_K &sl SL_X                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &sl SL_B  &sl SL_M   &sl SL_W  &sl SL_V  &sl SL_Z  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_SEMI {
+    //         bindings = <
+    //     &trans  &trans                  &trans                    &trans                 &trans               &trans               &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_126_KEY(SEMI) &kp HYPER_126_KEY(COMMA)  &kp HYPER_126_KEY(DOT) &kp HYPER_126_KEY(P) &kp HYPER_126_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_126_KEY(F)  &kp HYPER_126_KEY(G)   &kp HYPER_126_KEY(C)  &kp HYPER_126_KEY(R)  &kp HYPER_126_KEY(L)  &trans
+    //     &trans  &kp HYPER_126_KEY(A)    &kp HYPER_126_KEY(O)      &kp HYPER_126_KEY(E)   &kp HYPER_126_KEY(U) &kp HYPER_126_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_126_KEY(D)  &kp HYPER_126_KEY(H)   &kp HYPER_126_KEY(T)  &kp HYPER_126_KEY(N)  &kp HYPER_126_KEY(S)  &trans
+    //     &trans  &kp HYPER_126_KEY(APOS) &kp HYPER_126_KEY(Q)      &kp HYPER_126_KEY(J)   &kp HYPER_126_KEY(K) &kp HYPER_126_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_126_KEY(B)  &kp HYPER_126_KEY(M)   &kp HYPER_126_KEY(W)  &kp HYPER_126_KEY(V)  &kp HYPER_126_KEY(Z)  &trans
+    //     &trans  &trans                  &trans                    &trans                 &trans                                             &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_COMMA {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_127_KEY(SEMI)  &kp HYPER_127_KEY(COMMA)  &kp HYPER_127_KEY(DOT) &kp HYPER_127_KEY(P) &kp HYPER_127_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_127_KEY(F)  &kp HYPER_127_KEY(G)   &kp HYPER_127_KEY(C)  &kp HYPER_127_KEY(R)  &kp HYPER_127_KEY(L)  &trans
+    //     &trans  &kp HYPER_127_KEY(A)    &kp HYPER_127_KEY(O)      &kp HYPER_127_KEY(E)   &kp HYPER_127_KEY(U) &kp HYPER_127_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_127_KEY(D)  &kp HYPER_127_KEY(H)   &kp HYPER_127_KEY(T)  &kp HYPER_127_KEY(N)  &kp HYPER_127_KEY(S)  &trans
+    //     &trans  &kp HYPER_127_KEY(APOS) &kp HYPER_127_KEY(Q)      &kp HYPER_127_KEY(J)   &kp HYPER_127_KEY(K) &kp HYPER_127_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_127_KEY(B)  &kp HYPER_127_KEY(M)   &kp HYPER_127_KEY(W)  &kp HYPER_127_KEY(V)  &kp HYPER_127_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_DOT {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_128_KEY(SEMI)  &kp HYPER_128_KEY(COMMA)  &kp HYPER_128_KEY(DOT) &kp HYPER_128_KEY(P) &kp HYPER_128_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_128_KEY(F)  &kp HYPER_128_KEY(G)   &kp HYPER_128_KEY(C)  &kp HYPER_128_KEY(R)  &kp HYPER_128_KEY(L)  &trans
+    //     &trans  &kp HYPER_128_KEY(A)    &kp HYPER_128_KEY(O)      &kp HYPER_128_KEY(E)   &kp HYPER_128_KEY(U) &kp HYPER_128_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_128_KEY(D)  &kp HYPER_128_KEY(H)   &kp HYPER_128_KEY(T)  &kp HYPER_128_KEY(N)  &kp HYPER_128_KEY(S)  &trans
+    //     &trans  &kp HYPER_128_KEY(APOS) &kp HYPER_128_KEY(Q)      &kp HYPER_128_KEY(J)   &kp HYPER_128_KEY(K) &kp HYPER_128_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_128_KEY(B)  &kp HYPER_128_KEY(M)   &kp HYPER_128_KEY(W)  &kp HYPER_128_KEY(V)  &kp HYPER_128_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_P {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_129_KEY(SEMI)  &kp HYPER_129_KEY(COMMA)  &kp HYPER_129_KEY(DOT) &kp HYPER_129_KEY(P) &kp HYPER_129_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_129_KEY(F)  &kp HYPER_129_KEY(G)   &kp HYPER_129_KEY(C)  &kp HYPER_129_KEY(R)  &kp HYPER_129_KEY(L)  &trans
+    //     &trans  &kp HYPER_129_KEY(A)    &kp HYPER_129_KEY(O)      &kp HYPER_129_KEY(E)   &kp HYPER_129_KEY(U) &kp HYPER_129_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_129_KEY(D)  &kp HYPER_129_KEY(H)   &kp HYPER_129_KEY(T)  &kp HYPER_129_KEY(N)  &kp HYPER_129_KEY(S)  &trans
+    //     &trans  &kp HYPER_129_KEY(APOS) &kp HYPER_129_KEY(Q)      &kp HYPER_129_KEY(J)   &kp HYPER_129_KEY(K) &kp HYPER_129_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_129_KEY(B)  &kp HYPER_129_KEY(M)   &kp HYPER_129_KEY(W)  &kp HYPER_129_KEY(V)  &kp HYPER_129_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_Y {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_130_KEY(SEMI)  &kp HYPER_130_KEY(COMMA)  &kp HYPER_130_KEY(DOT) &kp HYPER_130_KEY(P) &kp HYPER_130_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_130_KEY(F)  &kp HYPER_130_KEY(G)   &kp HYPER_130_KEY(C)  &kp HYPER_130_KEY(R)  &kp HYPER_130_KEY(L)  &trans
+    //     &trans  &kp HYPER_130_KEY(A)    &kp HYPER_130_KEY(O)      &kp HYPER_130_KEY(E)   &kp HYPER_130_KEY(U) &kp HYPER_130_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_130_KEY(D)  &kp HYPER_130_KEY(H)   &kp HYPER_130_KEY(T)  &kp HYPER_130_KEY(N)  &kp HYPER_130_KEY(S)  &trans
+    //     &trans  &kp HYPER_130_KEY(APOS) &kp HYPER_130_KEY(Q)      &kp HYPER_130_KEY(J)   &kp HYPER_130_KEY(K) &kp HYPER_130_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_130_KEY(B)  &kp HYPER_130_KEY(M)   &kp HYPER_130_KEY(W)  &kp HYPER_130_KEY(V)  &kp HYPER_130_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_F {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_131_KEY(SEMI)  &kp HYPER_131_KEY(COMMA)  &kp HYPER_131_KEY(DOT) &kp HYPER_131_KEY(P) &kp HYPER_131_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_131_KEY(F)  &kp HYPER_131_KEY(G)   &kp HYPER_131_KEY(C)  &kp HYPER_131_KEY(R)  &kp HYPER_131_KEY(L)  &trans
+    //     &trans  &kp HYPER_131_KEY(A)    &kp HYPER_131_KEY(O)      &kp HYPER_131_KEY(E)   &kp HYPER_131_KEY(U) &kp HYPER_131_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_131_KEY(D)  &kp HYPER_131_KEY(H)   &kp HYPER_131_KEY(T)  &kp HYPER_131_KEY(N)  &kp HYPER_131_KEY(S)  &trans
+    //     &trans  &kp HYPER_131_KEY(APOS) &kp HYPER_131_KEY(Q)      &kp HYPER_131_KEY(J)   &kp HYPER_131_KEY(K) &kp HYPER_131_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_131_KEY(B)  &kp HYPER_131_KEY(M)   &kp HYPER_131_KEY(W)  &kp HYPER_131_KEY(V)  &kp HYPER_131_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_G {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_132_KEY(SEMI)  &kp HYPER_132_KEY(COMMA)  &kp HYPER_132_KEY(DOT) &kp HYPER_132_KEY(P) &kp HYPER_132_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_132_KEY(F)  &kp HYPER_132_KEY(G)   &kp HYPER_132_KEY(C)  &kp HYPER_132_KEY(R)  &kp HYPER_132_KEY(L)  &trans
+    //     &trans  &kp HYPER_132_KEY(A)    &kp HYPER_132_KEY(O)      &kp HYPER_132_KEY(E)   &kp HYPER_132_KEY(U) &kp HYPER_132_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_132_KEY(D)  &kp HYPER_132_KEY(H)   &kp HYPER_132_KEY(T)  &kp HYPER_132_KEY(N)  &kp HYPER_132_KEY(S)  &trans
+    //     &trans  &kp HYPER_132_KEY(APOS) &kp HYPER_132_KEY(Q)      &kp HYPER_132_KEY(J)   &kp HYPER_132_KEY(K) &kp HYPER_132_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_132_KEY(B)  &kp HYPER_132_KEY(M)   &kp HYPER_132_KEY(W)  &kp HYPER_132_KEY(V)  &kp HYPER_132_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_R {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_133_KEY(SEMI)  &kp HYPER_133_KEY(COMMA)  &kp HYPER_133_KEY(DOT) &kp HYPER_133_KEY(P) &kp HYPER_133_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_133_KEY(F)  &kp HYPER_133_KEY(G)   &kp HYPER_133_KEY(C)  &kp HYPER_133_KEY(R)  &kp HYPER_133_KEY(L)  &trans
+    //     &trans  &kp HYPER_133_KEY(A)    &kp HYPER_133_KEY(O)      &kp HYPER_133_KEY(E)   &kp HYPER_133_KEY(U) &kp HYPER_133_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_133_KEY(D)  &kp HYPER_133_KEY(H)   &kp HYPER_133_KEY(T)  &kp HYPER_133_KEY(N)  &kp HYPER_133_KEY(S)  &trans
+    //     &trans  &kp HYPER_133_KEY(APOS) &kp HYPER_133_KEY(Q)      &kp HYPER_133_KEY(J)   &kp HYPER_133_KEY(K) &kp HYPER_133_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_133_KEY(B)  &kp HYPER_133_KEY(M)   &kp HYPER_133_KEY(W)  &kp HYPER_133_KEY(V)  &kp HYPER_133_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_L {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_134_KEY(SEMI)  &kp HYPER_134_KEY(COMMA)  &kp HYPER_134_KEY(DOT) &kp HYPER_134_KEY(P) &kp HYPER_134_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_134_KEY(F)  &kp HYPER_134_KEY(G)   &kp HYPER_134_KEY(C)  &kp HYPER_134_KEY(R)  &kp HYPER_134_KEY(L)  &trans
+    //     &trans  &kp HYPER_134_KEY(A)    &kp HYPER_134_KEY(O)      &kp HYPER_134_KEY(E)   &kp HYPER_134_KEY(U) &kp HYPER_134_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_134_KEY(D)  &kp HYPER_134_KEY(H)   &kp HYPER_134_KEY(T)  &kp HYPER_134_KEY(N)  &kp HYPER_134_KEY(S)  &trans
+    //     &trans  &kp HYPER_134_KEY(APOS) &kp HYPER_134_KEY(Q)      &kp HYPER_134_KEY(J)   &kp HYPER_134_KEY(K) &kp HYPER_134_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_134_KEY(B)  &kp HYPER_134_KEY(M)   &kp HYPER_134_KEY(W)  &kp HYPER_134_KEY(V)  &kp HYPER_134_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_A {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_135_KEY(SEMI)  &kp HYPER_135_KEY(COMMA)  &kp HYPER_135_KEY(DOT) &kp HYPER_135_KEY(P) &kp HYPER_135_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_135_KEY(F)  &kp HYPER_135_KEY(G)   &kp HYPER_135_KEY(C)  &kp HYPER_135_KEY(R)  &kp HYPER_135_KEY(L)  &trans
+    //     &trans  &kp HYPER_135_KEY(A)    &kp HYPER_135_KEY(O)      &kp HYPER_135_KEY(E)   &kp HYPER_135_KEY(U) &kp HYPER_135_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_135_KEY(D)  &kp HYPER_135_KEY(H)   &kp HYPER_135_KEY(T)  &kp HYPER_135_KEY(N)  &kp HYPER_135_KEY(S)  &trans
+    //     &trans  &kp HYPER_135_KEY(APOS) &kp HYPER_135_KEY(Q)      &kp HYPER_135_KEY(J)   &kp HYPER_135_KEY(K) &kp HYPER_135_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_135_KEY(B)  &kp HYPER_135_KEY(M)   &kp HYPER_135_KEY(W)  &kp HYPER_135_KEY(V)  &kp HYPER_135_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_O {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_136_KEY(SEMI)  &kp HYPER_136_KEY(COMMA)  &kp HYPER_136_KEY(DOT) &kp HYPER_136_KEY(P) &kp HYPER_136_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_136_KEY(F)  &kp HYPER_136_KEY(G)   &kp HYPER_136_KEY(C)  &kp HYPER_136_KEY(R)  &kp HYPER_136_KEY(L)  &trans
+    //     &trans  &kp HYPER_136_KEY(A)    &kp HYPER_136_KEY(O)      &kp HYPER_136_KEY(E)   &kp HYPER_136_KEY(U) &kp HYPER_136_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_136_KEY(D)  &kp HYPER_136_KEY(H)   &kp HYPER_136_KEY(T)  &kp HYPER_136_KEY(N)  &kp HYPER_136_KEY(S)  &trans
+    //     &trans  &kp HYPER_136_KEY(APOS) &kp HYPER_136_KEY(Q)      &kp HYPER_136_KEY(J)   &kp HYPER_136_KEY(K) &kp HYPER_136_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_136_KEY(B)  &kp HYPER_136_KEY(M)   &kp HYPER_136_KEY(W)  &kp HYPER_136_KEY(V)  &kp HYPER_136_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_E {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_137_KEY(SEMI)  &kp HYPER_137_KEY(COMMA)  &kp HYPER_137_KEY(DOT) &kp HYPER_137_KEY(P) &kp HYPER_137_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_137_KEY(F)  &kp HYPER_137_KEY(G)   &kp HYPER_137_KEY(C)  &kp HYPER_137_KEY(R)  &kp HYPER_137_KEY(L)  &trans
+    //     &trans  &kp HYPER_137_KEY(A)    &kp HYPER_137_KEY(O)      &kp HYPER_137_KEY(E)   &kp HYPER_137_KEY(U) &kp HYPER_137_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_137_KEY(D)  &kp HYPER_137_KEY(H)   &kp HYPER_137_KEY(T)  &kp HYPER_137_KEY(N)  &kp HYPER_137_KEY(S)  &trans
+    //     &trans  &kp HYPER_137_KEY(APOS) &kp HYPER_137_KEY(Q)      &kp HYPER_137_KEY(J)   &kp HYPER_137_KEY(K) &kp HYPER_137_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_137_KEY(B)  &kp HYPER_137_KEY(M)   &kp HYPER_137_KEY(W)  &kp HYPER_137_KEY(V)  &kp HYPER_137_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_U {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_138_KEY(SEMI)  &kp HYPER_138_KEY(COMMA)  &kp HYPER_138_KEY(DOT) &kp HYPER_138_KEY(P) &kp HYPER_138_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_138_KEY(F)  &kp HYPER_138_KEY(G)   &kp HYPER_138_KEY(C)  &kp HYPER_138_KEY(R)  &kp HYPER_138_KEY(L)  &trans
+    //     &trans  &kp HYPER_138_KEY(A)    &kp HYPER_138_KEY(O)      &kp HYPER_138_KEY(E)   &kp HYPER_138_KEY(U) &kp HYPER_138_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_138_KEY(D)  &kp HYPER_138_KEY(H)   &kp HYPER_138_KEY(T)  &kp HYPER_138_KEY(N)  &kp HYPER_138_KEY(S)  &trans
+    //     &trans  &kp HYPER_138_KEY(APOS) &kp HYPER_138_KEY(Q)      &kp HYPER_138_KEY(J)   &kp HYPER_138_KEY(K) &kp HYPER_138_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_138_KEY(B)  &kp HYPER_138_KEY(M)   &kp HYPER_138_KEY(W)  &kp HYPER_138_KEY(V)  &kp HYPER_138_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_I {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_139_KEY(SEMI)  &kp HYPER_139_KEY(COMMA)  &kp HYPER_139_KEY(DOT) &kp HYPER_139_KEY(P) &kp HYPER_139_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_139_KEY(F)  &kp HYPER_139_KEY(G)   &kp HYPER_139_KEY(C)  &kp HYPER_139_KEY(R)  &kp HYPER_139_KEY(L)  &trans
+    //     &trans  &kp HYPER_139_KEY(A)    &kp HYPER_139_KEY(O)      &kp HYPER_139_KEY(E)   &kp HYPER_139_KEY(U) &kp HYPER_139_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_139_KEY(D)  &kp HYPER_139_KEY(H)   &kp HYPER_139_KEY(T)  &kp HYPER_139_KEY(N)  &kp HYPER_139_KEY(S)  &trans
+    //     &trans  &kp HYPER_139_KEY(APOS) &kp HYPER_139_KEY(Q)      &kp HYPER_139_KEY(J)   &kp HYPER_139_KEY(K) &kp HYPER_139_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_139_KEY(B)  &kp HYPER_139_KEY(M)   &kp HYPER_139_KEY(W)  &kp HYPER_139_KEY(V)  &kp HYPER_139_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_D {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_140_KEY(SEMI)  &kp HYPER_140_KEY(COMMA)  &kp HYPER_140_KEY(DOT) &kp HYPER_140_KEY(P) &kp HYPER_140_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_140_KEY(F)  &kp HYPER_140_KEY(G)   &kp HYPER_140_KEY(C)  &kp HYPER_140_KEY(R)  &kp HYPER_140_KEY(L)  &trans
+    //     &trans  &kp HYPER_140_KEY(A)    &kp HYPER_140_KEY(O)      &kp HYPER_140_KEY(E)   &kp HYPER_140_KEY(U) &kp HYPER_140_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_140_KEY(D)  &kp HYPER_140_KEY(H)   &kp HYPER_140_KEY(T)  &kp HYPER_140_KEY(N)  &kp HYPER_140_KEY(S)  &trans
+    //     &trans  &kp HYPER_140_KEY(APOS) &kp HYPER_140_KEY(Q)      &kp HYPER_140_KEY(J)   &kp HYPER_140_KEY(K) &kp HYPER_140_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_140_KEY(B)  &kp HYPER_140_KEY(M)   &kp HYPER_140_KEY(W)  &kp HYPER_140_KEY(V)  &kp HYPER_140_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_H {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_141_KEY(SEMI)  &kp HYPER_141_KEY(COMMA)  &kp HYPER_141_KEY(DOT) &kp HYPER_141_KEY(P) &kp HYPER_141_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_141_KEY(F)  &kp HYPER_141_KEY(G)   &kp HYPER_141_KEY(C)  &kp HYPER_141_KEY(R)  &kp HYPER_141_KEY(L)  &trans
+    //     &trans  &kp HYPER_141_KEY(A)    &kp HYPER_141_KEY(O)      &kp HYPER_141_KEY(E)   &kp HYPER_141_KEY(U) &kp HYPER_141_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_141_KEY(D)  &kp HYPER_141_KEY(H)   &kp HYPER_141_KEY(T)  &kp HYPER_141_KEY(N)  &kp HYPER_141_KEY(S)  &trans
+    //     &trans  &kp HYPER_141_KEY(APOS) &kp HYPER_141_KEY(Q)      &kp HYPER_141_KEY(J)   &kp HYPER_141_KEY(K) &kp HYPER_141_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_141_KEY(B)  &kp HYPER_141_KEY(M)   &kp HYPER_141_KEY(W)  &kp HYPER_141_KEY(V)  &kp HYPER_141_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_T {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_142_KEY(SEMI)  &kp HYPER_142_KEY(COMMA)  &kp HYPER_142_KEY(DOT) &kp HYPER_142_KEY(P) &kp HYPER_142_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_142_KEY(F)  &kp HYPER_142_KEY(G)   &kp HYPER_142_KEY(C)  &kp HYPER_142_KEY(R)  &kp HYPER_142_KEY(L)  &trans
+    //     &trans  &kp HYPER_142_KEY(A)    &kp HYPER_142_KEY(O)      &kp HYPER_142_KEY(E)   &kp HYPER_142_KEY(U) &kp HYPER_142_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_142_KEY(D)  &kp HYPER_142_KEY(H)   &kp HYPER_142_KEY(T)  &kp HYPER_142_KEY(N)  &kp HYPER_142_KEY(S)  &trans
+    //     &trans  &kp HYPER_142_KEY(APOS) &kp HYPER_142_KEY(Q)      &kp HYPER_142_KEY(J)   &kp HYPER_142_KEY(K) &kp HYPER_142_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_142_KEY(B)  &kp HYPER_142_KEY(M)   &kp HYPER_142_KEY(W)  &kp HYPER_142_KEY(V)  &kp HYPER_142_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_N {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_143_KEY(SEMI)  &kp HYPER_143_KEY(COMMA)  &kp HYPER_143_KEY(DOT) &kp HYPER_143_KEY(P) &kp HYPER_143_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_143_KEY(F)  &kp HYPER_143_KEY(G)   &kp HYPER_143_KEY(C)  &kp HYPER_143_KEY(R)  &kp HYPER_143_KEY(L)  &trans
+    //     &trans  &kp HYPER_143_KEY(A)    &kp HYPER_143_KEY(O)      &kp HYPER_143_KEY(E)   &kp HYPER_143_KEY(U) &kp HYPER_143_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_143_KEY(D)  &kp HYPER_143_KEY(H)   &kp HYPER_143_KEY(T)  &kp HYPER_143_KEY(N)  &kp HYPER_143_KEY(S)  &trans
+    //     &trans  &kp HYPER_143_KEY(APOS) &kp HYPER_143_KEY(Q)      &kp HYPER_143_KEY(J)   &kp HYPER_143_KEY(K) &kp HYPER_143_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_143_KEY(B)  &kp HYPER_143_KEY(M)   &kp HYPER_143_KEY(W)  &kp HYPER_143_KEY(V)  &kp HYPER_143_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_S {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_144_KEY(SEMI)  &kp HYPER_144_KEY(COMMA)  &kp HYPER_144_KEY(DOT) &kp HYPER_144_KEY(P) &kp HYPER_144_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_144_KEY(F)  &kp HYPER_144_KEY(G)   &kp HYPER_144_KEY(C)  &kp HYPER_144_KEY(R)  &kp HYPER_144_KEY(L)  &trans
+    //     &trans  &kp HYPER_144_KEY(A)    &kp HYPER_144_KEY(O)      &kp HYPER_144_KEY(E)   &kp HYPER_144_KEY(U) &kp HYPER_144_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_144_KEY(D)  &kp HYPER_144_KEY(H)   &kp HYPER_144_KEY(T)  &kp HYPER_144_KEY(N)  &kp HYPER_144_KEY(S)  &trans
+    //     &trans  &kp HYPER_144_KEY(APOS) &kp HYPER_144_KEY(Q)      &kp HYPER_144_KEY(J)   &kp HYPER_144_KEY(K) &kp HYPER_144_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_144_KEY(B)  &kp HYPER_144_KEY(M)   &kp HYPER_144_KEY(W)  &kp HYPER_144_KEY(V)  &kp HYPER_144_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_APOS {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_145_KEY(SEMI)  &kp HYPER_145_KEY(COMMA)  &kp HYPER_145_KEY(DOT) &kp HYPER_145_KEY(P) &kp HYPER_145_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_145_KEY(F)  &kp HYPER_145_KEY(G)   &kp HYPER_145_KEY(C)  &kp HYPER_145_KEY(R)  &kp HYPER_145_KEY(L)  &trans
+    //     &trans  &kp HYPER_145_KEY(A)    &kp HYPER_145_KEY(O)      &kp HYPER_145_KEY(E)   &kp HYPER_145_KEY(U) &kp HYPER_145_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_145_KEY(D)  &kp HYPER_145_KEY(H)   &kp HYPER_145_KEY(T)  &kp HYPER_145_KEY(N)  &kp HYPER_145_KEY(S)  &trans
+    //     &trans  &kp HYPER_145_KEY(APOS) &kp HYPER_145_KEY(Q)      &kp HYPER_145_KEY(J)   &kp HYPER_145_KEY(K) &kp HYPER_145_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_145_KEY(B)  &kp HYPER_145_KEY(M)   &kp HYPER_145_KEY(W)  &kp HYPER_145_KEY(V)  &kp HYPER_145_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_Q {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_146_KEY(SEMI)  &kp HYPER_146_KEY(COMMA)  &kp HYPER_146_KEY(DOT) &kp HYPER_146_KEY(P) &kp HYPER_146_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_146_KEY(F)  &kp HYPER_146_KEY(G)   &kp HYPER_146_KEY(C)  &kp HYPER_146_KEY(R)  &kp HYPER_146_KEY(L)  &trans
+    //     &trans  &kp HYPER_146_KEY(A)    &kp HYPER_146_KEY(O)      &kp HYPER_146_KEY(E)   &kp HYPER_146_KEY(U) &kp HYPER_146_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_146_KEY(D)  &kp HYPER_146_KEY(H)   &kp HYPER_146_KEY(T)  &kp HYPER_146_KEY(N)  &kp HYPER_146_KEY(S)  &trans
+    //     &trans  &kp HYPER_146_KEY(APOS) &kp HYPER_146_KEY(Q)      &kp HYPER_146_KEY(J)   &kp HYPER_146_KEY(K) &kp HYPER_146_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_146_KEY(B)  &kp HYPER_146_KEY(M)   &kp HYPER_146_KEY(W)  &kp HYPER_146_KEY(V)  &kp HYPER_146_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_J {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_147_KEY(SEMI)  &kp HYPER_147_KEY(COMMA)  &kp HYPER_147_KEY(DOT) &kp HYPER_147_KEY(P) &kp HYPER_147_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_147_KEY(F)  &kp HYPER_147_KEY(G)   &kp HYPER_147_KEY(C)  &kp HYPER_147_KEY(R)  &kp HYPER_147_KEY(L)  &trans
+    //     &trans  &kp HYPER_147_KEY(A)    &kp HYPER_147_KEY(O)      &kp HYPER_147_KEY(E)   &kp HYPER_147_KEY(U) &kp HYPER_147_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_147_KEY(D)  &kp HYPER_147_KEY(H)   &kp HYPER_147_KEY(T)  &kp HYPER_147_KEY(N)  &kp HYPER_147_KEY(S)  &trans
+    //     &trans  &kp HYPER_147_KEY(APOS) &kp HYPER_147_KEY(Q)      &kp HYPER_147_KEY(J)   &kp HYPER_147_KEY(K) &kp HYPER_147_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_147_KEY(B)  &kp HYPER_147_KEY(M)   &kp HYPER_147_KEY(W)  &kp HYPER_147_KEY(V)  &kp HYPER_147_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_K {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_148_KEY(SEMI)  &kp HYPER_148_KEY(COMMA)  &kp HYPER_148_KEY(DOT) &kp HYPER_148_KEY(P) &kp HYPER_148_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_148_KEY(F)  &kp HYPER_148_KEY(G)   &kp HYPER_148_KEY(C)  &kp HYPER_148_KEY(R)  &kp HYPER_148_KEY(L)  &trans
+    //     &trans  &kp HYPER_148_KEY(A)    &kp HYPER_148_KEY(O)      &kp HYPER_148_KEY(E)   &kp HYPER_148_KEY(U) &kp HYPER_148_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_148_KEY(D)  &kp HYPER_148_KEY(H)   &kp HYPER_148_KEY(T)  &kp HYPER_148_KEY(N)  &kp HYPER_148_KEY(S)  &trans
+    //     &trans  &kp HYPER_148_KEY(APOS) &kp HYPER_148_KEY(Q)      &kp HYPER_148_KEY(J)   &kp HYPER_148_KEY(K) &kp HYPER_148_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_148_KEY(B)  &kp HYPER_148_KEY(M)   &kp HYPER_148_KEY(W)  &kp HYPER_148_KEY(V)  &kp HYPER_148_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_X {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_149_KEY(SEMI)  &kp HYPER_149_KEY(COMMA)  &kp HYPER_149_KEY(DOT) &kp HYPER_149_KEY(P) &kp HYPER_149_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_149_KEY(F)  &kp HYPER_149_KEY(G)   &kp HYPER_149_KEY(C)  &kp HYPER_149_KEY(R)  &kp HYPER_149_KEY(L)  &trans
+    //     &trans  &kp HYPER_149_KEY(A)    &kp HYPER_149_KEY(O)      &kp HYPER_149_KEY(E)   &kp HYPER_149_KEY(U) &kp HYPER_149_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_149_KEY(D)  &kp HYPER_149_KEY(H)   &kp HYPER_149_KEY(T)  &kp HYPER_149_KEY(N)  &kp HYPER_149_KEY(S)  &trans
+    //     &trans  &kp HYPER_149_KEY(APOS) &kp HYPER_149_KEY(Q)      &kp HYPER_149_KEY(J)   &kp HYPER_149_KEY(K) &kp HYPER_149_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_149_KEY(B)  &kp HYPER_149_KEY(M)   &kp HYPER_149_KEY(W)  &kp HYPER_149_KEY(V)  &kp HYPER_149_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_B {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_150_KEY(SEMI)  &kp HYPER_150_KEY(COMMA)  &kp HYPER_150_KEY(DOT) &kp HYPER_150_KEY(P) &kp HYPER_150_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_150_KEY(F)  &kp HYPER_150_KEY(G)   &kp HYPER_150_KEY(C)  &kp HYPER_150_KEY(R)  &kp HYPER_150_KEY(L)  &trans
+    //     &trans  &kp HYPER_150_KEY(A)    &kp HYPER_150_KEY(O)      &kp HYPER_150_KEY(E)   &kp HYPER_150_KEY(U) &kp HYPER_150_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_150_KEY(D)  &kp HYPER_150_KEY(H)   &kp HYPER_150_KEY(T)  &kp HYPER_150_KEY(N)  &kp HYPER_150_KEY(S)  &trans
+    //     &trans  &kp HYPER_150_KEY(APOS) &kp HYPER_150_KEY(Q)      &kp HYPER_150_KEY(J)   &kp HYPER_150_KEY(K) &kp HYPER_150_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_150_KEY(B)  &kp HYPER_150_KEY(M)   &kp HYPER_150_KEY(W)  &kp HYPER_150_KEY(V)  &kp HYPER_150_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_M {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_151_KEY(SEMI)  &kp HYPER_151_KEY(COMMA)  &kp HYPER_151_KEY(DOT) &kp HYPER_151_KEY(P) &kp HYPER_151_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_151_KEY(F)  &kp HYPER_151_KEY(G)   &kp HYPER_151_KEY(C)  &kp HYPER_151_KEY(R)  &kp HYPER_151_KEY(L)  &trans
+    //     &trans  &kp HYPER_151_KEY(A)    &kp HYPER_151_KEY(O)      &kp HYPER_151_KEY(E)   &kp HYPER_151_KEY(U) &kp HYPER_151_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_151_KEY(D)  &kp HYPER_151_KEY(H)   &kp HYPER_151_KEY(T)  &kp HYPER_151_KEY(N)  &kp HYPER_151_KEY(S)  &trans
+    //     &trans  &kp HYPER_151_KEY(APOS) &kp HYPER_151_KEY(Q)      &kp HYPER_151_KEY(J)   &kp HYPER_151_KEY(K) &kp HYPER_151_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_151_KEY(B)  &kp HYPER_151_KEY(M)   &kp HYPER_151_KEY(W)  &kp HYPER_151_KEY(V)  &kp HYPER_151_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_W {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_152_KEY(SEMI)  &kp HYPER_152_KEY(COMMA)  &kp HYPER_152_KEY(DOT) &kp HYPER_152_KEY(P) &kp HYPER_152_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_152_KEY(F)  &kp HYPER_152_KEY(G)   &kp HYPER_152_KEY(C)  &kp HYPER_152_KEY(R)  &kp HYPER_152_KEY(L)  &trans
+    //     &trans  &kp HYPER_152_KEY(A)    &kp HYPER_152_KEY(O)      &kp HYPER_152_KEY(E)   &kp HYPER_152_KEY(U) &kp HYPER_152_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_152_KEY(D)  &kp HYPER_152_KEY(H)   &kp HYPER_152_KEY(T)  &kp HYPER_152_KEY(N)  &kp HYPER_152_KEY(S)  &trans
+    //     &trans  &kp HYPER_152_KEY(APOS) &kp HYPER_152_KEY(Q)      &kp HYPER_152_KEY(J)   &kp HYPER_152_KEY(K) &kp HYPER_152_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_152_KEY(B)  &kp HYPER_152_KEY(M)   &kp HYPER_152_KEY(W)  &kp HYPER_152_KEY(V)  &kp HYPER_152_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_V {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_153_KEY(SEMI)  &kp HYPER_153_KEY(COMMA)  &kp HYPER_153_KEY(DOT) &kp HYPER_153_KEY(P) &kp HYPER_153_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_153_KEY(F)  &kp HYPER_153_KEY(G)   &kp HYPER_153_KEY(C)  &kp HYPER_153_KEY(R)  &kp HYPER_153_KEY(L)  &trans
+    //     &trans  &kp HYPER_153_KEY(A)    &kp HYPER_153_KEY(O)      &kp HYPER_153_KEY(E)   &kp HYPER_153_KEY(U) &kp HYPER_153_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_153_KEY(D)  &kp HYPER_153_KEY(H)   &kp HYPER_153_KEY(T)  &kp HYPER_153_KEY(N)  &kp HYPER_153_KEY(S)  &trans
+    //     &trans  &kp HYPER_153_KEY(APOS) &kp HYPER_153_KEY(Q)      &kp HYPER_153_KEY(J)   &kp HYPER_153_KEY(K) &kp HYPER_153_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_153_KEY(B)  &kp HYPER_153_KEY(M)   &kp HYPER_153_KEY(W)  &kp HYPER_153_KEY(V)  &kp HYPER_153_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+    //     SL_Z {
+    //         bindings = <
+    //     &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
+    //     &trans  &kp HYPER_154_KEY(SEMI)  &kp HYPER_154_KEY(COMMA)  &kp HYPER_154_KEY(DOT) &kp HYPER_154_KEY(P) &kp HYPER_154_KEY(Y) &trans                                                                                                                                                                                                                         &trans   &kp HYPER_154_KEY(F)  &kp HYPER_154_KEY(G)   &kp HYPER_154_KEY(C)  &kp HYPER_154_KEY(R)  &kp HYPER_154_KEY(L)  &trans
+    //     &trans  &kp HYPER_154_KEY(A)    &kp HYPER_154_KEY(O)      &kp HYPER_154_KEY(E)   &kp HYPER_154_KEY(U) &kp HYPER_154_KEY(I) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &kp HYPER_154_KEY(D)  &kp HYPER_154_KEY(H)   &kp HYPER_154_KEY(T)  &kp HYPER_154_KEY(N)  &kp HYPER_154_KEY(S)  &trans
+    //     &trans  &kp HYPER_154_KEY(APOS) &kp HYPER_154_KEY(Q)      &kp HYPER_154_KEY(J)   &kp HYPER_154_KEY(K) &kp HYPER_154_KEY(X)                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &kp HYPER_154_KEY(B)  &kp HYPER_154_KEY(M)   &kp HYPER_154_KEY(W)  &kp HYPER_154_KEY(V)  &kp HYPER_154_KEY(Z)  &trans
+    //     &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+    //     >;
+    //    };
+
+       // sticky layers end
     //             layer_fn_12 {
     //         bindings = <
     //    &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog 1                                  &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
