@@ -179,6 +179,7 @@
 #define HYPER_88_KEY(key)  RC(RA(LA(LS(LC(key)))))   // hyper  // RC RA LA LS LC
 #define HYPER_89_KEY(key)  RC(RA(LA(LG(LC(key)))))   // hyper  // RC RA LA LG LC
 #define HYPER_90_KEY(key)  RC(RA(LS(LG(LC(key)))))   // hyper  // RC RA LS LG LC
+// unused hyper keys
 #define HYPER_91_KEY(key)  RC(RG(RS(LA(LS(key)))))   // hyper  // RC RG RS LA LS
 #define HYPER_92_KEY(key)  RC(RG(RS(LA(LG(key)))))   // hyper  // RC RG RS LA LG
 #define HYPER_93_KEY(key)  RC(RG(RS(LA(LC(key)))))   // hyper  // RC RG RS LA LC
@@ -818,7 +819,7 @@ td_mt: tap_dance_mod_tap {
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp RSHFT >, < &caps_word >/*, <&kp HYPER_67>*/;
+            bindings = <&sl SKQ_CROSSROADS >, < &caps_word >/*, <&kp HYPER_67>*/;
         };
                 as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -842,7 +843,7 @@ td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
+            tapping_term_ms = <175>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&td_mt>;
         };
@@ -850,7 +851,7 @@ td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_REPEAT";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
+            tapping_term_ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&td_mt_kp_25_26>;
         };
@@ -880,8 +881,8 @@ td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_KP_25_26";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&key_repeat/*HYPER_85_KEY(KP_PLUS)*/>, </*&mt HYPER_26*/&kp HYPER_86_KEY(KP_MINUS)>;
+            tapping-term-ms = <200>;
+            bindings = <&key_repeat/*HYPER_85_KEY(KP_PLUS)*/>/*, <&mt HYPER_26&kp HYPER_86_KEY(KP_MINUS)>*/;
         }; 
         td_mt_kp_35_36: tap_dance_kp_35_36 {
             compatible = "zmk,behavior-tap-dance";
