@@ -213,10 +213,10 @@
 #define HYPER_122_KEY(key)  RG(RS(LA(LS(LC(key)))))   // hyper  // RG RS LA LS LC
 #define HYPER_123_KEY(key)  RG(RS(LA(LG(LC(key)))))   // hyper  // RG RS LA LG LC
 #define HYPER_124_KEY(key)  RG(RS(LS(LG(LC(key)))))   // hyper  // RG RS LS LG LC
-#define HYPER_125_KEY(key)  RG(LA(LS(LG(LC(key)))))   // hyper  // RG LA LS LG LC
 // unused hyper keys 
 
 // keys for one time activation(not holding)
+#define HYPER_125_KEY(key)  RG(LA(LS(LG(LC(key)))))   // hyper  // RG LA LS LG LC
 #define HYPER_126_KEY(key)  RS(LA(LS(LG(LC(key)))))   // hyper  // RS LA LS LG LC
 #define HYPER_127_KEY(key)  RC(RA(RG(RS(LA(LS(key))))))   // hyper  // RC RA RG RS LA LS
 #define HYPER_128_KEY(key)  RC(RA(RG(RS(LA(LG(key))))))   // hyper  // RC RA RG RS LA LG
@@ -320,35 +320,36 @@
 
 
 // keys for sticky modifiers(not holding)
-#define HYPER_126(key) RS(LA(LS(LG(LCTRL))))   // hyper  // RS LA LS LG LC
-#define HYPER_127(key) RC(RA(RG(RS(LA(LSHFT)))))   // hyper  // RC RA RG RS LA LS
-#define HYPER_128(key) RC(RA(RG(RS(LA(LGUI)))))   // hyper  // RC RA RG RS LA LG
-#define HYPER_129(key) RC(RA(RG(RS(LA(LCTRL)))))   // hyper  // RC RA RG RS LA LC
-#define HYPER_130(key) RC(RA(RG(RS(LS(LGUI)))))   // hyper  // RC RA RG RS LS LG
-#define HYPER_131(key) RC(RA(RG(RS(LS(LCTRL)))))   // hyper  // RC RA RG RS LS LC
-#define HYPER_132(key) RC(RA(RG(RS(LG(LCTRL)))))   // hyper  // RC RA RG RS LG LC
-#define HYPER_133(key) RC(RA(RG(LA(LS(LGUI)))))   // hyper  // RC RA RG LA LS LG
-#define HYPER_134(key) RC(RA(RG(LA(LS(LCTRL)))))   // hyper  // RC RA RG LA LS LC
-#define HYPER_135(key) RC(RA(RG(LA(LG(LCTRL)))))   // hyper  // RC RA RG LA LG LC
-#define HYPER_136(key) RC(RA(RG(LS(LG(LCTRL)))))   // hyper  // RC RA RG LS LG LC
-#define HYPER_137(key) RC(RA(RS(LA(LS(LGUI)))))   // hyper  // RC RA RS LA LS LG
-#define HYPER_138(key) RC(RA(RS(LA(LS(LCTRL)))))   // hyper  // RC RA RS LA LS LC
-#define HYPER_139(key) RC(RA(RS(LA(LG(LCTRL)))))   // hyper  // RC RA RS LA LG LC
-#define HYPER_140(key) RC(RA(RS(LS(LG(LCTRL)))))   // hyper  // RC RA RS LS LG LC
-#define HYPER_141(key) RC(RA(LA(LS(LG(LCTRL)))))   // hyper  // RC RA LA LS LG LC
-#define HYPER_142(key) RC(RG(RS(LA(LS(LGUI)))))   // hyper  // RC RG RS LA LS LG
-#define HYPER_143(key) RC(RG(RS(LA(LS(LCTRL)))))   // hyper  // RC RG RS LA LS LC
-#define HYPER_144(key) RC(RG(RS(LA(LG(LCTRL)))))   // hyper  // RC RG RS LA LG LC
-#define HYPER_145(key) RC(RG(RS(LS(LG(LCTRL)))))   // hyper  // RC RG RS LS LG LC
-#define HYPER_146(key) RC(RG(LA(LS(LG(LCTRL)))))   // hyper  // RC RG LA LS LG LC
-#define HYPER_147(key) RC(RS(LA(LS(LG(LCTRL)))))   // hyper  // RC RS LA LS LG LC
-#define HYPER_148(key) RA(RG(RS(LA(LS(LGUI)))))   // hyper  // RA RG RS LA LS LG
-#define HYPER_149(key) RA(RG(RS(LA(LS(LCTRL)))))   // hyper  // RA RG RS LA LS LC
-#define HYPER_150(key) RA(RG(RS(LA(LG(LCTRL)))))   // hyper  // RA RG RS LA LG LC
-#define HYPER_151(key) RA(RG(RS(LS(LG(LCTRL)))))   // hyper  // RA RG RS LS LG LC
-#define HYPER_152(key) RA(RG(LA(LS(LG(LCTRL)))))   // hyper  // RA RG LA LS LG LC
-#define HYPER_153(key) RA(RS(LA(LS(LG(LCTRL)))))   // hyper  // RA RS LA LS LG LC
-#define HYPER_154(key) RG(RS(LA(LS(LG(LCTRL)))))   // hyper  // RG RS LA LS LG LC
+#define HYPER_126_SEMI(key) RS(LA(LS(LG(LCTRL))))   // hyper  // RS LA LS LG LC
+#define HYPER_127_COMMA(key) RC(RA(RG(RS(LA(LSHFT)))))   // hyper  // RC RA RG RS LA LS
+#define HYPER_128_DOT(key) RC(RA(RG(RS(LA(LGUI)))))   // hyper  // RC RA RG RS LA LG
+#define HYPER_129_P(key) RC(RA(RG(RS(LA(LCTRL)))))   // hyper  // RC RA RG RS LA LC
+#define HYPER_130_Y(key) RC(RA(RG(RS(LS(LGUI)))))   // hyper  // RC RA RG RS LS LG
+#define HYPER_131_F(key) RC(RA(RG(RS(LS(LCTRL)))))   // hyper  // RC RA RG RS LS LC
+#define HYPER_132_G(key) RC(RA(RG(RS(LG(LCTRL)))))   // hyper  // RC RA RG RS LG LC
+#define HYPER_133_R(key) RC(RA(RG(LA(LS(LGUI)))))   // hyper  // RC RA RG LA LS LG
+#define HYPER_134_C(key) RC(RA(RG(LA(LS(LCTRL)))))   // hyper  // RC RA RG LA LS LC
+#define HYPER_135_L(key) RC(RA(RG(LA(LG(LCTRL)))))   // hyper  // RC RA RG LA LG LC
+#define HYPER_136_A(key) RC(RA(RG(LS(LG(LCTRL)))))   // hyper  // RC RA RG LS LG LC
+#define HYPER_137_O(key) RC(RA(RS(LA(LS(LGUI)))))   // hyper  // RC RA RS LA LS LG
+#define HYPER_138_E(key) RC(RA(RS(LA(LS(LCTRL)))))   // hyper  // RC RA RS LA LS LC
+#define HYPER_139_U(key) RC(RA(RS(LA(LG(LCTRL)))))   // hyper  // RC RA RS LA LG LC
+#define HYPER_140_I(key) RC(RA(RS(LS(LG(LCTRL)))))   // hyper  // RC RA RS LS LG LC
+#define HYPER_141_D(key) RC(RA(LA(LS(LG(LCTRL)))))   // hyper  // RC RA LA LS LG LC
+#define HYPER_142_H(key) RC(RG(RS(LA(LS(LGUI)))))   // hyper  // RC RG RS LA LS LG
+#define HYPER_143_T(key) RC(RG(RS(LA(LS(LCTRL)))))   // hyper  // RC RG RS LA LS LC
+#define HYPER_144_N(key) RC(RG(RS(LA(LG(LCTRL)))))   // hyper  // RC RG RS LA LG LC
+#define HYPER_145_S(key) RC(RG(RS(LS(LG(LCTRL)))))   // hyper  // RC RG RS LS LG LC
+#define HYPER_146_APOS(key) RC(RG(LA(LS(LG(LCTRL)))))   // hyper  // RC RG LA LS LG LC
+#define HYPER_147_Q(key) RC(RS(LA(LS(LG(LCTRL)))))   // hyper  // RC RS LA LS LG LC
+#define HYPER_148_J(key) RA(RG(RS(LA(LS(LGUI)))))   // hyper  // RA RG RS LA LS LG
+#define HYPER_149_K(key) RA(RG(RS(LA(LS(LCTRL)))))   // hyper  // RA RG RS LA LS LC
+#define HYPER_150_X(key) RA(RG(RS(LA(LG(LCTRL)))))   // hyper  // RA RG RS LA LG LC
+#define HYPER_151_B(key) RA(RG(RS(LS(LG(LCTRL)))))   // hyper  // RA RG RS LS LG LC
+#define HYPER_152_M(key) RA(RG(LA(LS(LG(LCTRL)))))   // hyper  // RA RG LA LS LG LC
+#define HYPER_153_W(key) RA(RS(LA(LS(LG(LCTRL)))))   // hyper  // RA RS LA LS LG LC
+#define HYPER_154_V(key) RG(RS(LA(LS(LG(LCTRL)))))   // hyper  // RG RS LA LS LG LC
+#define HYPER_125_Z(key)  RG(LA(LS(LG(LCTRL))))   // hyper  // RG LA LS LG LC
 
 // #define ALL_RIGHT_HYPER_01 RS(RC(RA(RGUI))) // hyper
 // #define RIGHT_CMD_HYPER_02 LS(LC(LA(RGUI))) // hyper
@@ -1156,7 +1157,7 @@ td_mt: tap_dance_mod_tap {
         &trans  &trans      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
         &trans  &skq RS(LA(LS(LG(LCTRL)))) &skq RC(RA(RG(RS(LA(LSHFT)))))  &skq RC(RA(RG(RS(LA(LGUI))))) &skq RC(RA(RG(RS(LA(LCTRL))))) &skq RC(RA(RG(RS(LS(LGUI))))) &trans                                                                                                                                                                                                                         &trans   &skq RC(RA(RG(RS(LS(LCTRL)))))  &skq RC(RA(RG(RS(LG(LCTRL)))))   &skq RC(RA(RG(LA(LS(LGUI)))))  &skq RC(RA(RG(LA(LS(LCTRL)))))  &skq RC(RA(RG(LA(LG(LCTRL)))))  &trans
         &trans  &skq RC(RA(RG(LS(LG(LCTRL)))))    &skq RC(RA(RS(LA(LS(LGUI)))))      &skq RC(RA(RS(LA(LS(LCTRL)))))   &skq RC(RA(RS(LA(LG(LCTRL))))) &skq RC(RA(RS(LS(LG(LCTRL))))) &trans                          &modthumbhm HYPER_37 HYPER_71_KEY(KP_N1) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)   &modthumbhm HYPER_40 HYPER_74_KEY(KP_N4)                         &trans   &skq RC(RA(LA(LS(LG(LCTRL)))))  &skq RC(RG(RS(LA(LS(LGUI)))))   &skq RC(RG(RS(LA(LS(LCTRL)))))  &skq RC(RG(RS(LA(LG(LCTRL)))))  &skq RC(RG(RS(LS(LG(LCTRL)))))  &trans
-        &trans  &skq RC(RG(LA(LS(LG(LCTRL))))) &skq RC(RS(LA(LS(LG(LCTRL)))))      &skq RA(RG(RS(LA(LS(LGUI)))))   &skq RA(RG(RS(LA(LS(LCTRL))))) &skq RA(RG(RS(LA(LG(LCTRL)))))                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &skq RA(RG(RS(LS(LG(LCTRL)))))  &skq RA(RG(LA(LS(LG(LCTRL)))))   &skq RA(RS(LA(LS(LG(LCTRL)))))  &skq RG(RS(LA(LS(LG(LCTRL)))))  &skq RS(LA(LS(LG(LCTRL))))  &trans
+        &trans  &skq RC(RG(LA(LS(LG(LCTRL))))) &skq RC(RS(LA(LS(LG(LCTRL)))))      &skq RA(RG(RS(LA(LS(LGUI)))))   &skq RA(RG(RS(LA(LS(LCTRL))))) &skq RA(RG(RS(LA(LG(LCTRL)))))                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &skq RA(RG(RS(LS(LG(LCTRL)))))  &skq RA(RG(LA(LS(LG(LCTRL)))))   &skq RA(RS(LA(LS(LG(LCTRL)))))  &skq RG(RS(LA(LS(LG(LCTRL)))))  &skq RG(LA(LS(LG(LCTRL))))  &trans
         &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
         >;
        };
