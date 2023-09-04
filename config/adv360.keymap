@@ -478,7 +478,7 @@
     quick_tap_ms = <210>;
 };
 &sl {
-    release-after-ms = <2000>;
+    release-after-ms = <1000>;
 };
 // &leader {
 //     timeout-ms = <500>;
@@ -493,12 +493,13 @@
 / {
     behaviors {
       #include "macros.dtsi"
-    skq: sticky_key_quick_release {
+      // sticky modifiers custom, not affecting the rest of sticky keys(if I had any others)
+      skq: sticky_key_quick_release {
         compatible = "zmk,behavior-sticky-key";
         label = "STICKY_KEY_QUICK_RELEASE";
         #binding-cells = <1>;
         bindings = <&kp>;
-        release-after-ms = <2000>;
+        release-after-ms = <1000>;
         quick-release;
         ignore-modifiers;
       };
