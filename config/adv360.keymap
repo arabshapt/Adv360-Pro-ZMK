@@ -711,6 +711,18 @@
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
+    thumbhlayShiftLeader: thumb_homerow_layShiftLeader {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_LAYShiftLeader";
+        #binding-cells = <2>;
+        tapping-term-ms = <185>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "hold-preferred";
+        global-quick-tap-ms = <50>;         // requires PR #1387
+        bindings = <&kp>, <&skq1 >;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
         thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_LAY";
@@ -1318,7 +1330,7 @@ td_mt: tap_dance_mod_tap {
         &modthumbhm/*&custom_repeat*/ HYPER_17 TAB    &hml HYPER_18 SEMI &hml HYPER_19 COMMA  &hml HYPER_20 DOT &hml HYPER_21 P  &hml HYPER_22 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &custom_repeat HYPER_25 0   &hmr HYPER_27 F  &hmr HYPER_28 G   &hmr HYPER_29 C    &hmr HYPER_30 R            &hmr HYPER_31 L                &modthumbhm HYPER_32 MINUS
         &modthumbhm HYPER_33/*&thumbhlay SYMBOLS_LAYER*/ ESC    &hml_primal LCTL A        &hml_primal LALT O          &hml_primal LSFT E       &hml_primal LGUI U      &hml HYPER_34 I   &td_mt_kp_35_36                                       &thumbhSlayNextLeft HYPER_37 SKQ_LEFT_RED /*HYPER_71_KEY(KP_N1)*/ &stickymodthumbhm  HYPER_72 /*HYPER_38*/RC(RA(RG(LCTRL))) &stickymodthumbhm HYPER_73 /*HYPER_39*/RC(RA(RG(LALT)))   &thumbhSlayNextRight HYPER_40 SKQ_RIGHT_RED /*HYPER_74_KEY(KP_N4)*/                              &td_mt_kp_41_42   &hmr HYPER_43 D  &hmr_primal RGUI H       &hmr_primal RSHFT T       &hmr_primal RALT N                &hmr_primal RCTL S                   &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
         &kp LSHFT           &hml HYPER_47 APOS &hml HYPER_48 Q      &hml HYPER_49 J   &hml HYPER_50 K  &hml HYPER_51 X                                                                                               &stickymodthumbhm HYPER_66 /*HYPER_71*/ RC(RA(RG(RS(LALT))))                   &stickymodthumbhm  HYPER_69 /*HYPER_44*/ RC(RA(LC(LALT)))/*HYPER_40 RC(RA(RG(LGUI)))*/                                                                                                                &hmr HYPER_52 B  &hmr HYPER_53 M   &hmr HYPER_54 W    &hmr HYPER_55 V            &hmr HYPER_56 Z                &custom_shift RSHFT 0
-        &mo SYMBOLS_LAYER   &kp GRAVE           &kp FSLH              &kp LEFT          &kp  RIGHT                                                     &thumbhmbalanced HYPER_58 BKSP    &thumbhlayEscape SYMBOLS_LAYER ESC                 &stickymodthumbhm  HYPER_59 /*HYPER_77*/ RC(RA(RG(LA(LCTRL))))                     &stickymodthumbhm  HYPER_61 /*HYPER_78*/ RC(RA(RG(LS(LGUI))))                     &thumbhlayEnter LSHFT  ENTER               &thumbhmbalanced HYPER_64 SPACE                                        &kp DOWN          &kp UP             &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &mo SYMBOLS_LAYER
+        &thumbhmbalanced HYPER_58 BKSP   &kp GRAVE           &kp FSLH              &kp LEFT          &kp  RIGHT                                                      &thumbhlayShiftLeader LSHFT  RC(RA(RS(LA(LS(LGUI)))))   &thumbhlayEscape SYMBOLS_LAYER ESC                 &stickymodthumbhm  HYPER_59 /*HYPER_77*/ RC(RA(RG(LA(LCTRL))))                     &stickymodthumbhm  HYPER_61 /*HYPER_78*/ RC(RA(RG(LS(LGUI))))                     &thumbhlayEnter LSHFT  ENTER               &thumbhmbalanced HYPER_64 SPACE                                        &kp DOWN          &kp UP             &hmr HYPER_65 LEFT_BRACKET &hmr HYPER_66 RIGHT_BRACKET    &thumbhmbalanced HYPER_58 BKSP
         >;
        };
          PRIME_LAYER_NO_MODS {
@@ -1443,6 +1455,16 @@ td_mt: tap_dance_mod_tap {
         &kp  GRAVE     &kp N1      &kp N2        &kp N3     &kp N4    &kp N5  &td_mt_kp_07_08                                                                                                                                                                                   &td_mt_kp_09_10   &kp N6 &kp N7  &kp N8   &kp N9           &kp N0               &modthumbhm HYPER_16 EQUAL
         &kp  TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y   &td_mt_kp_23_24                                                                                                                                                                                  &td_mt_kp_25_26   &kp F    &kp G       &kp C       &kp R       &kp L      &kp BKSP
         &kp /*&thumbhlay SYMBOLS_LAYER*/ TAB     &kp A             &kp O      &kp E      &kp U      &kp I   &td_mt_kp_35_36                     &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_N4                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                               &kp KP_N0                      &kp  KP_N5                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &kp RSHFT
+        &mo SYMBOLS_LAYER &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape SYMBOLS_LAYER ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   ENTER               &kp  SPACE                         &kp DOWN    &kp UP      &kp LEFT_BRACKET &kp RIGHT_BRACKET    &mo SYMBOLS_LAYER
+             >;
+       };
+//K_CONTEXT_MENU 
+        SKQ_HOLD_RED_SEC {
+            bindings = <
+        &kp  GRAVE     &kp N1      &kp N2        &kp N3     &kp N4    &kp N5  &td_mt_kp_07_08                                                                                                                                                                                   &td_mt_kp_09_10   &kp N6 &kp N7  &kp N8   &kp N9           &kp N0               &modthumbhm HYPER_16 EQUAL
+        &kp  TAB       &kp F1          &kp F2  &kp F3    &kp F4      &kp F5   &td_mt_kp_23_24                                                                                                                                                                                  &td_mt_kp_25_26   &kp F6    &kp F7       &kp F8       &kp F9       &kp F10      &kp BKSP
+        &kp /*&thumbhlay SYMBOLS_LAYER*/ TAB     &kp F11             &kp F12      &kp E      &kp U      &kp I   &td_mt_kp_35_36                     &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_N4                          &mt LALT CSG   &kp D    &kp H       &kp T       &kp  N      &kp S      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
         &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                               &kp KP_N0                      &kp  KP_N5                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &kp RSHFT
         &mo SYMBOLS_LAYER &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape SYMBOLS_LAYER ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   ENTER               &kp  SPACE                         &kp DOWN    &kp UP      &kp LEFT_BRACKET &kp RIGHT_BRACKET    &mo SYMBOLS_LAYER
              >;
