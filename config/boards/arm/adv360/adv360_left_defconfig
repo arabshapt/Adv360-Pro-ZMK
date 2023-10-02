@@ -63,3 +63,12 @@ CONFIG_USB_DEVICE_MANUFACTURER="Kinesis Corporation"
 CONFIG_ZMK_HID_REPORT_TYPE_NKRO=y
 CONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_BASIC=y
 CONFIG_BUILD_OUTPUT_UF2=y
+CONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_FULL=y
+################################################################################
+# For more pleasant PC debugging: increase the idle timeout from 30s to 5m,
+# to ensure the num lock LED will turn on (on the right key block). Otherwise,
+# the right key block goes into power save mode and won’t show the num lock LED
+################################################################################
+
+# Increase idle timeout from the default of 30s (= 30000ms) to 5 minutes (= 300s).
+CONFIG_ZMK_IDLE_TIMEOUT=300000

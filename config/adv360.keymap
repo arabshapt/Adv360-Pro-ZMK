@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
-
+#include "apple_globe.h"
 /*                                 ADVANTAGE 360 KEY MATRIX / LAYOUT MAPPING
  ╭────────────────────────────┬────────────────────────────╮
  │  0   1   2   3   4   5   6 │  7   8   9  10  11  12  13 │
@@ -45,9 +45,9 @@
 // SB symbols layer on kinesis
 
 
-#define KEYS_L  0   1   2   3   4   5   6  14  15  16  17  18  19  20 28  29  30  31  32  33  34 42  43  44  45  46  47 54  55  56  57  58 // left-hand keys
-#define KEYS_R  7   8   9   10  11  12  13 21  22  23  24  25  26  27 35  36  37  38  39  40  41 48  49  50  51  52  53 59  60  61  62  63 // right-hand keys
-#define THUMBS 64  65  66  67    68  69  70  71  72  73      74  75                             // thumb keys
+#define KEYS_L  0   1   2   3   4   5   6  14  15  16  17  18  19  20 28  29  30  31  32  33  34  46  47 48  49  50  51 60  61  62  63 64 // left-hand keys
+#define KEYS_R  7   8   9   10  11  12  13 21  22  23  24  25  26  27    39  40  41 42  43  44  45  54  55  56  57  58   59  71 72 73 74 75 // right-hand keys
+#define THUMBS 35 36 37 38 65 66 52 67 53 68 69 70                             // thumb keys
 
 
 // #include <dt-bindings/zmk/dynamic-macros.h>
@@ -59,6 +59,11 @@
 #define QUICK_TAP_MS_PRIMAL 140
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
+#define COMBO_TERM_SLOWER 42
+#define COMBO_TERM_SLUGGISH 54
+#define COMBO_TERM_SLOWEST 70
+#define COMBO_TERM_TOOSLOW 100
+
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define AHL(keycode, hyper) &ahl hyper RC(RA(RS(LS(LC(keycode)))))      // AutoHyper Macro HYPER_85_KEY
 #define AHR(keycode, hyper) &ahr hyper RC(RA(RS(LG(LC(keycode)))))      // AutoHyper Macro HYPER_86_KEY
@@ -565,19 +570,166 @@
 //     quick-release;
 //     /delete-property/ ignore-modifiers;
 // };
+#undef COMBO_HOOK
+#define COMBO_HOOK global-quick-tap-ms = <150>;
+#define ALL 0xff
+#if !defined COMBO_TERM
+    #define COMBO_TERM 70
+#endif
+#if !defined COMBO_HOOK
+    #define COMBO_HOOK
+#endif
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TIMEOUT) \
   combo_##NAME { \
     timeout-ms = <TIMEOUT>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
+    COMBO_HOOK \
   };
+//       combos {
+//   compatible = "zmk,combos";
+
+//   COMBO(chrome_tab_search, &kp HYPER_69_KEY(C), 24 71, PRIME_LAYER, 70)
+//   COMBO(dash_search, &kp HYPER_69_KEY(D), 36 71, PRIME_LAYER, 70)
+//   COMBO(word_search, &kp HYPER_69_KEY(N), 39 71, PRIME_LAYER, 70)
+//   COMBO(menu_search, &kp HYPER_69_KEY(M), 49 71, PRIME_LAYER, 70)
+//   COMBO(raycast, &kp LG(SPACE), 37 67, PRIME_LAYER, COMBO_TERM_SLOW)
+// };
 
 / {
-    behaviors {
-      #include "macros.dtsi"
-            macros {
-        // zed_em_kay: zed_em_kay {
+    combos {
+        compatible = "zmk,combos";
+  COMBO(raycast, &kp LG(SPACE), 38 41, PRIME_LAYER, COMBO_TERM_SLOWER)
+  COMBO(contexts, &kp HYPER_29_KEY(SPACE), 38 42, PRIME_LAYER, COMBO_TERM_SLOWER)
+  COMBO(raycast2, &kp LG(SPACE), 70 41, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(contexts2, &kp HYPER_29_KEY(SPACE), 70 42, PRIME_LAYER, COMBO_TERM_FAST)
+
+  COMBO(raycast3, &kp HYPER_29_KEY(SPACE), 38 41, SHIFT_LAYER, COMBO_TERM_TOOSLOW)
+  COMBO(contexts3, &kp LG(SPACE) , 38 42, SHIFT_LAYER, COMBO_TERM_TOOSLOW)
+  COMBO(raycast4, &kp HYPER_29_KEY(SPACE), 70 41, SHIFT_LAYER, COMBO_TERM_FAST)
+  COMBO(contexts4, &kp LG(SPACE) , 70 42, SHIFT_LAYER, COMBO_TERM_FAST)
+
+  COMBO(appswitcher, &skq RC(RA(RS(LA(LS(LGUI))))) , 35 30, PRIME_LAYER, COMBO_TERM_TOOSLOW)
+
+//   COMBO(lcmd_a, &kp LG(A), 29 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_o, &kp LG(O), 30 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_e, &kp LG(E), 31 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_u, &kp LG(U), 32 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_i, &kp LG(I), 33 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_semi, &kp LG(SEMI), 15 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_comma, &kp LG(COMMA), 16 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_dot, &kp LG(DOT), 17 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_p, &kp LG(P), 18 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_y, &kp LG(Y), 19 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_apos, &kp LG(APOS), 47 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_q, &kp LG(Q), 48 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_j, &kp LG(J), 49 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_k, &kp LG(K), 50 41, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lcmd_x, &kp LG(X), 51 41, PRIME_LAYER, COMBO_TERM_SLOW)
+
+//   COMBO(lshift_a, &kp LS(A), 29 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_o, &kp LS(O), 30 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_e, &kp LS(E), 31 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_u, &kp LS(U), 32 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_i, &kp LS(I), 33 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_semi, &kp LS(SEMI), 15 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_comma, &kp LS(COMMA), 16 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_dot, &kp LS(DOT), 17 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_p, &kp LS(P), 18 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_y, &kp LS(Y), 19 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_apos, &kp LS(APOS), 20 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_q, &kp LS(Q), 21 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_j, &kp LS(J), 22 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_k, &kp LS(K), 23 42, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(lshift_x, &kp LS(X), 24 42, PRIME_LAYER, COMBO_TERM_SLOW)
+
+
+//   COMBO(rcmd_d, &kp LG(D), 40 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_h, &kp LG(H), 41 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_t, &kp LG(T), 42 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_n, &kp LG(N), 43 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_s, &kp LG(S), 44 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_f, &kp LG(F), 22 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_g, &kp LG(G), 23 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_c, &kp LG(C), 24 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_r, &kp LG(R), 25 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_l, &kp LG(L), 26 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_b, &kp LG(B), 54 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_m, &kp LG(M), 55 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_w, &kp LG(W), 56 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_v, &kp LG(V), 57 32, PRIME_LAYER, COMBO_TERM_SLOW)
+//   COMBO(rcmd_z, &kp LG(Z), 58 32, PRIME_LAYER, COMBO_TERM_SLOW)
+
+//   COMBO(cmd_shift_a, &kp LG(LS(A)), 29 41 42, PRIME_LAYER, 70)
+//   COMBO(cmd_shift_o, &kp LG(LS(O)), 30 41 42, PRIME_LAYER, 70)
+//   COMBO(cmd_shift_n, &kp LG(LS(N)), 31 32 43, PRIME_LAYER, 70)
+
+
+//   COMBO(lshift_a,        &kp LS(A),     65  29, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_o,        &kp LS(O),     65  30, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_e,        &kp LS(E),     65  31, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_u,        &kp LS(U),     65  32, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_i,        &kp LS(I),     65  33, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_semi,     &kp LS(SEMI),  65  15, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_comma,    &kp LS(COMMA), 65  16, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_dot,      &kp LS(DOT),   65  17, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_p,        &kp LS(P),     65  18, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_y,        &kp LS(Y),     65  19, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_apos,     &kp LS(APOS),  65  47, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_q,        &kp LS(Q),     65  48, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_j,        &kp LS(J),     65  49, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_k,        &kp LS(K),     65  50, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_x,        &kp LS(X),     65  51, PRIME_LAYER, COMBO_TERM_SLOWEST)
+
+//   COMBO(lshift_d,        &kp LS(D),     65  40, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_h,        &kp LS(H),     65  41, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_t,        &kp LS(T),     65  42, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_n,        &kp LS(N),     65  43, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_s,        &kp LS(S),     65  44, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_f,        &kp LS(F),     65  22, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_g,        &kp LS(G),     65  23, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_c,        &kp LS(C),     65  24, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_r,        &kp LS(R),     65  25, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_l,        &kp LS(L),     65  26, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_b,        &kp LS(B),     65  54, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_m,        &kp LS(M),     65  55, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_w,        &kp LS(W),     65  56, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_v,        &kp LS(V),     65  57, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(lshift_z,        &kp LS(Z),     65  58, PRIME_LAYER, COMBO_TERM_SLOWEST)  
+
+    // COMBO(contexts3, &kp HYPER_29_KEY(SPACE), 41 42, PRIME_LAYER, COMBO_TERM_FAST)
+ 	//  combo_del {
+    //         timeout-ms = <70>;
+    //         key-positions = <0 1>;
+    //         bindings = <&kp LG(SPACE)>;
+    //     };
+    //     combo_del1 {
+    //         timeout-ms = <70>;
+    //         key-positions = <37 38>;
+    //         bindings = <&kp LG(SPACE)>;
+    //     };
+    //     combo_del2 {
+    //         timeout-ms = <70>;
+    //         key-positions = <31 32>;
+    //         bindings = <&kp LG(SPACE)>;
+    //     };
+    //     combo_del3 {
+    //         timeout-ms = <70>;
+    //         key-positions = <7 8>;
+    //         bindings = <&kp LG(SPACE)>;
+    //     };
+        //     combo_del3 {
+        //     timeout-ms = <70>;
+        //     key-positions = <35 36>;
+        //     bindings = <&kp LG(SPACE)>;
+        // };
+    };
+};
+
+/ {
+    macros {
+		 // zed_em_kay: zed_em_kay {
         //     label = "ZM_zed_em_kay";
         //     compatible = "zmk,behavior-macro";
         //     #binding-cells = <0>;
@@ -619,7 +771,56 @@
                 , <&macro_release &mo SKQ_HOLD_RIGHT_RED>
                 ;
         };
-      };
+    };
+};
+
+/ {
+    behaviors {
+      #include "macros.dtsi"
+    //         macros {
+    //     // zed_em_kay: zed_em_kay {
+    //     //     label = "ZM_zed_em_kay";
+    //     //     compatible = "zmk,behavior-macro";
+    //     //     #binding-cells = <0>;
+    //     //     bindings
+    //     //         = <&macro_press &kp LSHFT>
+    //     //         , <&macro_tap &kp Z &kp M &kp K>
+    //     //         , <&macro_release &kp LSHFT>
+    //     //         ;
+    //     // };
+    //     lm_left: lm_left{
+    //         label = "LAYER_MOD_left";
+    //         compatible = "zmk,behavior-macro-one-param";
+    //         wait-ms = <0>;
+    //         tap-ms = <0>;
+    //         #binding-cells = <1>;
+    //         bindings
+    //             = <&macro_press &mo SKQ_HOLD_LEFT_RED>
+    //             , <&macro_param_1to1>
+    //             , <&macro_press &kp MACRO_PLACEHOLDER>
+    //             , <&macro_pause_for_release>
+    //             , <&macro_param_1to1>
+    //             , <&macro_release &kp MACRO_PLACEHOLDER>
+    //             , <&macro_release &mo SKQ_HOLD_LEFT_RED>
+    //             ;
+    //     };
+    //     lm_right: lm_right{
+    //         label = "LAYER_MOD_right";
+    //         compatible = "zmk,behavior-macro-one-param";
+    //         wait-ms = <0>;
+    //         tap-ms = <0>;
+    //         #binding-cells = <1>;
+    //         bindings
+    //             = <&macro_press &mo SKQ_HOLD_RIGHT_RED>
+    //             , <&macro_param_1to1>
+    //             , <&macro_press &kp MACRO_PLACEHOLDER>
+    //             , <&macro_pause_for_release>
+    //             , <&macro_param_1to1>
+    //             , <&macro_release &kp MACRO_PLACEHOLDER>
+    //             , <&macro_release &mo SKQ_HOLD_RIGHT_RED>
+    //             ;
+    //     };
+    //   };
 
       // sticky modifiers custom, not affecting the rest of sticky keys(if I had any others)
       skq: sticky_key_quick_release {
@@ -761,10 +962,10 @@
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_LAY";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <185>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        global-quick-tap-ms = <50>;         // requires PR #1387
         bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1296,14 +1497,6 @@ td_mt: tap_dance_mod_tap {
 //     };
 // ZMK_COMBO(chrome_tab_search,   &kp RG(LS(LA(LG(C)))),    24 71,     5, COMBO_TERM_FAST);
 
-      combos {
-  compatible = "zmk,combos";
-
-  COMBO(chrome_tab_search, &kp HYPER_69_KEY(C), 24 71, PRIME_LAYER, 70)
-  COMBO(dash_search, &kp HYPER_69_KEY(D), 36 71, PRIME_LAYER, 70)
-  COMBO(word_search, &kp HYPER_69_KEY(N), 39 71, PRIME_LAYER, 70)
-  COMBO(menu_search, &kp HYPER_69_KEY(M), 49 71, PRIME_LAYER, 70)
-};
     keymap {
         compatible = "zmk,keymap";
 
@@ -1360,12 +1553,12 @@ td_mt: tap_dance_mod_tap {
         //unused hypers: 33, 44, 45, 46, 57, 58, 63, 64,
         PRIME_LAYER {
             bindings = <
-        &kp  BACKSLASH     AH(N1)       AH(N2)         AH(N3)      AH(N4)     AH(N5)  &td_mt_kp_07_08                                                                                                                                                                                                                              &td_mt_kp_09_10   AH(N6) AH(N7)  AH(N8)   AH(N9)           AH(N0)               &kp EQUAL
-        &modthumbhm/*&custom_repeat*/ HYPER_25 TAB    &hml HYPER_03 SEMI &hml HYPER_04 COMMA  &hml HYPER_05 DOT &hml HYPER_06 P  &hml HYPER_07 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &td_mt_kp_25_26   &hmr HYPER_08 F  &hmr HYPER_09 G   &hmr HYPER_10 C    &hmr HYPER_11 R            &hmr HYPER_12 L                &modthumbhm HYPER_26 MINUS
-        &modthumbhm HYPER_27/*&thumbhlay SYMBOLS_LAYER*/ TAB    &hml_primal LCTL A        &hml_primal LALT O          &hml_primal LSFT E       &hml_primal LGUI U      &hml HYPER_13 I   &td_mt_kp_35_36                                       &thumbhSlayNextLeft HYPER_29 SKQ_LEFT_RED &stickymodthumbhm  HYPER_30 /*HYPER_31*/RS(RG(LC(LGUI))) &stickymodthumbhm HYPER_32 /*HYPER_33*/RS(LS(LC(LALT)))   &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED                               &td_mt_kp_41_42   &hmr HYPER_14 D  &hmr_primal RGUI H       &hmr_primal RSHFT T       &hmr_primal RALT N                &hmr_primal RCTL S                   &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ DEL
-        &kp BSPC           &hml HYPER_15 APOS &hml HYPER_16 Q      &hml HYPER_17 J   &hml HYPER_18 K  &hml HYPER_19 X                                                                                               &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))                                                                                                                &hmr HYPER_20 B  &hmr HYPER_21 M   &hmr HYPER_22 W    &hmr HYPER_23 V            &hmr HYPER_24 Z                /*&custom_shift RSHFT 0*/ &kp BKSP
-        &kp LSHFT   &kp GRAVE           &kp FSLH              &kp LEFT          &kp  RIGHT                                                      &thumbhlayShiftLayerLeader SHIFT_LAYER  SKQ_LEFT_SHIFT   &thumbhlayEscape SYMBOLS_LAYER ESC                 &stickymodthumbhm  HYPER_39 /*HYPER_40*/ RC(RA(RG(LGUI)))                     /*&stickymodthumbhm  HYPER_41 /*HYPER_42*/ /*RC(RA(LS(LALT)))*/ &thumbhlayEnter HYPER_41  BSPC                     &thumbhlayEnter HYPER_43  ENTER               &thumbhmbalanced HYPER_44 SPACE                                        &kp DOWN          &kp UP             &kp LEFT_BRACKET &kp RIGHT_BRACKET    &kp BKSP
-        >;
+        &kp GLOBE    &kp  GLOBEE       AH(N2)         AH(N3)      AH(N4)     AH(N5)  &td_mt_kp_07_08                                                                                                                                                                                                                              &td_mt_kp_09_10   AH(N6) AH(N7)  AH(N8)   AH(N9)           AH(N0)               &kp EQUAL
+        &modthumbhm/*&custom_repeat*/ HYPER_25 TAB    &hml HYPER_03 SEMI &hml HYPER_04 COMMA  &thumbhlay LAYER_FN/*&hml HYPER_05*/ DOT &hml HYPER_06 P  &hml HYPER_07 Y   &td_mt_kp_23_24                                                                                                                                                                                                                             &td_mt_kp_25_26   &hmr HYPER_08 F  &hmr HYPER_09 G   &hmr HYPER_10 C    &hmr HYPER_11 R            &hmr HYPER_12 L                &modthumbhm HYPER_26 MINUS
+        &modthumbhm HYPER_27/*&thumbhlay SYMBOLS_LAYER*/ TAB    &hml_primal LCTL A        &hml_primal LALT O          &hml_primal LSFT E       &hml_primal LGUI U      &hml HYPER_13 I   &td_mt_kp_35_36                                       &thumbhSlayNextLeft HYPER_29 SKQ_LEFT_RED &stickymodthumbhm  HYPER_30 /*HYPER_31*/RS(RG(LC(LGUI))) &stickymodthumbhm HYPER_32 /*HYPER_33*/RS(LS(LC(LALT)))   &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED                               &td_mt_kp_41_42   &hmr HYPER_14 D  &hmr_primal RGUI H       &hmr_primal RSHFT T       &hmr_primal RALT N                &hmr_primal RCTL S                   &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
+        &kp BSPC           /*&hml HYPER_15*/&thumbhlay LAYER_FN APOS &hml HYPER_16 Q      &hml HYPER_17 J   &hml HYPER_18 K  &hml HYPER_19 X                                                                                               &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))                                                                                                                &hmr HYPER_20 B  &hmr HYPER_21 M   &hmr HYPER_22 W    &hmr HYPER_23 V            &hmr HYPER_24 Z                /*&custom_shift RSHFT 0*/ &kp BKSP
+        &kp LSHFT   &kp GRAVE           &kp FSLH              &kp LEFT          &kp  RIGHT                                                      &thumbhlayShiftLayerLeader SHIFT_LAYER  SKQ_LEFT_SHIFT   &thumbhlayEscape SYMBOLS_LAYER ESC                 &stickymodthumbhm  HYPER_39 /*HYPER_40*/ RC(RA(RG(LGUI)))                     /*&stickymodthumbhm  HYPER_41 /*HYPER_42*/ /*RC(RA(LS(LALT)))*/ &thumbhlayEnter HYPER_41  BSPC                     &thumbhlayEnter HYPER_43  ENTER               &thumbhmbalanced HYPER_44 SPACE                                        &kp DOWN          &kp UP             &kp LEFT_BRACKET &kp RIGHT_BRACKET    &kp DEL
+        >;//15 and 05 are free at the moment
        };
          PRIME_LAYER_NO_MODS {
             bindings = <
@@ -1444,11 +1637,11 @@ td_mt: tap_dance_mod_tap {
         };
         LAYER_FN {
             bindings = <
-       &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog LAYER_KEYPAD                                  &to LAYER_MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-       &trans           &trans         &trans         &trans          &trans  &trans             &trans                                   &trans  &kp ENTER  &kp N7     &kp N8      &kp N9     &kp  N0   &trans
-       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &trans  &trans  &trans                   &trans   &trans    &trans  &kp DOT   &kp N4  &kp N5  &kp N6   &kp  BSPC   &trans
-       &trans           &trans         &trans         &trans          &trans  &trans                              &trans                     &trans                       &kp COMMA  &kp N1  &kp N2  &kp N3  &kp PLUS  &trans
-       &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &trans  &trans   &kp BSPC  &kp EQUAL  &kp FSLH  &kp ASTRK  &trans
+       &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog LAYER_KEYPAD                                            &to LAYER_MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+       &trans           &trans         &trans         &trans          &trans  &trans             &trans                                                      &trans  &kp ENTER  &kp N7     &kp N8      &kp N9     &kp  N0   &trans
+       &trans  &macro_brackets  &macro_braces  &macro_parens  &macro_dquotes  &trans             &trans  &trans  &trans                   &trans   &trans    &trans  &kp DOT    &kp N4    &kp N5     &kp N6     &kp  BSPC   &trans
+       &trans           &trans         &trans         &trans          &trans  &trans                              &trans                     &trans                  &kp COMMA  &kp N1    &kp N2     &kp N3     &kp PLUS    &trans
+       &trans           &trans         &trans         &trans          &trans  &trans            &trans  &trans  &trans  &kp LA(BSPC)  &trans                                          &kp PRCNT  &kp EQUAL  &kp FSLH   &kp ASTRK   &trans
             >;
         };
 
@@ -1516,7 +1709,7 @@ td_mt: tap_dance_mod_tap {
         &kp  LS(GRAVE)     &kp LS(N1)      &kp LS(N2)        &kp LS(N3)     &kp LS(N4)    &kp LS(N5)  &td_mt_kp_07_08                                                                                                                                                                                   &td_mt_kp_09_10   &kp LS(N6) &kp LS(N7)  &kp LS(N8)   &kp LS(N9)           &kp LS(N0)               &modthumbhm HYPER_16 LS(EQUAL)
         &kp  LS(TAB)       &kp LS(SEMI)          &kp LS(COMMA)  &kp LS(DOT)    &kp LS(P)      &kp LS(Y)   &td_mt_kp_23_24                                                                                                                                                                                  &td_mt_kp_25_26   &kp LS(F)    &kp LS(G)       &kp LS(C)       &kp LS(R)       &kp LS(L)      &kp BKSP
         &kp /*&thumbhlay SYMBOLS_LAYER*/ LS(TAB)     &kp LS(A)             &kp LS(O)      &kp LS(E)      &kp LS(U)      &kp LS(I)   &td_mt_kp_35_36                     &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_N4                          &mt LALT CSG   &kp LS(D)    &kp LS(H)       &kp LS(T)       &kp  LS(N)      &kp LS(S)      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
-        &kp LSHFT         &lt LAYER_FN LS(APOS) &kp LS(Q)      &kp LS(J)      &kp LS(K)      &kp LS(X)                                                               &kp KP_N0                      &kp  KP_N5                                                                                                 &kp LS(B)    &kp LS(M)       &kp LS(W)       &kp LS(V)       &kp LS(Z)      &kp RSHFT
+        &kp LSHFT         &lt LAYER_FN LS(APOS) &kp LS(Q)      &kp LS(J)      &kp LS(K)      &kp LS(X)                                                               &kp KP_N0                      &kp  KP_N5                                                                                                 &kp LS(B)    &kp LS(M)       &kp LS(W)       &kp LS(V)       &kp LS(Z)      &kp BKSP
         &mo SYMBOLS_LAYER &kp LS(GRAVE)           &kp LS(FSLH)    &kp LS(LEFT)   &kp LS(RIGHT)                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape SYMBOLS_LAYER ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   LA(BSPC)               &modthumbhmFAST LA(BSPC) BSPC/*&kp  LA(BSPC)*/                         &kp LS(DOWN)    &kp LS(UP)      &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET)    &mo SYMBOLS_LAYER
        >;
        };
