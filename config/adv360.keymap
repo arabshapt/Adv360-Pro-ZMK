@@ -1531,7 +1531,7 @@ td_mt: tap_dance_mod_tap {
         &mo LAYER_FN     &dtilde     &gprcnt  &kp LEFT &kp RIGHT                &lt SYMBOLS_LAYER BKSP  &lt LAYER_QWERTY_NAV ESC   &caps_word             &mo SYMBOLS_LAYER &lt SYMBOLS_LAYER  ENTER &lt SYMBOLS_LAYER SPACE       &kp DOWN   &kp UP  &kp APOS  &acaret  &mo LAYER_FN
         >;
         };
-
+ 
         LAYER_MOD {
             bindings = <
         &to DEFAULT_QWERTY      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog LAYER_MOD                                                                             &to LAYER_MOD          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to DEFAULT_QWERTY
