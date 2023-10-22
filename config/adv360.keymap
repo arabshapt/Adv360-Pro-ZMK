@@ -1077,7 +1077,7 @@
         global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <KEYS_R THUMBS>;
+        hold-trigger-key-positions = <KEYS_L THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
     };
     hmr_primal: right_homerow_mods_primal {
@@ -1662,9 +1662,9 @@ td_mt: tap_dance_mod_tap {
             bindings = <
         &skq LS(LC(LA(LG(CAPS)))) &skq LS(LC(LA(LGUI)))      &trans        &trans     &trans   &trans   &trans                                                                                                                                                                                                                         &trans   &trans    &trans     &trans    &trans    &trans    &trans
         &trans  &skq RC(RG(RS(LS(LCTRL)))) &skq RC(RG(RS(LG(LCTRL))))  &skq RC(RG(LA(LS(LGUI)))) &skq RC(RG(LA(LS(LCTRL)))) &skq RC(RG(LA(LG(LCTRL)))) &trans                                                                                                                                                                                                                         &trans   &skq RC(RG(LS(LG(LCTRL))))  &skq RC(RS(LA(LS(LGUI))))   &skq RC(RS(LA(LS(LCTRL))))  &skq RC(RS(LA(LG(LCTRL))))  &skq RC(RS(LS(LG(LCTRL))))  &trans
-        &trans  &skq RC(LA(LS(LG(LCTRL))))    &skq RA(RG(RS(LA(LSHFT))))      &skq RA(RG(RS(LA(LGUI))))   &skq RA(RG(RS(LA(LCTRL)))) &skq RA(RG(RS(LS(LGUI)))) &trans                          &kp /*HYPER_42*/ RC(RA(LS(LA(KP_N1)))) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &kp /*HYPER_42*/ RC(RA(LS(LA(KP_N4))))                        &trans   &skq RA(RG(RS(LS(LCTRL))))  &skq RA(RG(RS(LG(LCTRL))))   &skq RA(RG(LA(LS(LGUI))))  &skq RA(RG(LA(LS(LCTRL))))  &skq RA(RG(LA(LG(LCTRL))))  &trans
+        &trans  &skq RC(LA(LS(LG(LCTRL))))    &skq RA(RG(RS(LA(LSHFT))))      &skq RA(RG(RS(LA(LGUI))))   &skq RA(RG(RS(LA(LCTRL)))) &skq RA(RG(RS(LS(LGUI)))) &trans                          &kp /*HYPER_42*/ HYPER_29_KEY(SPACE) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)  &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &kp /*HYPER_42*/ RC(RA(LS(LA(KP_N4))))                        &trans   &skq RA(RG(RS(LS(LCTRL))))  &skq RA(RG(RS(LG(LCTRL))))   &skq RA(RG(LA(LS(LGUI))))  &skq RA(RG(LA(LS(LCTRL))))  &skq RA(RG(LA(LG(LCTRL))))  &trans
         &trans  &skq RA(RG(LS(LG(LCTRL)))) &skq RA(RS(LA(LS(LGUI))))      &skq RA(RS(LA(LS(LCTRL))))   &skq RA(RS(LA(LG(LCTRL)))) &skq RA(RS(LS(LG(LCTRL))))                                                                          &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                           &skq RA(LA(LS(LG(LCTRL))))  &skq RG(RS(LA(LS(LGUI))))   &skq RG(RS(LA(LS(LCTRL))))  &skq RG(RS(LA(LG(LCTRL))))  &skq RG(RS(LS(LG(LCTRL))))  &trans
-        &trans  &trans      &trans        &trans     &trans                     &thumbhSlayNextLeft HYPER_58  SKQ_LEFT_SHIFT /* &thumbhm HYPER_58 BKSP */ &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+        &trans  &trans      &trans        &trans     &trans                     &thumbhlay HYPER_58  HYPER_02_KEY(KP_N7) /* &thumbhm HYPER_58 BKSP */ &thumbhlay SYMBOLS_LAYER LG(SPACE)             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
         >;
        };
       SKQ_LEFT_SHIFT {
