@@ -1317,7 +1317,7 @@ td_mt: tap_dance_mod_tap {
             flavor = "balanced";
             bindings = <&kp>, <&skq>;
                     global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
-        hold-trigger-key-positions = <KEYS_L THUMBS>;
+        hold-trigger-key-positions = <KEYS_R THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
         };
         ahr: auto_shift_right {
@@ -1329,7 +1329,7 @@ td_mt: tap_dance_mod_tap {
             flavor = "balanced";
             bindings = <&kp>, <&skq>;
             global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
-        hold-trigger-key-positions = <KEYS_R THUMBS>;
+        hold-trigger-key-positions = <KEYS_L THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
         };
         ht_bhash: ht_bhash {
