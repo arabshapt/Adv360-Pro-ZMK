@@ -54,7 +54,7 @@
 
 /* Global settings */
 // #undef COMBO_HOOK
-// #define COMBO_HOOK global-quick-tap-ms = <150>;
+// #define COMBO_HOOK require-prior-idle-ms = <150>;
 #define QUICK_TAP_MS 175 
 #define QUICK_TAP_MS_PRIMAL 140 //140  ONLY FOR WARM TIMES
 #define COMBO_TERM_FAST 18
@@ -573,7 +573,7 @@
 //     /delete-property/ ignore-modifiers;
 // };
 #undef COMBO_HOOK
-#define COMBO_HOOK global-quick-tap-ms = <150>;
+#define COMBO_HOOK require-prior-idle-ms = <150>;
 #define ALL 0xff
 #if !defined COMBO_TERM
     #define COMBO_TERM 70
@@ -878,7 +878,7 @@
         tapping-term-ms = <160>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <50>;    // reduce this     // requires PR #1387
+        require-prior-idle-ms = <50>;    // reduce this     // requires PR #1387
         bindings = <&kp>, <&kp>;
         // hold-trigger-key-positions = < KEYS_L THUMBS>;
         // hold-trigger-on-release;             // delay positional check until key-release
@@ -890,7 +890,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <50>;    // reduce this     // requires PR #1387
+        require-prior-idle-ms = <50>;    // reduce this     // requires PR #1387
         bindings = <&kp>, <&kp>;
         // hold-trigger-key-positions = < KEYS_L THUMBS>;
         // hold-trigger-on-release;             // delay positional check until key-release
@@ -902,7 +902,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";//"hold-preferred";
-        global-quick-tap-ms = <50>;    // reduce this     // requires PR #1387
+        require-prior-idle-ms = <50>;    // reduce this     // requires PR #1387
         bindings = <&kp>, <&skq1>;
         // hold-trigger-key-positions = < KEYS_L THUMBS>;
         // hold-trigger-on-release;             // delay positional check until key-release
@@ -914,7 +914,7 @@
         tapping-term-ms = <280>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -926,7 +926,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -938,7 +938,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <50>;         // requires PR #1387
+        require-prior-idle-ms = <50>;         // requires PR #1387
         bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -950,7 +950,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <50>;         // requires PR #1387
+        require-prior-idle-ms = <50>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -962,7 +962,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <50>;         // requires PR #1387
+        require-prior-idle-ms = <50>;         // requires PR #1387
         bindings = <&kp>, <&sl >;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -974,7 +974,7 @@
         tapping-term-ms = <165>; //185 old version
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <50>;         // requires PR #1387
+        require-prior-idle-ms = <50>;         // requires PR #1387
         bindings = <&mo>, <&kp >;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -986,7 +986,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <130>;         // requires PR #1387
+        require-prior-idle-ms = <130>;         // requires PR #1387
         bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -998,7 +998,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&sl>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1010,7 +1010,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <50>;         // requires PR #1387
+        require-prior-idle-ms = <50>;         // requires PR #1387
         bindings = <&lm_left>, <&lm_left>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1022,7 +1022,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <50>;         // requires PR #1387
+        require-prior-idle-ms = <50>;         // requires PR #1387
         bindings = <&lm_right>, <&lm_right>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1034,7 +1034,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&lm_left>, <&sl>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1046,7 +1046,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&lm_right>, <&sl>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1058,7 +1058,7 @@
         tapping-term-ms = <280>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1070,7 +1070,7 @@
         tapping-term-ms = <210>;
         quick-tap-ms = <210>;                //default: 175 repeat on tap-into-hold
         flavor = "balanced";
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = < KEYS_R THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
@@ -1081,7 +1081,7 @@
         #binding-cells = <2>;
         tapping-term-ms = <210>;
         quick-tap-ms = <210>;
-        global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
+        require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -1093,7 +1093,7 @@
         #binding-cells = <2>;
         tapping-term-ms = <185>;
         quick-tap-ms = <210>;
-        global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
+        require-prior-idle-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -1105,7 +1105,7 @@
         #binding-cells = <2>;
         tapping-term-ms = <185>;
         quick-tap-ms = <210>;
-        global-quick-tap-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
+        require-prior-idle-ms = <QUICK_TAP_MS_PRIMAL>;         // requires PR #1387                // repeat on tap-into-hold
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -1327,7 +1327,7 @@ td_mt: tap_dance_mod_tap {
             quick_tap_ms = <1000>; //was 0
             flavor = "balanced";
             bindings = <&kp>, <&skq>;
-                    global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
+                    require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
         hold-trigger-key-positions = <KEYS_R THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
         };
@@ -1339,7 +1339,7 @@ td_mt: tap_dance_mod_tap {
             quick_tap_ms = <1000>; //was 0
             flavor = "balanced";
             bindings = <&kp>, <&skq>;
-            global-quick-tap-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
+            require-prior-idle-ms = <QUICK_TAP_MS>;         // requires PR #1387                // repeat on tap-into-hold
         hold-trigger-key-positions = <KEYS_L THUMBS>;
         hold-trigger-on-release;             // delay positional check until key-release
         };
