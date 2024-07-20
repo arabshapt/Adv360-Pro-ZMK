@@ -23,7 +23,7 @@ manifest:
     - name: zmk
       remote: arabshapt
       # revision: experim_3
-      revision: experim_3
+      revision: main
       import: app/west.yml
   self:
     path: config
