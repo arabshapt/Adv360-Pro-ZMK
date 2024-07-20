@@ -21,6 +21,7 @@ manifest:
       url-base: https://github.com/arabshapt
   projects:
     - name: zmk
+      # remote: refil
       remote: arabshapt
       # revision: experim_3
       revision: main
