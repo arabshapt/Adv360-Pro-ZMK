@@ -60,7 +60,8 @@ CONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_FULL=y
 # to ensure the num lock LED will turn on (on the right key block). Otherwise,
 # the right key block goes into power save mode and won’t show the num lock LED
 ################################################################################
-
+CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO=3
+CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY=10
 # Increase idle timeout from the default of 30s (= 30000ms) to 5 minutes (= 300s).
 CONFIG_ZMK_IDLE_TIMEOUT=300000
 
