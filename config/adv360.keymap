@@ -19,7 +19,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/stp.h>
 #include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/pointing.h>
 
 /*                                 ADVANTAGE 360 KEY MATRIX / LAYOUT MAPPING
  ╭────────────────────────────┬────────────────────────────╮
@@ -514,53 +516,116 @@ create a list of all possible keys for hyper_01 and mark used ones
 / {
     combos {
         compatible = "zmk,combos";
-  COMBO_FAST(searchTextOnNavigationL, &kp HYPER_01_KEY(F), 22 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(searchFilesOnNavigationL, &kp HYPER_01_KEY(P), 18 32, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(middlefinger_1_left, &spacecombo HYPER_22 HYPER_01_KEY(KP_N5), 17 31, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(middlefinger_1_right, &spacecombo HYPER_23 HYPER_01_KEY(KP_N6), 24 42, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(lshift, &skqi LSHFT , 32 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(rshift, &skqi RSHFT, 41 55, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  //--------------------ready for kinesis advantage 360
-//   COMBO_FAST(forefinger_1_left, &kp BSPC, 26 38, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-//   COMBO_FAST(forefinger_1_right, &kp LA(BSPC), 29 41, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-//   COMBO_FAST(backspaceOnNumberL, &kp BSPC, 29 41, LAYER_Number, COMBO_TERM_ARAB_SLOW)
+  //   COMBO(deleteline, &kp LG(BKSP), 41 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
+//   COMBO(leftline, &kp LG(LEFT), 63 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
+//   COMBO(rightline, &kp LG(RIGHT), 64 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
-//   COMBO_FAST(thumbcombos_2_hyper, &spacecombo HYPER_25 HYPER_01_KEY(KP_N3), 70 71, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-//   COMBO_FAST(thumbcombos_3_hyper, &spacecombo HYPER_24 LG(LS(V))/* HYPER_01_KEY(KP_N5) */, 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-//   COMBO_FAST(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+// make these combos without require idle
+   // make ctrl and option combo shift
+  COMBO_FAST(searchTextOnNavigationL, &kp HYPER_01_KEY(F), 28 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(searchFilesOnNavigationL, &kp HYPER_01_KEY(P), 26 38, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(middlefinger_1_left, &spacecombo HYPER_22 HYPER_01_KEY(KP_N5), 25 37, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(middlefinger_1_right, &spacecombo HYPER_23 HYPER_01_KEY(KP_N6), 30 42, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  // COMBO_FAST(shift_combo_left_1, &homey_left LS(LALT) LA(BSPC), 36 37, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
+  COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(forefinger_1_left, &kp BSPC, 26 38, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(forefinger_1_right, &kp LA(BSPC), 29 41, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(backspaceOnNumberL, &kp BSPC, 29 41, LAYER_Number, COMBO_TERM_ARAB_SLOW)
 
-//   COMBO_FAST(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
-//   COMBO_FAST(raycast37, &spacecombomo LAYER_Mouse HYPER_01_KEY(T), 60 42, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-//   COMBO_FAST(raycast31, &spacecombomo LAYER_Number ESC, 37 49, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-// //------------------------------------------------
-//   COMBO(shift_combo_left_2, &homey_left LS(LGUI) HYPER_01_KEY(N5), 37 38, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
-//   COMBO(shift_combo_right_1_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
-//   COMBO(shift_combo_right_2_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
-//   COMBO(shift_combo_right_3_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
-  //wait COMBO(shift_combo_right_2, &homey_right RS(RALT) HYPER_01_KEY(N7)/* ENTER */, 38 39, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
-  //wait COMBO(shift_combo_right_2_cursor_layer, &kp HYPER_01_KEY(N7)/* ENTER */, 38 39, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
-  COMBO(shift_combo_right_2, &homey_right RS(RALT) HYPER_01_KEY(N7)/* ENTER */, 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) //potentially remove fast at beginning
-  COMBO(shift_combo_right_2_cursor_layer, &kp HYPER_01_KEY(N7)/* ENTER */, 42 43, LAYER_Cursor, COMBO_TERM_ARAB_SLOW) //potentially remove fast at beginning
-//   COMBO(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
-//   COMBO(escape_on_symbols_layer, &homey_right RA(RGUI) ESC, 41 43, LAYER_Symbol, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
-//   COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
-//   COMBO(raycast20, &kp LG(SPACE), 29 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast30, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 25 26, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast32, &kp LA(BSPC), 29 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast35, &kp LG(TAB), 41 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast36, &kp HYPER_01_KEY(F10), 59 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) // dictionary raycast
-//   COMBO(raycast21, &mo LAYER_Cursor, 59 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast22, &kp LG(SPACE),  59 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(context37, &kp HYPER_29_KEY(SPACE), 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast39, &kp HYPER_01_KEY(F10), 60 43, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(go_to_file, &homey_left LS(LALT) HYPER_01_KEY(N1), 36 37, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(search_file_everywhere, &kp HYPER_01_KEY(N2), 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(go_to, &kp HYPER_01_KEY(N3), 30 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(change_project, &homey_left LA(LGUI) HYPER_01_KEY(N4), 36 38, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(raycast, &kp LG(SPACE), 41 57, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(contexts, &kp HYPER_29_KEY(SPACE), 57 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-//   COMBO(alfred, &kp HYPER_02_KEY(KP_N7) , 57 29, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO_FAST(thumbcombos_2_hyper, &spacecombo HYPER_25 HYPER_01_KEY(KP_N3), 70 71, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_3_hyper, &spacecombo HYPER_24 LG(LS(V))/* HYPER_01_KEY(KP_N5) */, 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  // combo for clipboard
+  // COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper LAYER_Cursor 0 , 69 70, LAYER_Dvorak, 100)
+  COMBO_FAST(thumbcombos_1, &spacecombo HYPER_34 /* RA(RG(RS(LA(LSHFT)))) */ LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW) //appswitch&raycast
+  COMBO_FAST(thumbcombos_1_cursor, &spacecombo RA(RG(RS(LA(LSHFT)))) LG(SPACE), 57 74, LAYER_Cursor, COMBO_TERM_ARAB_VERY_SLOW) //appswitch&raycast
+  // COMBO_FAST(thumbcombos_1, &spacecombo HYPER_30 LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  // HYPER_RIGHT_RED_106_O(key)  RA(RG(RS(LA(LSHFT))))
+  COMBO_FAST(thumbcombos_2, &spacecombo HYPER_30 LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_3, &kp HYPER_01_KEY(F10), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_4, &spacecombo HYPER_26 HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_5, &spacecombo HYPER_31 HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
+  COMBO_FAST(raycast37, &spacecombomo LAYER_Mouse HYPER_01_KEY(T), 60 42, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  // COMBO(raycast38, &kp HYPER_01_KEY(F10), 60 76, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(raycast31, &spacecombomo LAYER_Number ESC, 37 49, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+//------------------------------------------------
+
+
+  COMBO(shift_combo_left_2, &homey_left LS(LGUI) HYPER_01_KEY(N5), 37 38, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
+  COMBO(cmd_combo_right_1_bspc, &spacecombo  HYPER_32 /* LA(BSPC) */  HYPER_01_KEY(N9)  /* LA(BSPC) */,40 41, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  COMBO(cmd_combo_right_2_bspc, &spacecombo  HYPER_32 /* LA(BSPC) */  HYPER_01_KEY(N9)  /* LA(BSPC) */,40 41, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
+  COMBO(cmd_combo_right_3_bspc, &spacecombo  HYPER_32 /* LA(BSPC) */  HYPER_01_KEY(N9)  /* LA(BSPC) */,40 41, LAYER_Cursor, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  COMBO(shift3keys_combo_right_1_bspc, &homey_right RA(RS(RGUI)) /* LA(BSPC) */  ENTER  /* LA(BSPC) */, 41 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // seems to work, but still experimental
+  COMBO(shift4keys_combo_right_1_bspc, &homey_right RC(RA(RS(RGUI))) /* LA(BSPC) */  LG(ESC)  /* LA(BSPC) */, 41 42 43 44, LAYER_Dvorak, COMBO_TERM_ARAB_EVER_SLOWER) // seems to work, but still experimental
+  COMBO(shift4keys_combo_left_1_bspc, &homey_left LC(LA(LS(LGUI))) /* LA(BSPC) */  LG(ESC)  /* LA(BSPC) */, 35 36 37 38, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // seems to work, but still experimental
+  COMBO(3mwv_keys_combo_right_1_bspc, &kp HYPER_01_KEY(F10), 59 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // change HYPER_01_KEY(F10) to something else that is unique
+  COMBO(3gcr_keys_combo_right_1_bspc, &spacecombo HYPER_23 HYPER_01_KEY(KP_N6), 29 30 31, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // change &spacecombo HYPER_23 HYPER_01_KEY(KP_N6) to something else that is unique
+  COMBO(shift_combo_right_1_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  COMBO(shift_combo_right_2_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
+  COMBO(shift_combo_right_3_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  LG(ESC)  /* LA(BSPC) */, 41 42, LAYER_Cursor, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  // COMBO(shift_combo_left_2, &homey_left_combo LS(LGUI) 0/* HYPER_01_KEY(N5) */, 37 38, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
+  // COMBO(shift_combo_right_1, &homey_right_combo RS(RGUI) 0 /* HYPER_01_KEY(N6) */ /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
+  // COMBO(hyper_go_in, &homey_right RS(RGUI) HYPER_01_KEY(B)/* LA(BSPC) */, 41 42, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //go in 
+  COMBO(shift_combo_right_2, &homey_right RS(RALT) HYPER_01_KEY(N7)/* ENTER */, 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
+  COMBO(shift_combo_right_2_cursor_layer, &kp HYPER_01_KEY(N7)/* ENTER */, 42 43, LAYER_Cursor, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  COMBO(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  COMBO(shift_combo_right_4, &homey_right RC(RGUI) HYPER_01_KEY(N8), 41 44, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) 
+  COMBO(escape_on_symbols_layer, &homey_right RA(RGUI) ESC, 41 43, LAYER_Symbol, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH)
+//   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
+//   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
+//   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
+
+  // COMBO(deleteWordLayerMod, &comboHT 0  RA(RG(RS(LA(LSHFT)))), 69 74, LAYER_Dvorak, 100)
+  // COMBO(deleteWordLayerMod1, &skq RA(RG(RS(LA(LSHFT)))), 74 41 42, LAYER_Dvorak, 70)
+  // COMBO(deleteWordLayerMod2, &comboCmdTabHT LAYER_Symbol LG(TAB), 74 41 43, LAYER_Dvorak, 70)
+  // COMBO(deleteWordLayerMod3, &kp LG(SPACE), 74 42 43, LAYER_Dvorak, 70)
+  // COMBO(deleteWordLayerMod4, &kp HYPER_01_KEY(F10), 74 59 43, LAYER_Dvorak, 70)
+  // COMBO(deleteWordLayerMod5, &kp HYPER_01_KEY(F10), 69 59 43, LAYER_Dvorak, 100)
+  // COMBO(deleteWordLayerMod6, &skq RA(RG(RS(LA(LSHFT)))), 69 41 42, LAYER_Dvorak, 100)
+  // COMBO(deleteWordLayerMod7, &kp LG(TAB), 69 41 43, LAYER_Dvorak, 100)
+  // COMBO(deleteWordLayerMod8, &kp LG(SPACE), 69 42 43, LAYER_Dvorak, 100)
+  // COMBO(deleteWordLayerMod9, &comboCmdTabHT LAYER_Symbol_mirrored LG(TAB), 69 37 38, LAYER_Dvorak, 70)
+  COMBO(raycast20, &kp LG(SPACE), 29 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // ;,. are good for combos
+  COMBO(raycast30, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 25 26, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast32, &kp LA(BSPC), 29 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+//   COMBO(raycast33, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast35, &kp LG(TAB), 41 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast36, &kp HYPER_01_KEY(F10), 59 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) // dictionary raycast
+  COMBO(raycast21, &mo LAYER_Cursor, 59 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast22, &kp LG(SPACE),  59 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(context37, &kp HYPER_02_KEY(N8), 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH)
+  COMBO(context37rc, &kp HYPER_29_KEY(SPACE), 30 31, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH)
+  COMBO(context48_49qj, &kp HYPER_29_KEY(SPACE), 48 49, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH)
+  // COMBO(context24_25comma_period, &kp HYPER_29_KEY(SPACE), 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH)
+  COMBO(raycast39, &kp HYPER_01_KEY(F10), 60 43, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+ // COMBO(raycast40, &kp LG(SPACE), 31 32, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  //COMBO(raycast70, &kp LG(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+//   COMBO(warp70, &kp HYPER_02_KEY(HOME), 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(go_to_file, &homey_left LS(LALT) HYPER_01_KEY(N1), 36 37, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(search_file_everywhere, &kp HYPER_01_KEY(N2), 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH)
+  COMBO(go_to, &kp HYPER_01_KEY(N3), 30 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(change_project, &homey_left LA(LGUI) HYPER_01_KEY(N4), 36 38, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast, &kp LG(SPACE), 41 57, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(contexts, &kp HYPER_29_KEY(SPACE), 57 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+//   COMBO(raycast2, &kp LG(SPACE), 70 41, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+//   COMBO(contexts2, &kp HYPER_29_KEY(SPACE), 70 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(alfred, &kp HYPER_02_KEY(KP_N7) , 57 29, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+
+  // COMBO(raycast3, &kp HYPER_29_KEY(SPACE), 74 41, LAYER_SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
+
+  // COMBO(lshift1, &skq LSHIFT , 25 38, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  // COMBO(rshift1, &skq RSHIFT, 41 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  // COMBO(lshift, &skq LSHIFT , 35 36, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  // COMBO(rshift, &skq RSHIFT, 43 44, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+//   COMBO(contexts3, &kp LG(SPACE) , 38 42, SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
+//   COMBO(raycast4, &kp HYPER_29_KEY(SPACE), 70 41, SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
+//   COMBO(contexts4, &kp LG(SPACE) , 70 42, SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
+
+  // COMBO(appswitcher, &skq RC(RA(RS(LA(LS(LGUI))))) , 35 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
     };
 
 
@@ -612,13 +677,13 @@ fastmacrotapdanceLT: fastmacrotapdanceLT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <650>;
-            bindings = <&to LAYER_Dvorak>, <&to LAYER_OneHand>, <&rgb_ug RGB_STATUS>;
+            bindings = <&to LAYER_Dvorak>, <&to LAYER_OneHand>, <&kp SPACE>;
         };
 toggleOneHandedNormal: toggleOneHandedNormal {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <650>;
-            bindings =  <&to LAYER_OneHand>, <&to LAYER_Dvorak>, <&rgb_ug RGB_STATUS>;
+            bindings =  <&to LAYER_OneHand>, <&to LAYER_Dvorak>, <&kp SPACE>;
         };
     };
 };
@@ -630,7 +695,7 @@ toggleOneHandedNormal: toggleOneHandedNormal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&rgb_ug RGB_STATUS>;
+                = <&kp SPACE>;
         };
     };
 };
@@ -4503,8 +4568,8 @@ ZMK_MACRO(layer_function_macro,
         layer_Magic {
             bindings = <
        &to 0            &to LAYER_Gaming            &to 2            &to 3            &to 4            &to 5                 &none   &none                            &none   &none   &none   &none   &none           &none
-       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                            &none   &none                &none   &none   &none   &none   &none           &none
- &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF   &none   &bt_2   &bt_3     &none   &none       &none                     &none   &none   &none   &none   &none     &bootloader
+       &none  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE                            &none   &none                &none   &none   &none   &none   &none           &none
+ &bootloader  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &none   &bt_2   &bt_3     &none   &none       &none                     &none   &none   &none   &none   &none     &bootloader
   &sys_reset            &none            &none            &none            &none            &none         &none   &none    &none   &none   &none   &none   &none      &sys_reset
        &none            &to 0            &to 13             &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
             >;
@@ -4562,9 +4627,9 @@ ZMK_MACRO(layer_function_macro,
         layer_System {
             bindings = <
            &none            &none            &none            &none            &none   &none                            &none   &none                                                   &none      &none      &none     &none     &none   &none
-           &none            &none  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI            &none   &none                            &none   &none                                                 &none      &none      &none     &none     &none   &none
- &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF   &none    &none    &kp _LOCK  &kp _SLEEP       &none               &none       &none                              &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
-           &none  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI   &none      &kp _POWER              &none   &none      &none      &none     &none     &none   &none
+           &none            &none  &kp SPACE  &kp SPACE            &none   &none                            &none   &none                                                 &none      &none      &none     &none     &none   &none
+ &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &none    &none    &kp _LOCK  &kp _SLEEP       &none               &none       &none                              &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
+           &none  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &none      &kp _POWER              &none   &none      &none      &none     &none     &none   &none
            &none            &none            &none            &none            &none          &kp PSCRN    &kp SLCK  &kp PAUSE_BREAK  &tog LAYER_System   &none  &linux_magic_sysrq              &none      &none     &none     &none   &none
             >;
         };
