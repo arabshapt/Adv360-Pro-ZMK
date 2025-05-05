@@ -93,6 +93,11 @@
 #define COMBO_TERM_ARAB_NORMAL 30
 #define COMBO_TERM_ARAB_SLOW 50
 #define COMBO_TERM_ARAB_VERY_SLOW 100
+#define COMBO_TERM_ARAB_FASTISH 22//18
+#define COMBO_TERM_ARAB_ULTRA_FAST 14//18
+
+#define COMBO_TERM_ARAB_SLOWER 60
+#define COMBO_TERM_ARAB_EVER_SLOWER 60
 
 #define HYPERKEY(key) LS(LC(LA(LG(key)))) // hyper
 #define RIGHT_CMD_HYPERKEY(key) LS(LC(LA(RG(key)))) // hyper
@@ -554,7 +559,7 @@ create a list of all possible keys for hyper_01 and mark used ones
 
 
   COMBO(shift_combo_left_2, &homey_left LS(LGUI) HYPER_01_KEY(N5), 31 32, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
-  COMBO(cmd_combo_right_1_bspc, &spacecombo HYPER_32 /* LA(BSPC) */ HYPER_01_KEY(N9) /* LA(BSPC) */,40 41, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
+  COMBO(cmd_combo_right_1_bspc, &spacecombo HYPER_32 HYPER_01_KEY(N9) /* LA(BSPC) */,40 41, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
   COMBO(cmd_combo_right_2_bspc, &spacecombo HYPER_32 /* LA(BSPC) */ HYPER_01_KEY(N9) /* LA(BSPC) */,40 41, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
   COMBO(cmd_combo_right_3_bspc, &spacecombo HYPER_32 /* LA(BSPC) */ HYPER_01_KEY(N9) /* LA(BSPC) */,40 41, LAYER_Cursor, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
   COMBO(shift3keys_combo_right_1_bspc, &homey_right RA(RS(RGUI)) /* LA(BSPC) */  ENTER  /* LA(BSPC) */, 41 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // seems to work, but still experimental
@@ -4709,7 +4714,7 @@ ZMK_MACRO(layer_function_macro,
         layer_SKQ_RIGHT_RED {
             bindings = <
         &skq LS(LC(LA(LG(CAPS)))) &skq LS(LC(LA(LGUI)))      &trans        &trans     &trans   &trans                                                                         &none   &none                                                                                                                                         &trans    &trans     &trans    &trans    &trans    &trans
-        &trans  &skq RC(RG(RS(LS(LCTRL)))) &skq RC(RG(RS(LG(LCTRL))))  &skq RC(RG(LA(LS(LGUI)))) &skq RC(RG(LA(LS(LCTRL)))) &skq RC(RG(LA(LG(LCTRL))))                         &none   &none                                                                                                                                                                                         &skq RC(RG(LS(LG(LCTRL))))  &skq RC(RS(LA(LS(LGUI))))   &skq RC(RS(LA(LS(LCTRL))))  &skq RC(RS(LA(LG(LCTRL))))  &skq RC(RS(LS(LG(LCTRL))))  &trans
+        &trans  &skq RC(RG(RS(LS(LCTRL)))) &skq RC(RG(RS(LG(LCTRL))))  &skq RC(RG(LA(LS(LGUI)))) &skq RC(RG(LA(LS(LCTRL)))) &skq RC(RG(LA(LG(LCTRL))))                         &none   &none                                                                                                                                                                                         &skq RC(RG(LS(LG(LCTRL))))  &skq RC(RS(LA(LS(LGUI))))   &skq RC(RS(LA(LG(LCTRL))))  &skq  RC(RS(LA(LS(LCTRL))))  &skq RC(RS(LS(LG(LCTRL)))) &trans
         &trans  &skq RC(LA(LS(LG(LCTRL))))    &skq RA(RG(RS(LA(LSHFT))))      &skq RA(RG(RS(LA(LGUI))))   &skq RA(RG(RS(LA(LCTRL)))) &skq RA(RG(RS(LS(LGUI))))         &none             &kp /*HYPER_42*/ HYPER_29_KEY(SPACE) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)    &none     &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &kp /*HYPER_42*/ RC(RA(LS(LA(KP_N4))))                                      &skq RA(RG(RS(LS(LCTRL))))  &skq RA(RG(RS(LG(LCTRL))))   &skq RA(RG(LA(LS(LGUI))))  &skq RA(RG(LA(LS(LCTRL))))  &skq RA(RG(LA(LG(LCTRL))))  &trans
         &trans  &skq RA(RG(LS(LG(LCTRL)))) &skq RA(RS(LA(LS(LGUI))))      &skq RA(RS(LA(LS(LCTRL))))   &skq RA(RS(LA(LG(LCTRL)))) &skq RA(RS(LS(LG(LCTRL))))                                                                   &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)                                                                         &skq RA(LA(LS(LG(LCTRL))))  &skq RG(RS(LA(LS(LGUI))))   &skq RG(RS(LA(LS(LCTRL))))  &skq RG(RS(LA(LG(LCTRL))))  &skq RG(RS(LS(LG(LCTRL))))  &trans
         &trans  &trans      &trans        &trans     &trans                     &thumbhlay HYPER_58  HYPER_02_KEY(KP_N7) /* &thumbhm HYPER_58 BKSP */ &thumbhlay LAYER_Symbol LG(SPACE)             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
